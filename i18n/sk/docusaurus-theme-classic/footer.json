@@ -1,0 +1,22 @@
+{
+  "link.title.Docs": {
+    "message": "Dokumentácia",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.item.label.Internal Operations": {
+    "message": "Interná prevádzka",
+    "description": "The label of footer link with label=Internal Operations linking to /internal-operations/server-architecture"
+  },
+  "link.item.label.Study Materials": {
+    "message": "Študijné materiály",
+    "description": "The label of footer link with label=Study Materials linking to /study-materials/java-kotlin-patterns"
+  },
+  "link.item.label.Clients": {
+    "message": "Klienti",
+    "description": "The label of footer link with label=Clients linking to /clients/mbm-group/overview"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 Vectorly s.r.o.",
+    "description": "The footer copyright"
+  }
+}

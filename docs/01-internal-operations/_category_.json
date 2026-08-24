@@ -1,0 +1,8 @@
+{
+  "label": "Internal Operations",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Server runbooks, infrastructure architecture, backup/recovery procedures, and Git/CI-CD workflow."
+  }
+}

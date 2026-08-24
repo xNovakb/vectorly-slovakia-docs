@@ -1,0 +1,22 @@
+{
+  "logo.alt": {
+    "message": "Vectorly",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Internal Operations": {
+    "message": "Interná prevádzka",
+    "description": "Navbar item with label Internal Operations"
+  },
+  "item.label.Study Materials": {
+    "message": "Študijné materiály",
+    "description": "Navbar item with label Study Materials"
+  },
+  "item.label.Clients": {
+    "message": "Klienti",
+    "description": "Navbar item with label Clients"
+  },
+  "item.label.vectorly-slovakia.sk": {
+    "message": "vectorly-slovakia.sk",
+    "description": "Navbar item with label vectorly-slovakia.sk"
+  }
+}

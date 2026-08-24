@@ -1,0 +1,8 @@
+{
+  "label": "Study Materials",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Technical deep dives and architectural notes: Java/Kotlin, graph databases, backend performance."
+  }
+}
