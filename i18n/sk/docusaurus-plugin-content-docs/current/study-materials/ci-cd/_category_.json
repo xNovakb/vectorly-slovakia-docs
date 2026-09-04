@@ -1,0 +1,8 @@
+{
+  "label": "CI/CD Basics",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Automatizované buildy, testy a nasadenia: pipeliny, fázy, deployment stratégie, secrety, a platformy, ktoré ich spúšťajú."
+  }
+}

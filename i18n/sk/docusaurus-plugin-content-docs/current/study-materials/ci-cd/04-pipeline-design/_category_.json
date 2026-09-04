@@ -1,0 +1,8 @@
+{
+  "label": "Návrh Pipeline",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Fázy a joby, caching na zrýchlenie buildov, a beh práce paralelne."
+  }
+}

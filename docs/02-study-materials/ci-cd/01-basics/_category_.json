@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "CiCdBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "What CI/CD actually means, the pipeline concept, and what triggers a run."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Deployment Stratégie",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Continuous delivery vs. deployment, blue-green a canary releasy, a bezpečné vrátenie zmien."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "CiCdBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo CI/CD naozaj znamená, koncept pipeline, a čo spustí beh."
+  }
+}

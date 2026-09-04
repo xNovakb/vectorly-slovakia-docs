@@ -1,0 +1,8 @@
+{
+  "label": "Pipeline Design",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Stages and jobs, caching to speed up builds, and running work in parallel."
+  }
+}

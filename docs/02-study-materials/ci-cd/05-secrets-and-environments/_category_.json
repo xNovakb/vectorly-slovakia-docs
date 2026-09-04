@@ -1,0 +1,8 @@
+{
+  "label": "Secrets & Environments",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Managing secrets safely, promoting a build through environments, and least-privilege credentials."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Secrety a Prostredia",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Bezpečná správa secretov, postup buildu cez prostredia, a credentials s najmenším oprávnením."
+  }
+}

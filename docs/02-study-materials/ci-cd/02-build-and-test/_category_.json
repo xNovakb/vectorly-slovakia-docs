@@ -1,0 +1,8 @@
+{
+  "label": "Build & Test",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Automated builds, running tests in CI, and passing artifacts between stages."
+  }
+}

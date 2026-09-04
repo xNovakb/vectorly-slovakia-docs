@@ -1,0 +1,8 @@
+{
+  "label": "CI/CD Basics",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Automated builds, tests, and deployments: pipelines, stages, deployment strategies, secrets, and the platforms that run them."
+  }
+}
