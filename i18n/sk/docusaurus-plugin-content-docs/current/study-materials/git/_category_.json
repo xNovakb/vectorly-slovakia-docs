@@ -1,0 +1,8 @@
+{
+  "label": "Git",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Git pre vývojárov: od prvého commitu po conventional commits, branching, rebasing a náš squash-and-rebase workflow."
+  }
+}

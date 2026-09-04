@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "GitBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Getting started with Git: what it is, initial setup, and the core add/commit/status loop."
+  }
+}

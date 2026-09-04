@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "GitBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Prvé kroky s Gitom: čo to je, počiatočné nastavenie a základný cyklus add/commit/status."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Git",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Git for developers: from first commit to conventional commits, branching, rebasing, and this org's squash-and-rebase workflow."
+  }
+}

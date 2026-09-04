@@ -1,0 +1,8 @@
+{
+  "label": "Branching & Merging",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Branches, merges, and rebasing — how Git combines diverging lines of work."
+  }
+}

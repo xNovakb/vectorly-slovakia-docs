@@ -1,0 +1,8 @@
+{
+  "label": "Advanced",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "Submodules, hooks, history rewriting, and other advanced Git tooling."
+  }
+}

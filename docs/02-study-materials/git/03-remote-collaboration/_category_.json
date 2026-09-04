@@ -1,0 +1,8 @@
+{
+  "label": "Remote Collaboration",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Working with remotes, pull/merge requests, and team branching models."
+  }
+}

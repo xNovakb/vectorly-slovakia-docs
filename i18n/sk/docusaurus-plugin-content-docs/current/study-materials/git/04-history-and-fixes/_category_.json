@@ -1,0 +1,8 @@
+{
+  "label": "História a Opravy",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Vracanie chýb, obnova stratenej práce a prehľadávanie histórie."
+  }
+}

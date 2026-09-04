@@ -1,0 +1,8 @@
+{
+  "label": "Konvencie",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Konvencie pre commit správy, merge stratégiu a tagovanie releasov, ktoré používame naprieč repozitármi."
+  }
+}

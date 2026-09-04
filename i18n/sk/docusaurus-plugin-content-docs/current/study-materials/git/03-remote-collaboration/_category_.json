@@ -1,0 +1,8 @@
+{
+  "label": "Spolupráca cez Remote",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Práca s remote repozitármi, pull/merge requesty a tímové branching modely."
+  }
+}
