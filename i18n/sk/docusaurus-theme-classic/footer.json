@@ -9,7 +9,7 @@
   },
   "link.item.label.Study Materials": {
     "message": "Študijné materiály",
-    "description": "The label of footer link with label=Study Materials linking to /study-materials/java-kotlin-patterns"
+    "description": "The label of footer link with label=Study Materials linking to /study-materials/kotlin/kotlin-fundamentals/basics/what-is-kotlin"
   },
   "link.item.label.Clients": {
     "message": "Klienti",

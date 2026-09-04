@@ -24,6 +24,11 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -69,7 +74,7 @@ const config: Config = {
           label: 'Internal Operations',
         },
         {
-          to: '/study-materials/java-kotlin-patterns',
+          to: '/study-materials/kotlin/kotlin-fundamentals/basics/what-is-kotlin',
           position: 'left',
           label: 'Study Materials',
         },
@@ -96,7 +101,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {label: 'Internal Operations', to: '/internal-operations/server-architecture'},
-            {label: 'Study Materials', to: '/study-materials/java-kotlin-patterns'},
+            {label: 'Study Materials', to: '/study-materials/kotlin/kotlin-fundamentals/basics/what-is-kotlin'},
             {label: 'Clients', to: '/clients/mbm-group/overview'},
           ],
         },

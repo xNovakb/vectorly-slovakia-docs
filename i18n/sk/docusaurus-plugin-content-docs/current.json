@@ -14,5 +14,313 @@
   "sidebar.clientsSidebar.category.Nexonera": {
     "message": "Nexonera",
     "description": "The label for category 'Nexonera' in sidebar 'clientsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Git": {
+    "message": "Git",
+    "description": "The label for category 'Git' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.GitBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Branching & Merging": {
+    "message": "Branching a Merging",
+    "description": "The label for category 'Branching & Merging' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Remote Collaboration": {
+    "message": "Spolupráca cez Remote",
+    "description": "The label for category 'Remote Collaboration' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.History & Fixes": {
+    "message": "História a Opravy",
+    "description": "The label for category 'History & Fixes' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Conventions": {
+    "message": "Konvencie",
+    "description": "The label for category 'Conventions' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Advanced": {
+    "message": "Pokročilé",
+    "description": "The label for category 'Advanced' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.SSH & Networking": {
+    "message": "SSH a Siete",
+    "description": "The label for category 'SSH & Networking' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.NetworkingBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.SSH": {
+    "message": "SSH",
+    "description": "The label for category 'SSH' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Domains & DNS": {
+    "message": "Domény a DNS",
+    "description": "The label for category 'Domains & DNS' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Web Serving": {
+    "message": "Web Serving",
+    "description": "The label for category 'Web Serving' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Practical Setups": {
+    "message": "Praktické Nastavenia",
+    "description": "The label for category 'Practical Setups' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Linux & Shell": {
+    "message": "Linux a Shell",
+    "description": "The label for category 'Linux & Shell' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.LinuxShellBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Permissions & Users": {
+    "message": "Oprávnenia a Používatelia",
+    "description": "The label for category 'Permissions & Users' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Processes": {
+    "message": "Procesy",
+    "description": "The label for category 'Processes' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Text & Pipes": {
+    "message": "Text a Roury",
+    "description": "The label for category 'Text & Pipes' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Package Management": {
+    "message": "Správa Balíkov",
+    "description": "The label for category 'Package Management' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Practical Shell": {
+    "message": "Praktický Shell",
+    "description": "The label for category 'Practical Shell' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.HTTP & Web Fundamentals": {
+    "message": "HTTP a Web Základy",
+    "description": "The label for category 'HTTP & Web Fundamentals' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.HttpWebBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Methods & Semantics": {
+    "message": "Metódy a Sémantika",
+    "description": "The label for category 'Methods & Semantics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Headers & Content": {
+    "message": "Hlavičky a Obsah",
+    "description": "The label for category 'Headers & Content' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Security": {
+    "message": "Bezpečnosť",
+    "description": "The label for category 'Security' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.REST & API Design": {
+    "message": "REST a Návrh API",
+    "description": "The label for category 'REST & API Design' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Performance & Protocol Evolution": {
+    "message": "Výkon a Vývoj Protokolu",
+    "description": "The label for category 'Performance & Protocol Evolution' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Docker & Containers": {
+    "message": "Docker a Kontajnery",
+    "description": "The label for category 'Docker & Containers' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.DockerBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Images & Dockerfiles": {
+    "message": "Image a Dockerfile",
+    "description": "The label for category 'Images & Dockerfiles' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Running Containers": {
+    "message": "Spúšťanie Kontajnerov",
+    "description": "The label for category 'Running Containers' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Networking & Storage": {
+    "message": "Siete a Úložisko",
+    "description": "The label for category 'Networking & Storage' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Docker Compose": {
+    "message": "Docker Compose",
+    "description": "The label for category 'Docker Compose' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Production Practices": {
+    "message": "Produkčné Postupy",
+    "description": "The label for category 'Production Practices' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Podman": {
+    "message": "Podman",
+    "description": "The label for category 'Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.PodmanBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Using Podman": {
+    "message": "Používanie Podman",
+    "description": "The label for category 'Using Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Docker vs. Podman": {
+    "message": "Docker vs. Podman",
+    "description": "The label for category 'Docker vs. Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.CI/CD Basics": {
+    "message": "CI/CD Základy",
+    "description": "The label for category 'CI/CD Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.CiCdBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Build & Test": {
+    "message": "Build a Test",
+    "description": "The label for category 'Build & Test' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Deployment Strategies": {
+    "message": "Deployment Stratégie",
+    "description": "The label for category 'Deployment Strategies' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Pipeline Design": {
+    "message": "Návrh Pipeline",
+    "description": "The label for category 'Pipeline Design' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Secrets & Environments": {
+    "message": "Secrety a Prostredia",
+    "description": "The label for category 'Secrets & Environments' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Tools & Platforms": {
+    "message": "Nástroje a Platformy",
+    "description": "The label for category 'Tools & Platforms' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin Fundamentals": {
+    "message": "Kotlin Fundamentals",
+    "description": "The label for category 'Kotlin Fundamentals' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinFundamentalsBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Functions & Control Flow": {
+    "message": "Funkcie a Riadenie Toku",
+    "description": "The label for category 'Functions & Control Flow' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Classes & Objects": {
+    "message": "Triedy a Objekty",
+    "description": "The label for category 'Classes & Objects' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Collections & Functional Style": {
+    "message": "Kolekcie a Funkcionálny Štýl",
+    "description": "The label for category 'Collections & Functional Style' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Error Handling": {
+    "message": "Error Handling",
+    "description": "The label for category 'Error Handling' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Interop & Tooling": {
+    "message": "Interop a Tooling",
+    "description": "The label for category 'Interop & Tooling' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin Idioms & Advanced Features": {
+    "message": "Kotlin Idiomy a Pokročilé Funkcie",
+    "description": "The label for category 'Kotlin Idioms & Advanced Features' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Scope Functions": {
+    "message": "Scope Funkcie",
+    "description": "The label for category 'Scope Functions' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Extension Functions & Properties": {
+    "message": "Extension Funkcie a Vlastnosti",
+    "description": "The label for category 'Extension Functions & Properties' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Classes: Advanced": {
+    "message": "Triedy: Pokročilé",
+    "description": "The label for category 'Classes: Advanced' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Generics & Type System": {
+    "message": "Generiká a Typový Systém",
+    "description": "The label for category 'Generics & Type System' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Building DSLs": {
+    "message": "Budovanie DSL",
+    "description": "The label for category 'Building DSLs' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Idiomatic Patterns": {
+    "message": "Idiomatické Vzory",
+    "description": "The label for category 'Idiomatic Patterns' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin Coroutines & Concurrency": {
+    "message": "Kotlin Coroutines a Konkurencia",
+    "description": "The label for category 'Kotlin Coroutines & Concurrency' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinCoroutinesBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Structured Concurrency": {
+    "message": "Štruktúrovaná Konkurencia",
+    "description": "The label for category 'Structured Concurrency' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Dispatchers & Threading": {
+    "message": "Dispatchery a Vlákna",
+    "description": "The label for category 'Dispatchers & Threading' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Flow": {
+    "message": "Flow",
+    "description": "The label for category 'Flow' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Error Handling & Testing": {
+    "message": "Spracovanie Chýb a Testovanie",
+    "description": "The label for category 'Error Handling & Testing' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Common Pitfalls": {
+    "message": "Bežné Chyby",
+    "description": "The label for category 'Common Pitfalls' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin + Spring Boot": {
+    "message": "Kotlin + Spring Boot",
+    "description": "The label for category 'Kotlin + Spring Boot' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinSpringBootBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Dependency Injection": {
+    "message": "Dependency Injection",
+    "description": "The label for category 'Dependency Injection' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Web Layer": {
+    "message": "Web Vrstva",
+    "description": "The label for category 'Web Layer' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Data Access": {
+    "message": "Prístup k Dátam",
+    "description": "The label for category 'Data Access' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Testing Spring Apps": {
+    "message": "Testovanie Spring Appiek",
+    "description": "The label for category 'Testing Spring Apps' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Production Considerations": {
+    "message": "Produkčné Úvahy",
+    "description": "The label for category 'Production Considerations' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Testing in Kotlin": {
+    "message": "Testovanie v Kotline",
+    "description": "The label for category 'Testing in Kotlin' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinTestingBasics": {
+    "message": "Základy",
+    "description": "The label for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Assertions & Mocking": {
+    "message": "Assertions a Mocking",
+    "description": "The label for category 'Assertions & Mocking' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Parameterized & Property-Based Testing": {
+    "message": "Parametrizované a Property-Based Testovanie",
+    "description": "The label for category 'Parameterized & Property-Based Testing' in sidebar 'studyMaterialsSidebar'"
   }
 }
