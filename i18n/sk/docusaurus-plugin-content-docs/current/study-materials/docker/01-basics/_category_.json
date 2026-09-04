@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "DockerBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo je kontajner v skutočnosti, image vs. kontajnery, a ako sa kontajnery líšia od VM."
+  }
+}

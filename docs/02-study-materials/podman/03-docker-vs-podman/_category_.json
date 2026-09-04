@@ -1,0 +1,8 @@
+{
+  "label": "Docker vs. Podman",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Architectural differences, compatibility and migration, and when to actually choose which."
+  }
+}

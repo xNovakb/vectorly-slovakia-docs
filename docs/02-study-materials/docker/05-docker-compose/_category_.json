@@ -1,0 +1,8 @@
+{
+  "label": "Docker Compose",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Defining multi-container apps declaratively, and how this org's own deploy uses Compose."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Siete a Úložisko",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Publikovanie portov, sieťové režimy, volumes, a prečo sú kontajnery predvolene efemérne."
+  }
+}

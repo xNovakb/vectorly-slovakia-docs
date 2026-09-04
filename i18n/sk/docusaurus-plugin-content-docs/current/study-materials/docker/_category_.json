@@ -1,0 +1,8 @@
+{
+  "label": "Docker & Containers",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Kontajnery, image, Dockerfile, siete, Compose, a ako táto organizácia naozaj prevádzkuje svoje stránky v Dockeri."
+  }
+}

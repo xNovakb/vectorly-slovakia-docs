@@ -1,0 +1,8 @@
+{
+  "label": "Docker vs. Podman",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Architektonické rozdiely, kompatibilita a migrácia, a kedy si naozaj vybrať ktorý."
+  }
+}

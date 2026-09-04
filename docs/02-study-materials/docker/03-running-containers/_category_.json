@@ -1,0 +1,8 @@
+{
+  "label": "Running Containers",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "The container lifecycle, debugging a running container, and handling environment/secrets."
+  }
+}

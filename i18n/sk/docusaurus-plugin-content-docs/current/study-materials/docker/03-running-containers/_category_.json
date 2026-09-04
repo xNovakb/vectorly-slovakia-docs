@@ -1,0 +1,8 @@
+{
+  "label": "Spúšťanie Kontajnerov",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Životný cyklus kontajnera, debugovanie bežiaceho kontajnera, a práca s prostredím/secretmi."
+  }
+}

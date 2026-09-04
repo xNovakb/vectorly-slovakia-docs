@@ -1,0 +1,8 @@
+{
+  "label": "Images & Dockerfiles",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Writing a Dockerfile, building and tagging images, and how layer caching works."
+  }
+}

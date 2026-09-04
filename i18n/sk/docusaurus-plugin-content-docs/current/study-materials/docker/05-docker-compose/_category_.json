@@ -1,0 +1,8 @@
+{
+  "label": "Docker Compose",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Deklaratívna definícia multi-kontajnerových appiek, a ako Compose používa vlastný deploy tejto organizácie."
+  }
+}

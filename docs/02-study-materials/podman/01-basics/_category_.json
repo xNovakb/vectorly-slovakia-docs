@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "PodmanBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Daemonless architecture, rootless containers by default, and the pod concept."
+  }
+}

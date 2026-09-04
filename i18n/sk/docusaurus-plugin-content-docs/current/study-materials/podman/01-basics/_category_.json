@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "PodmanBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Bezdémonová architektúra, predvolene rootless kontajnery, a koncept pod."
+  }
+}

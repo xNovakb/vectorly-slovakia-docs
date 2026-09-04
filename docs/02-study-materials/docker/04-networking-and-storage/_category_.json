@@ -1,0 +1,8 @@
+{
+  "label": "Networking & Storage",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Publishing ports, network modes, volumes, and why containers are ephemeral by default."
+  }
+}

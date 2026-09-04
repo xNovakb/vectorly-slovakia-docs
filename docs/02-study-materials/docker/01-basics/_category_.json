@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "DockerBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "What a container actually is, images vs. containers, and how containers differ from VMs."
+  }
+}
