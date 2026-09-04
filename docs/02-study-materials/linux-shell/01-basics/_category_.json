@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "LinuxShellBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "What a shell actually is, the filesystem layout, and moving around it."
+  }
+}

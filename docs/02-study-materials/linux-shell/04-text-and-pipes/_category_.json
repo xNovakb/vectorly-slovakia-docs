@@ -1,0 +1,8 @@
+{
+  "label": "Text & Pipes",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Viewing and editing files, searching, and chaining commands together."
+  }
+}

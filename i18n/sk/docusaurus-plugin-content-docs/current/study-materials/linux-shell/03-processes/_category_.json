@@ -1,0 +1,8 @@
+{
+  "label": "Procesy",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo je proces, ich sledovanie a ovládanie, a spúšťanie vecí na pozadí."
+  }
+}

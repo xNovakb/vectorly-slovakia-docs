@@ -1,0 +1,8 @@
+{
+  "label": "Správa Balíkov",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Inštalácia a aktualizácia softvéru na Linux serveri."
+  }
+}

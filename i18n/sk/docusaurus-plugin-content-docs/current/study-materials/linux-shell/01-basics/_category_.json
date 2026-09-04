@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "LinuxShellBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo je shell v skutočnosti, usporiadanie súborového systému, a pohyb v ňom."
+  }
+}

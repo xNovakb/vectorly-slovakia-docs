@@ -1,0 +1,8 @@
+{
+  "label": "Permissions & Users",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Users, groups, file permissions, and why servers avoid running as root."
+  }
+}
