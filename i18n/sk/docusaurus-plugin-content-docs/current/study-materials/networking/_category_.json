@@ -1,0 +1,8 @@
+{
+  "label": "SSH & Networking",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Servery, SSH, DNS a reverse proxy: dosť sietí na to, aby si vedel vysvetliť, ako sa doména dostane až k bežiacej appke."
+  }
+}

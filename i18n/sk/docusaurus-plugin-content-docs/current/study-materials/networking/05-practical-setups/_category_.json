@@ -1,0 +1,8 @@
+{
+  "label": "Praktické Nastavenia",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Spojenie všetkého dokopy, plus Docker networking a riešenie problémov s pripojením."
+  }
+}

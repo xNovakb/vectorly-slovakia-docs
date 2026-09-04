@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "NetworkingBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "The client/server model, ports and protocols, and just enough of how the internet routes packets."
+  }
+}

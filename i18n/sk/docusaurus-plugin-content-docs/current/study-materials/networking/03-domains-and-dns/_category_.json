@@ -1,0 +1,8 @@
+{
+  "label": "Domény a DNS",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Ako sa doména preloží na server, a typy záznamov, ktoré to umožňujú."
+  }
+}

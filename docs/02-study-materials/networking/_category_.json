@@ -1,0 +1,8 @@
+{
+  "label": "SSH & Networking",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Servers, SSH, DNS, and reverse proxies: enough networking to reason about how a domain ends up pointing at a running app."
+  }
+}

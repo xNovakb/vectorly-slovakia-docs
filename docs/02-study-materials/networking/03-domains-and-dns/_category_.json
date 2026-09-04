@@ -1,0 +1,8 @@
+{
+  "label": "Domains & DNS",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "How a domain name resolves to a server, and the record types that make it work."
+  }
+}

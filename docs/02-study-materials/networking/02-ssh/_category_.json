@@ -1,0 +1,8 @@
+{
+  "label": "SSH",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Connecting to remote machines securely: keys, config, and tunneling."
+  }
+}

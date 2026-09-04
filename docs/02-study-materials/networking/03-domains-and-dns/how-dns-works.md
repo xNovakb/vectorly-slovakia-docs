@@ -1,0 +1,62 @@
+---
+sidebar_position: 1
+title: How DNS Works
+---
+
+# How DNS Works
+
+**DNS** (Domain Name System) translates a human-readable domain (`docs.vectorly-slovakia.sk`)
+into an IP address a computer can actually route packets to. Without it, you'd have to remember
+and type raw IP addresses for everything.
+
+## Registrars vs. nameservers — two different jobs
+
+- **Registrar** — where you *bought* the domain (e.g. Namecheap, GoDaddy). Handles ownership,
+  renewal, and points the domain at a set of nameservers.
+- **Nameservers** — the servers that actually answer "what's the IP for this domain" queries.
+  Often run by a DNS provider (Cloudflare, the registrar itself, or your hosting provider) — this
+  is where the actual DNS records (see [DNS Records](./dns-records.md)) live and get edited.
+
+A domain's registrar and its DNS provider are commonly different companies — the registrar just
+needs to know *which* nameservers to point to; everything else happens there.
+
+## Resolution flow
+
+```mermaid
+sequenceDiagram
+    participant Browser
+    participant Resolver as Recursive resolver (e.g. ISP/1.1.1.1)
+    participant Root as Root nameserver
+    participant TLD as .sk TLD nameserver
+    participant Auth as Authoritative nameserver (your DNS provider)
+
+    Browser->>Resolver: Where is docs.vectorly-slovakia.sk?
+    Resolver->>Root: Who handles .sk?
+    Root-->>Resolver: Ask the .sk TLD servers
+    Resolver->>TLD: Who handles vectorly-slovakia.sk?
+    TLD-->>Resolver: Ask this authoritative nameserver
+    Resolver->>Auth: What's the A record for docs.vectorly-slovakia.sk?
+    Auth-->>Resolver: 203.0.113.42
+    Resolver-->>Browser: 203.0.113.42
+```
+
+In practice most of this is cached at every level, so it rarely happens in full for a domain
+that's been resolved recently anywhere on your network — this is the "cold start" path.
+
+## Caching and TTL
+
+Every DNS record has a **TTL** (time to live) — how long a resolver is allowed to cache the
+answer before asking again. Set it low (e.g. 300 seconds) before a planned DNS change so the
+change propagates quickly; a long-standing record with a high TTL (e.g. 86400 = 24h) reduces load
+on the nameserver but means changes take longer to take effect everywhere.
+
+## Checking DNS yourself
+
+```bash
+dig docs.vectorly-slovakia.sk           # detailed query + answer
+dig docs.vectorly-slovakia.sk +short     # just the IP
+nslookup docs.vectorly-slovakia.sk        # alternative, more available by default on Windows
+```
+
+More on reading these results in
+[Troubleshooting Connectivity](../05-practical-setups/troubleshooting-connectivity.md).

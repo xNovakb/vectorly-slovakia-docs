@@ -1,0 +1,8 @@
+{
+  "label": "Practical Setups",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Tying it all together, plus Docker networking and troubleshooting connectivity."
+  }
+}

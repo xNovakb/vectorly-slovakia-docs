@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "NetworkingBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Client/server model, porty a protokoly, a toľko z toho, ako internet smeruje pakety, koľko potrebuješ."
+  }
+}
