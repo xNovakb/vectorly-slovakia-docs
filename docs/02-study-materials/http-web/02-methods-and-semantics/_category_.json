@@ -1,0 +1,8 @@
+{
+  "label": "Methods & Semantics",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "HTTP verbs, safety and idempotency, and where data belongs in a request."
+  }
+}

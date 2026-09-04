@@ -1,0 +1,8 @@
+{
+  "label": "HTTP & Web Fundamentals",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "The protocol underneath every web app: requests, status codes, headers, caching, security, and REST API design."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "REST & API Design",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "What REST actually means, designing a consistent API, versioning and pagination."
+  }
+}

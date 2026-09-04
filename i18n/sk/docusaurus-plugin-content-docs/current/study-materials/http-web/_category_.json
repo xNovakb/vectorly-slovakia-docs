@@ -1,0 +1,8 @@
+{
+  "label": "HTTP & Web Fundamentals",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Protokol pod každou webovou appkou: requesty, status kódy, hlavičky, cachovanie, bezpečnosť a návrh REST API."
+  }
+}

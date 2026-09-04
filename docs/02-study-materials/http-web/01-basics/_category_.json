@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "HttpWebBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "The request/response cycle and status codes — the shape of every HTTP exchange."
+  }
+}

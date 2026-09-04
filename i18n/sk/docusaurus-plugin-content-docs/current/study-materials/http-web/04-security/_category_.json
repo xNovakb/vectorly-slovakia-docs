@@ -1,0 +1,8 @@
+{
+  "label": "Bezpečnosť",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Same-origin policy, CORS, cookies a session, a klasické webové útoky, proti ktorým sa bránia."
+  }
+}

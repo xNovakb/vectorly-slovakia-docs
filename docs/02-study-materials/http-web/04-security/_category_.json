@@ -1,0 +1,8 @@
+{
+  "label": "Security",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Same-origin policy, CORS, cookies and sessions, and the classic web attacks they defend against."
+  }
+}

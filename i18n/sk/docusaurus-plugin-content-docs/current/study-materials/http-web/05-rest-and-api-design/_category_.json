@@ -1,0 +1,8 @@
+{
+  "label": "REST a Návrh API",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo REST naozaj znamená, návrh konzistentného API, verzovanie a stránkovanie."
+  }
+}

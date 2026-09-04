@@ -1,0 +1,8 @@
+{
+  "label": "Hlavičky a Obsah",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Hlavičky, na ktorých naozaj dennodenne záleží, content types, a HTTP cachovanie."
+  }
+}

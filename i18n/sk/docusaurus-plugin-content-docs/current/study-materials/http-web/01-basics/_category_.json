@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "HttpWebBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Cyklus request/response a status kódy — tvar každej HTTP výmeny."
+  }
+}
