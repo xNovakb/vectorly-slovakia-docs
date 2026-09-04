@@ -1,0 +1,8 @@
+{
+  "label": "Dispatchers & Threading",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Which dispatcher to use for what, switching context mid-coroutine, and thread safety with shared state."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Scope Functions",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "let, run, with, apply, also — what each one actually does, and how to pick the right one."
+  }
+}

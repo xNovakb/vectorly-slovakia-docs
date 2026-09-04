@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin Coroutines & Concurrency",
+  "position": 13,
+  "link": {
+    "type": "generated-index",
+    "description": "Structured concurrency, dispatchers, Flow, and the common mistakes that trip people up when writing async Kotlin."
+  }
+}

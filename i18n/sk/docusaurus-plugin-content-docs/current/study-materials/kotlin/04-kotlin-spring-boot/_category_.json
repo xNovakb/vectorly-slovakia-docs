@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin + Spring Boot",
+  "position": 14,
+  "link": {
+    "type": "generated-index",
+    "description": "Budovanie webových API v Kotline so Spring Boot: dependency injection, web vrstva, prístup k dátam, testovanie a produkčné úvahy."
+  }
+}

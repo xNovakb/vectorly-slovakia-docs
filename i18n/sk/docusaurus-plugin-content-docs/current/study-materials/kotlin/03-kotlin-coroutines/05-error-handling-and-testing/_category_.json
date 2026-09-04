@@ -1,0 +1,8 @@
+{
+  "label": "Spracovanie Chýb a Testovanie",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Ako sa výnimky šíria cez coroutines, supervisor joby, a testovanie suspending kódu."
+  }
+}

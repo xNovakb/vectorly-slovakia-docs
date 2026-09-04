@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "KotlinTestingBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "JUnit5 z Kotlinu, idiómy testovania špecifické pre Kotlin, a organizácia test suite."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Flow",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Asynchronous streams of values built on coroutines, their operators, and StateFlow vs. SharedFlow."
+  }
+}

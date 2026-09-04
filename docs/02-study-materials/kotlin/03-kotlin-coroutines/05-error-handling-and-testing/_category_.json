@@ -1,0 +1,8 @@
+{
+  "label": "Error Handling & Testing",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "How exceptions propagate through coroutines, supervisor jobs, and testing suspending code."
+  }
+}

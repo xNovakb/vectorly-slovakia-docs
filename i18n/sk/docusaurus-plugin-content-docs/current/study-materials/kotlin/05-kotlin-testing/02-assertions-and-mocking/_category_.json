@@ -1,0 +1,8 @@
+{
+  "label": "Assertions a Mocking",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Plynulé assertions Kotest a MockK, natívna mockovacia knižnica pre Kotlin."
+  }
+}

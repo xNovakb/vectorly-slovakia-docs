@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin Idioms & Advanced Features",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Písanie idiomatického Kotlinu, nie len Kotlinom-ozdobenej Javy: scope funkcie, extensions, sealed classes, generiká, DSL, a vzory, vďaka ktorým Kotlin kód znie ako Kotlin."
+  }
+}

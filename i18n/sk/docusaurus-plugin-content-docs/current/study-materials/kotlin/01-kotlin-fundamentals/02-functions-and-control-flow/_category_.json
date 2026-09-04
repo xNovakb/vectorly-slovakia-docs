@@ -1,0 +1,8 @@
+{
+  "label": "Funkcie a Riadenie Toku",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Syntax funkcií, if/when ako výrazy, a lambdy ako plnohodnotné hodnoty."
+  }
+}

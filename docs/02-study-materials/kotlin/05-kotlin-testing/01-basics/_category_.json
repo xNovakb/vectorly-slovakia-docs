@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "KotlinTestingBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "JUnit5 from Kotlin, Kotlin-specific test idioms, and organizing a test suite."
+  }
+}

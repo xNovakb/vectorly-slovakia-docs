@@ -1,0 +1,8 @@
+{
+  "label": "Dependency Injection",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo DI rieši, constructor injection kotlinovým spôsobom, a bean scopes."
+  }
+}

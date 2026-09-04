@@ -1,0 +1,8 @@
+{
+  "label": "Error Handling",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Exceptions in Kotlin, the Result type, and defining your own exception types."
+  }
+}

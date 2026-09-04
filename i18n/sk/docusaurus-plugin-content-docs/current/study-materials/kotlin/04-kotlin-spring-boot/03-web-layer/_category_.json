@@ -1,0 +1,8 @@
+{
+  "label": "Web Vrstva",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "REST kontroléry, validácia požiadaviek, a centralizované spracovanie výnimiek."
+  }
+}

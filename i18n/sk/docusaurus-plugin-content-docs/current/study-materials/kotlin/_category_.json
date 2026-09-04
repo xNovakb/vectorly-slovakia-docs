@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Jazyk, jeho idiomy, coroutines, Spring Boot, a testovanie — Kotlin od základov po prax."
+  }
+}

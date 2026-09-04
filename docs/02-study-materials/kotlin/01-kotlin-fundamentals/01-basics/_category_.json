@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "KotlinFundamentalsBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "What Kotlin is, variables and types, and the headline feature: null safety."
+  }
+}

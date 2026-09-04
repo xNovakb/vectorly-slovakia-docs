@@ -1,0 +1,8 @@
+{
+  "label": "Triedy a Objekty",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Konštruktory a vlastnosti, data classes, a object/companion object deklarácie."
+  }
+}

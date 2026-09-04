@@ -1,0 +1,8 @@
+{
+  "label": "Structured Concurrency",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Scopes, context, and cancellation — how a coroutine's lifetime is bound to where it was launched."
+  }
+}

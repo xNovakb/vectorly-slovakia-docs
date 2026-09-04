@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin Idioms & Advanced Features",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Writing idiomatic Kotlin, not just Kotlin-flavored Java: scope functions, extensions, sealed classes, generics, DSLs, and the patterns that make Kotlin code read like Kotlin."
+  }
+}

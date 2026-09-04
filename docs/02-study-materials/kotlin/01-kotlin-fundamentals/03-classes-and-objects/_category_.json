@@ -1,0 +1,8 @@
+{
+  "label": "Classes & Objects",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Constructors and properties, data classes, and object/companion object declarations."
+  }
+}

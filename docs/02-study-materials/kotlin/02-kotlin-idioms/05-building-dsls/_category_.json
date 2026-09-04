@@ -1,0 +1,8 @@
+{
+  "label": "Building DSLs",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Trailing lambdas, type-safe builders, and operator overloading — how Kotlin's DSLs actually work."
+  }
+}

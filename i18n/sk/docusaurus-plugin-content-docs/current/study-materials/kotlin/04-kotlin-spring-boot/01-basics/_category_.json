@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "KotlinSpringBootBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Prečo Kotlin a Spring Boot fungujú dobre spolu, štruktúra projektu, a konfigurácia."
+  }
+}

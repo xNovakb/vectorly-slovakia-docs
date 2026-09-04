@@ -1,0 +1,8 @@
+{
+  "label": "Classes: Advanced",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Sealed classes, value classes, and delegation — modeling restricted hierarchies and avoiding boilerplate."
+  }
+}

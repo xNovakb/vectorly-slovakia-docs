@@ -1,0 +1,8 @@
+{
+  "label": "Generics & Type System",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Generic functions and classes, declaration-site variance, and reified type parameters."
+  }
+}

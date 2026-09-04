@@ -1,0 +1,8 @@
+{
+  "label": "Error Handling",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Výnimky v Kotline, typ Result, a definovanie vlastných typov výnimiek."
+  }
+}

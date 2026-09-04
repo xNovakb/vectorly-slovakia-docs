@@ -1,0 +1,8 @@
+{
+  "label": "Kolekcie a Funkcionálny Štýl",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "List/Set/Map, funkcionálne operácie nad kolekciami, a lazy Sequences."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Základy",
+  "key": "KotlinFundamentalsBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Čo je Kotlin, premenné a typy, a hlavná funkcia: null safety."
+  }
+}

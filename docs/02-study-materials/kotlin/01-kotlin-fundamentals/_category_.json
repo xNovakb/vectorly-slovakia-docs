@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin Fundamentals",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "The Kotlin language itself: syntax, null safety, classes, collections, error handling, and Java interop."
+  }
+}

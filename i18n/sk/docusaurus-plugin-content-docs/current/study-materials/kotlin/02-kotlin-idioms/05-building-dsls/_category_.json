@@ -1,0 +1,8 @@
+{
+  "label": "Budovanie DSL",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Trailing lambdy, type-safe buildery, a operator overloading — ako Kotlin DSL naozaj fungujú."
+  }
+}

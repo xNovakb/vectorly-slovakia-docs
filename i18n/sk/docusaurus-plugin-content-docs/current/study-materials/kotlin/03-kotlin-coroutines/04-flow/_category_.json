@@ -1,0 +1,8 @@
+{
+  "label": "Flow",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Asynchrónne prúdy hodnôt postavené na coroutines, ich operátory, a StateFlow vs. SharedFlow."
+  }
+}

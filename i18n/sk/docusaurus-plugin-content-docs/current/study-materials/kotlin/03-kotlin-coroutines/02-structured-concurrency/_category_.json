@@ -1,0 +1,8 @@
+{
+  "label": "Štruktúrovaná Konkurencia",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Scopes, context, a zrušenie — ako je životnosť coroutine viazaná na miesto, kde bola spustená."
+  }
+}

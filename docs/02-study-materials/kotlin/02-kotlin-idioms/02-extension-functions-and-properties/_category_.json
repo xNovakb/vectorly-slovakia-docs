@@ -1,0 +1,8 @@
+{
+  "label": "Extension Functions & Properties",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Adding functions and properties to types you don't own, and lambda receivers as DSL groundwork."
+  }
+}

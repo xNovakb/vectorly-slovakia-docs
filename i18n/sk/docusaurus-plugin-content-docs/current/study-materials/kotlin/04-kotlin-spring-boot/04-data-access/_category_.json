@@ -1,0 +1,8 @@
+{
+  "label": "Prístup k Dátam",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Spring Data JPA, skutočné trecie body Kotlin/JPA, a písanie query."
+  }
+}

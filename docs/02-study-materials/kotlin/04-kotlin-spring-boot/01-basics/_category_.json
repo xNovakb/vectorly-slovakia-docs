@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "KotlinSpringBootBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Why Kotlin and Spring Boot fit together, project structure, and configuration."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Generiká a Typový Systém",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Generické funkcie a triedy, declaration-site variancia, a reified typové parametre."
+  }
+}

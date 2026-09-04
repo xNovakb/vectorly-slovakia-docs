@@ -1,0 +1,8 @@
+{
+  "label": "Extension Funkcie a Vlastnosti",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Pridávanie funkcií a vlastností k typom, ktoré nevlastníš, a lambda receivery ako základ DSL."
+  }
+}

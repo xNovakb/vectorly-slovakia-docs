@@ -1,0 +1,8 @@
+{
+  "label": "Triedy: Pokročilé",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Sealed classes, value classes, a delegácia — modelovanie obmedzených hierarchií a vyhýbanie sa boilerplate."
+  }
+}

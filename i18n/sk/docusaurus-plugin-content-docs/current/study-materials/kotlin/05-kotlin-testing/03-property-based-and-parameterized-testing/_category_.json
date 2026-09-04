@@ -1,0 +1,8 @@
+{
+  "label": "Parametrizované a Property-Based Testovanie",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Spustenie jedného testu naprieč mnohými vstupmi, generatívne property-based testovanie, a budovanie test fixtures."
+  }
+}

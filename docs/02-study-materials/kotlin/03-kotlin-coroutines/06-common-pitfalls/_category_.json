@@ -1,0 +1,8 @@
+{
+  "label": "Common Pitfalls",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "The mistakes that show up over and over: GlobalScope misuse, blocking calls, and picking the wrong concurrency model."
+  }
+}

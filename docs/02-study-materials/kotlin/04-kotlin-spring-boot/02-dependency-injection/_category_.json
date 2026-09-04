@@ -1,0 +1,8 @@
+{
+  "label": "Dependency Injection",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "What DI solves, constructor injection the Kotlin way, and bean scopes."
+  }
+}

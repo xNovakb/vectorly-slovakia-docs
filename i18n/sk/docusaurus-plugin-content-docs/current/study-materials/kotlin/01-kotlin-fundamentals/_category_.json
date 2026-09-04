@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin Fundamentals",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Samotný jazyk Kotlin: syntax, null safety, triedy, kolekcie, error handling, a Java interop."
+  }
+}

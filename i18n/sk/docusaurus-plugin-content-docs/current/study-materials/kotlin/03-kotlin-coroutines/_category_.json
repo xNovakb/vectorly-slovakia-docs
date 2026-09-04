@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin Coroutines & Concurrency",
+  "position": 13,
+  "link": {
+    "type": "generated-index",
+    "description": "Štruktúrovaná konkurencia, dispatchery, Flow, a bežné chyby, ktoré potrápia pri písaní asynchrónneho Kotlinu."
+  }
+}

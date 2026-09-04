@@ -1,0 +1,8 @@
+{
+  "label": "Kotlin",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "The language, its idioms, coroutines, Spring Boot, and testing — Kotlin end to end."
+  }
+}

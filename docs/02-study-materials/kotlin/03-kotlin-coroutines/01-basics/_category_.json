@@ -1,0 +1,9 @@
+{
+  "label": "Basics",
+  "key": "KotlinCoroutinesBasics",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "What a coroutine actually is, the suspend keyword, and launch vs. async."
+  }
+}

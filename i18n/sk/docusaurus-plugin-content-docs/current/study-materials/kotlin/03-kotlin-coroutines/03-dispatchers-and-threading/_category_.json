@@ -1,0 +1,8 @@
+{
+  "label": "Dispatchery a Vlákna",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Ktorý dispatcher použiť na čo, prepínanie kontextu uprostred coroutine, a thread safety pri zdieľanom stave."
+  }
+}
