@@ -28,8 +28,9 @@ Do not guess these — ask (`AskUserQuestion`), because they change the whole sh
 Before writing anything, output a folder tree (subfolders → pages, one line each with a short
 comment on what it covers) sized comparably to the existing topics (~4-6 subfolders, ~15-22 pages
 total). Point out 1-2 natural cross-link spots into other study-materials topics and into the real
-internal-operations docs. Wait for the user to confirm or adjust before scaffolding anything —
-don't write files on the first pass.
+internal-operations docs. The tree's last subfolder is always the review subfolder (see step 4b) —
+include it in the proposal, don't add it silently later. Wait for the user to confirm or adjust
+before scaffolding anything — don't write files on the first pass.
 
 ## 3. Scaffold
 
@@ -73,14 +74,68 @@ copy-pasteable examples per page, not one abstract example per concept.
   `/internal-operations/git-workflow`. Read those two files if unfamiliar with their current
   content before citing specifics from them (container names, key names, branch model) — don't
   invent details, and don't assume last session's facts still hold if the files may have changed.
+- **Every page ends with a `## Check yourself` section**: 3-5 questions on that page's content,
+  phrased so the reader answers out loud from memory (active recall) before checking. Each
+  question gets its own collapsed answer directly underneath, using a native `<details>` block —
+  collapsed by default so the reader commits to an answer before revealing it, but never a
+  separate answer key requiring a scroll away from the question. Plain list, no admonition
+  wrapper. Example (from a CORS-shaped page):
+
+  ```markdown
+  ## Check yourself
+
+  - What three parts make up an origin, and which of them differ between `https://api.example.com`
+    and `https://api.example.com:8443`?
+
+    <details>
+    <summary>Answer</summary>
+
+    Scheme, host, and port. The two example URLs differ only in port (443 vs. 8443) — same
+    scheme, same host, still two different origins.
+    </details>
+
+  - Why does CORS not protect an API from `curl` or a server-to-server request?
+
+    <details>
+    <summary>Answer</summary>
+
+    CORS is enforced by the browser reading response headers before handing the response to
+    page JavaScript — it's not a server-side access control. `curl` and server-to-server calls
+    never go through that browser enforcement layer at all.
+    </details>
+  ```
+
+  Keep each answer to 1-3 sentences — a pointer back to the reasoning, not a restatement of the
+  whole page. Indent the `<details>` block to align under its list item so it renders nested
+  inside that bullet, not as a new top-level block.
+
+### 4b. Review subfolder — category and topic-level self-test
+
+Two more layers of the same self-test, same collapsed-answer format as the per-page section —
+each question gets its own `<details>` answer directly under it, collapsed by default.
+
+- **Per-category review page**: the last page in every numbered subfolder (after its normal
+  pages), named `review-questions.md`, `sidebar_position` after the rest. 5-8 questions that make
+  the reader connect pages within that subfolder to each other (not just repeat one page's
+  section) — e.g. "how does an ETag interact with the `Cache-Control` header from the previous
+  page?" rather than a duplicate of either page's own questions.
+- **Topic-level capstone**: one final numbered subfolder, after all the real content subfolders
+  (e.g. `07-review/` if the topic has six content subfolders), containing a single
+  `review-questions.md`. 10-15 questions synthesizing across the *whole* topic — the kind that
+  only make sense once every subfolder is done (e.g. "how does HTTP/2 multiplexing change the
+  case for CDN edge caching made in the performance subfolder?"). Needs its own `_category_.json`
+  (EN + SK, generated-index pointing at that one page) like any other subfolder — check for label
+  collisions the same way (step 3).
 
 ## 5. Translate to SK
 
 Full parallel content, not a thin stub — same structure, same examples (commands/code stay in
-English/as-is, prose translated), same diagrams translated (mermaid labels too). Match the
-existing SK style already in this repo's other study-materials topics (informal "ty" register,
-technical terms kept in English where that's already the established convention — check a couple
-of existing SK pages for tone before starting if unsure).
+English/as-is, prose translated), same diagrams translated (mermaid labels too), including the
+`## Check yourself` section on every page and both review-subfolder pages — translate both the
+questions and their `<details>` answers, don't drop either. Match the existing SK style already in
+this repo's other study-materials topics (informal "ty" register, technical terms kept in English
+where that's already the established convention — check a couple of existing SK pages for tone
+before starting if unsure). Translate `<summary>Answer</summary>` to `<summary>Odpoveď</summary>`.
 
 ## 6. Verify
 
