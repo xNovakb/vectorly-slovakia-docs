@@ -67,3 +67,34 @@ pokrýva, ako to konkrétne vyzerá.
 Žiadny univerzálne nenahrádza REST — voľba závisí od konkrétneho konzumenta (verejné API vs.
 interná mikroslužba vs. mobilná appka s prísnymi obmedzeniami šírky pásma), nie všeobecné "lepšie"
 alebo "horšie."
+
+## Skontroluj sa
+
+- Čo znamená "bezstavové" pre REST API, a ako to súvisí s vlastnou bezstavovosťou HTTP?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Každá požiadavka musí obsahovať všetko potrebné na jej pochopenie — server nedrží žiadny
+  "konverzačný stav" klienta medzi požiadavkami. Je to naozaj len vlastná bezstavovosť HTTP,
+  zámerne aplikovaná na úrovni návrhu API, nie niečo nové.
+  </details>
+
+- Prečo nevnárať cestu zdroja viac ako 1-2 úrovne hlboko?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Rýchlo sa to stane neprehľadným — plochejší prístup s query parametrom
+  (`/orders?user_id=42`) je za tým bodom praktickejší.
+  </details>
+
+- Aký problém rieši GraphQL oproti REST, a čo za to obetuje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Umožňuje klientovi presne špecifikovať, ktoré polia chce, v jednej požiadavke, čím rieši
+  over/under-fetching — na úkor straty vstavaného HTTP-level cachovania REST, keďže GraphQL API je
+  zvyčajne jeden `POST /graphql` endpoint, ktorý HTTP cachovanie nevie rozlíšiť podľa query.
+  </details>

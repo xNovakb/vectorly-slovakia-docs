@@ -78,3 +78,44 @@ Same idea as ETag, but based on a timestamp instead of a content hash — coarse
 change that happens within the same second, and doesn't detect a revert to identical content the
 way a hash-based ETag naturally would), but simpler for a server to generate when a precise
 content hash isn't readily available.
+
+## Check yourself
+
+- What's the actual difference between `Cache-Control: no-cache` and `no-store`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `no-cache` means "cache it, but revalidate with the server before using it." `no-store` means
+  "never cache this at all."
+  </details>
+
+- What does an `ETag` let a client ask the server, and what does the server reply when nothing
+  changed?
+
+  <details>
+  <summary>Answer</summary>
+
+  It lets the client ask "is this still current" (via `If-None-Match`). If nothing changed, the
+  server replies `304 Not Modified` with no body.
+  </details>
+
+- Why does a `304 Not Modified` response have no body?
+
+  <details>
+  <summary>Answer</summary>
+
+  Because its whole point is avoiding re-sending data the client already has — including a body
+  would defeat the purpose.
+  </details>
+
+- Why is "cache invalidation," not a bad deploy, often the real cause of "I shipped a fix but users
+  still see the old version"?
+
+  <details>
+  <summary>Answer</summary>
+
+  Because the browser or CDN is still legitimately serving whatever it was told to cache — it's
+  almost always a `Cache-Control` header set too aggressively (or missing entirely), not a broken
+  deployment.
+  </details>

@@ -65,3 +65,35 @@ Header **names** are case-insensitive (`Content-Type` and `content-type` are the
 values usually aren't. A header can also legally appear multiple times in one message (commonly
 `Set-Cookie`, once per cookie being set) — code reading headers needs to handle that, not assume
 exactly one value per name.
+
+## Check yourself
+
+- What does `Content-Type` describe on a request, and what does it describe on a response — is it
+  the same thing both times?
+
+  <details>
+  <summary>Answer</summary>
+
+  On a request it describes the format of that request's own body (if it has one); on a response
+  it describes the format of the response body. Same header name, but each instance describes
+  whichever message it's attached to.
+  </details>
+
+- Why are header names case-insensitive but their values usually aren't?
+
+  <details>
+  <summary>Answer</summary>
+
+  Header names are just a protocol-level identifier being matched, so case doesn't matter; values
+  are actual data (e.g. a token, a MIME type) where casing can be meaningful.
+  </details>
+
+- Which header can legally appear multiple times in one response, and why does code reading
+  headers need to account for that?
+
+  <details>
+  <summary>Answer</summary>
+
+  `Set-Cookie` — once per cookie being set. Code reading headers has to handle multiple values per
+  name instead of assuming exactly one.
+  </details>

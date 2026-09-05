@@ -65,3 +65,34 @@ vynucovaný na oveľa viac fyzických miestach než jednom. Zle nakonfigurované
 spôsobia presne tie isté problémy na CDN edge, ako by spôsobili len s browser cachovaním, len vo
 väčšom, viditeľnejšom rozsahu, keďže to postihne každého používateľa zasahujúceho ten edge node,
 nie len jeden prehliadač.
+
+## Skontroluj sa
+
+- Prečo CDN pomáha aj vtedy, keď samotný origin server odpovedá okamžite?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Lebo latencia je obmedzená fyzickou vzdialenosťou — žiadna rýchlosť origin servera neodstráni
+  čas round-tripu na server, ktorý je fyzicky ďaleko. CDN edge node je fyzicky bližšie k
+  používateľovi.
+  </details>
+
+- Prečo sa dynamický alebo personalizovaný obsah predvolene necachuje na edge?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zlé cachovanie riskuje servírovanie súkromných alebo personalizovaných dát jedného používateľa
+  druhému.
+  </details>
+
+- Prečo mnoho build nástrojov vloží content hash do mena súboru (`app.a1b2c3.js`) namiesto
+  opätovného použitia rovnakého mena súboru pri každom deployi?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zmenený súbor dostane naozaj novú URL, čím sa cache invalidácii úplne vyhne namiesto potreby
+  explicitne purgnúť CDN alebo čakať na vypršanie cache.
+  </details>

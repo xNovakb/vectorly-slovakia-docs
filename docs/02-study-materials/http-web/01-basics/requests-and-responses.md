@@ -77,3 +77,42 @@ Others, like `Content-Type`, appear on both, describing the body in *that* parti
 Headers describe the message; the body *is* the message's actual payload. Keeping them distinct
 (separated by that blank line) is what lets a server or proxy read and act on headers — routing,
 auth checks, content negotiation — without having to parse or even fully receive the body first.
+
+## Check yourself
+
+- What three parts does every HTTP message have, request or response?
+
+  <details>
+  <summary>Answer</summary>
+
+  A start line (a request line or a status line), headers, and an optional body.
+  </details>
+
+- Name a header that only ever appears on requests, and one that only ever appears on responses —
+  why does each make sense only on that side?
+
+  <details>
+  <summary>Answer</summary>
+
+  `User-Agent` only appears on requests (it identifies who's asking); `Set-Cookie` only appears on
+  responses (it describes what's being sent back to the client) — each only makes sense from the
+  side that's actually asking or actually replying.
+  </details>
+
+- Why keep the body separate from the headers with a blank line, instead of mixing them together?
+
+  <details>
+  <summary>Answer</summary>
+
+  It lets a server or proxy read and act on headers — routing, auth checks, content negotiation —
+  without having to parse or even fully receive the body first.
+  </details>
+
+- With `curl -v`, how do you tell what your client sent from what the server sent back?
+
+  <details>
+  <summary>Answer</summary>
+
+  Lines starting with `>` are what your client sent; lines starting with `<` are what the server
+  sent back.
+  </details>

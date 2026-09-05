@@ -66,3 +66,35 @@ When a response looks wrong (garbled text, a browser refusing to render somethin
 failing to parse a body), checking `Content-Type` (and `charset` for text) with `curl -I` is
 often faster than looking anywhere else first — a large share of "the API is broken" bugs are
 actually a mislabeled or missing `Content-Type`.
+
+## Check yourself
+
+- Both `charset` and `Content-Encoding` use the word "encoding" — what's the actual difference
+  between what each one describes?
+
+  <details>
+  <summary>Answer</summary>
+
+  `charset` describes how bytes map to characters (text interpretation); `Content-Encoding`
+  describes compression applied to the body. Unrelated concerns that happen to share the word
+  "encoding."
+  </details>
+
+- What causes "mojibake" (garbled text like `Ã©` instead of `é`), concretely?
+
+  <details>
+  <summary>Answer</summary>
+
+  The bytes are correct, but the receiving side decoded them assuming the wrong charset.
+  </details>
+
+- What does the `;q=0.8` value in an `Accept` header do, and what should a server respond if it
+  truly can't satisfy any format the client listed?
+
+  <details>
+  <summary>Answer</summary>
+
+  It's a quality value ranking preference among multiple acceptable formats (1.0 = most
+  preferred). If the server truly can't satisfy any listed format, it should return
+  `406 Not Acceptable`.
+  </details>

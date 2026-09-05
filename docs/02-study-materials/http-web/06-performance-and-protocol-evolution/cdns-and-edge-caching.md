@@ -65,3 +65,33 @@ system with its own rules, it's the same HTTP caching contract, just enforced at
 physical locations than one. Misconfigured cache headers cause exactly the same problems at a CDN
 edge as they would with browser caching alone, just at a larger, more visible scale since it
 affects every user hitting that edge node, not just one browser.
+
+## Check yourself
+
+- Why does a CDN help even when the origin server itself responds instantly?
+
+  <details>
+  <summary>Answer</summary>
+
+  Because latency is bounded by physical distance — no amount of origin-server speed removes the
+  round-trip time to a server that's physically far away. A CDN edge node is physically closer to
+  the user.
+  </details>
+
+- Why is dynamic or personalized content typically not cached at the edge by default?
+
+  <details>
+  <summary>Answer</summary>
+
+  Caching it wrong risks serving one user's private or personalized data to another.
+  </details>
+
+- Why do many build tools put a content hash in a filename (`app.a1b2c3.js`) instead of reusing
+  the same filename on every deploy?
+
+  <details>
+  <summary>Answer</summary>
+
+  A changed file gets a genuinely new URL, sidestepping cache invalidation entirely instead of
+  needing to explicitly purge the CDN or wait for a cache to expire.
+  </details>

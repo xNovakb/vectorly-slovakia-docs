@@ -66,3 +66,35 @@ Keď odpoveď vyzerá zle (pokazený text, prehliadač odmietajúci niečo vykre
 zlyhávajúci pri parsovaní tela), kontrola `Content-Type` (a `charset` pre text) cez `curl -I` je
 často rýchlejšia než hľadanie kdekoľvek inde najprv — veľká časť bugov "API je pokazené" je v
 skutočnosti zle označený alebo chýbajúci `Content-Type`.
+
+## Skontroluj sa
+
+- `charset` aj `Content-Encoding` používajú slovo "encoding" — aký je skutočný rozdiel medzi tým,
+  čo každé z nich popisuje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `charset` popisuje, ako sa bajty mapujú na znaky (interpretácia textu); `Content-Encoding`
+  popisuje kompresiu aplikovanú na telo. Nesúvisiace záležitosti, ktoré náhodou zdieľajú slovo
+  "encoding."
+  </details>
+
+- Čo konkrétne spôsobuje "mojibake" (pokazený text ako `Ã©` namiesto `é`)?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Bajty sú správne, ale prijímajúca strana ich dekódovala s predpokladom zlého charsetu.
+  </details>
+
+- Čo robí hodnota `;q=0.8` v hlavičke `Accept`, a čo by mal server odpovedať, ak naozaj nedokáže
+  uspokojiť žiadny formát, ktorý klient uviedol?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Je to quality hodnota zoraďujúca preferenciu medzi viacerými akceptovateľnými formátmi (1.0 =
+  najpreferovanejšie). Ak server naozaj nedokáže uspokojiť žiadny uvedený formát, mal by vrátiť
+  `406 Not Acceptable`.
+  </details>

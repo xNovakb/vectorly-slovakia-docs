@@ -90,3 +90,35 @@ replacement for offset pagination.
 A collection that changes frequently while being paginated (a social feed, a live log stream) is
 the clearest case for cursor-based pagination; a mostly-static admin table with a page-number UI
 is a reasonable place for offset pagination's simplicity to win.
+
+## Check yourself
+
+- Name two API changes that don't need a new version, and two that do.
+
+  <details>
+  <summary>Answer</summary>
+
+  Don't need one: adding a new optional response field, adding a new endpoint. Do need one:
+  removing or renaming a field, changing a field's type or meaning.
+  </details>
+
+- Why is URL-path versioning the most common approach in practice, despite not being the
+  architecturally "purest" one?
+
+  <details>
+  <summary>Answer</summary>
+
+  It's immediately visible, trivially routable at the infrastructure level (a reverse proxy can
+  route `/v1/*` and `/v2/*` to entirely different backends), and easy for any client developer to
+  understand at a glance.
+  </details>
+
+- What correctness problem can offset-based pagination hit that cursor-based pagination avoids?
+
+  <details>
+  <summary>Answer</summary>
+
+  If a record is inserted or deleted between paginated requests, the offset shifts underneath you
+  — a client can see the same item twice or skip one. A cursor encodes a stable position instead
+  of a raw offset, so it isn't affected by concurrent inserts/deletes.
+  </details>

@@ -113,3 +113,34 @@ Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000
 Klient raz vygeneruje unikátny kľúč a pošle ho s každým retry pokusom *rovnakej* logickej
 operácie; server rozpozná opakovaný kľúč a vráti pôvodný výsledok namiesto vytvorenia druhej
 platby.
+
+## Skontroluj sa
+
+- Prečo zabaliť odpoveď kolekcie do objektu (`{"data": [...], "meta": {...}}`) namiesto vrátenia
+  holého JSON poľa na najvyššej úrovni?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zabalenie necháva priestor na neskoršie pridanie metadát (info o stránkovaní, celkový počet) bez
+  breaking zmeny — holé pole nemá kam toto dať bez zmeny základného tvaru odpovede.
+  </details>
+
+- Čo je zle na vrátení `200 OK` s `{"success": false}` v tele namiesto skutočného chybového status
+  kódu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Rozbíja to všeobecné HTTP nástroje — monitoring, cachovanie, retry logiku — ktoré skúmajú status
+  kód, nie ad-hoc tvar tela každej odpovede, aby zistili, či sa požiadavka podarila.
+  </details>
+
+- Aký problém rieši `Idempotency-Key`, ktorý samotné idempotentné HTTP metódy ešte nepokrývajú?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Umožňuje klientovi bezpečne zopakovať neidempotentný `POST` (napr. platbu) po network timeoute —
+  server rozpozná opakovaný kľúč a vráti pôvodný výsledok namiesto vytvorenia duplikátu.
+  </details>

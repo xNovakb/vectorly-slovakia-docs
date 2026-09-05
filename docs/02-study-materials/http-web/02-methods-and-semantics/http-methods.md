@@ -58,3 +58,34 @@ cached and safely retried automatically by a browser on a flaky connection; a `P
 can't be (browsers warn before resubmitting a form). This is why picking the *semantically*
 correct method matters even when, technically, your server code could handle any of them the same
 way — see [Idempotency & Safety](./idempotency-and-safety.md) for exactly what's being relied on.
+
+## Check yourself
+
+- What's the real difference between `PUT` and `PATCH`, and what's the classic bug from sending a
+  partial body with `PUT`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `PUT` sends the entire resource and replaces what's there — fields you omit are implicitly
+  wiped. `PATCH` sends only the fields that changed, leaving everything else untouched. The
+  classic bug: sending a partial body via `PUT` silently deletes whatever wasn't included.
+  </details>
+
+- Which method does a CORS preflight request use, and why that one specifically?
+
+  <details>
+  <summary>Answer</summary>
+
+  `OPTIONS` — it asks what methods/headers are allowed on a resource before the browser sends the
+  real cross-origin request.
+  </details>
+
+- Name a method that returns headers but never a body — what's it useful for?
+
+  <details>
+  <summary>Answer</summary>
+
+  `HEAD` — like `GET` but with no body, useful for checking whether a resource exists or how large
+  it is without downloading it.
+  </details>

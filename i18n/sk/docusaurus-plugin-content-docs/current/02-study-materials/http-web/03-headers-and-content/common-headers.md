@@ -65,3 +65,33 @@ curl -H "Authorization: Bearer abc123" https://api.example.com/me
 hlavička) — hodnoty zvyčajne áno. Hlavička sa tiež legálne môže objaviť viackrát v jednej správe
 (bežne `Set-Cookie`, raz na každú nastavovanú cookie) — kód čítajúci hlavičky s tým musí počítať,
 nie predpokladať presne jednu hodnotu na meno.
+
+## Skontroluj sa
+
+- Čo popisuje `Content-Type` na požiadavke, a čo popisuje na odpovedi — je to to isté oboje razy?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Na požiadavke popisuje formát tela tej požiadavky (ak nejaké má); na odpovedi popisuje formát
+  tela odpovede. Rovnaké meno hlavičky, ale každá inštancia popisuje tú správu, na ktorej je.
+  </details>
+
+- Prečo mená hlavičiek nerozlišujú veľké/malé písmená, ale ich hodnoty zvyčajne áno?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Mená hlavičiek sú len protokolový identifikátor, ktorý sa porovnáva, tak na veľkosti písmen
+  nezáleží; hodnoty sú skutočné dáta (napr. token, MIME typ), kde na veľkosti písmen môže záležať.
+  </details>
+
+- Ktorá hlavička sa môže legálne objaviť viackrát v jednej odpovedi, a prečo s tým kód čítajúci
+  hlavičky musí počítať?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `Set-Cookie` — raz na každú nastavovanú cookie. Kód čítajúci hlavičky musí zvládnuť viacero
+  hodnôt na meno, nie predpokladať presne jednu.
+  </details>

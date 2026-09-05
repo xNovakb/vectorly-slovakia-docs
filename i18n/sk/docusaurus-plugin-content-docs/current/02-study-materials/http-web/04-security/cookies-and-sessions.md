@@ -75,3 +75,35 @@ Bežná moderná otázka: uložiť auth token do cookie, alebo do `localStorage`
 niektoré CSRF úvahy, keďže sa nikdy automaticky nepripája k požiadavkám tak, ako cookies).
 Ani jedno nie je striktne univerzálna odpoveď — je to reálny kompromis medzi vystavením XSS a
 CSRF, nie vyriešená otázka s jednou zjavne správnou voľbou.
+
+## Skontroluj sa
+
+- Prečo na `HttpOnly` záleží pri session cookie, konkrétne proti akému druhu útoku?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zastaví JavaScript — vrátane skriptu útočníka vloženého cez XSS — v čítaní cookie vôbec. Je to
+  konkrétna obrana proti XSS kradnúcemu session token.
+  </details>
+
+- Aký je praktický rozdiel medzi `SameSite=Strict`, `Lax`, a `None`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `Strict` nikdy neposiela cookie cross-site vôbec. `Lax` ju posiela pri top-level navigácii
+  (kliknutie na odkaz), ale nie pri cross-site požiadavkách na pozadí. `None` ju posiela pri každej
+  cross-site požiadavke (a vyžaduje `Secure`).
+  </details>
+
+- Aký je kompromis medzi server-side session a token-based (JWT) session, konkrétne ohľadom
+  zrušenia prístupu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Server-side session sa ľahko zruší — jednoducho zmažeš záznam na strane servera — ale potrebuje
+  zdieľané úložisko session. Token-based session sa škáluje bez neho, ale nedá sa zrušiť jeden
+  token pred jeho prirodzeným vypršaním.
+  </details>

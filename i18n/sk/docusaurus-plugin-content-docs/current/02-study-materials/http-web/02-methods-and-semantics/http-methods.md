@@ -59,3 +59,34 @@ zvyčajne nemôže (prehliadače varujú pred opätovným odoslaním formulára)
 *sémanticky* správnej metódy záleží, aj keď by technicky kód tvojho servera mohol zvládnuť
 ktorúkoľvek z nich rovnako — pozri [Idempotencia a Bezpečnosť](./idempotency-and-safety.md), na
 čo sa presne spolieha.
+
+## Skontroluj sa
+
+- Aký je skutočný rozdiel medzi `PUT` a `PATCH`, a aký je klasický bug pri poslaní čiastočného
+  tela cez `PUT`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `PUT` pošle celý zdroj a nahradí, čo tam je — polia, ktoré vynecháš, sú implicitne vymazané.
+  `PATCH` pošle len polia, ktoré sa zmenili, všetko ostatné ostane nedotknuté. Klasický bug:
+  poslanie čiastočného tela cez `PUT` potichu vymaže, čo nebolo zahrnuté.
+  </details>
+
+- Ktorú metódu používa CORS preflight požiadavka, a prečo práve tú?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `OPTIONS` — spýta sa, aké metódy/hlavičky sú povolené na zdroji, predtým než prehliadač pošle
+  skutočnú cross-origin požiadavku.
+  </details>
+
+- Pomenuj metódu, ktorá vracia hlavičky, ale nikdy telo — na čo je to užitočné?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `HEAD` — ako `GET`, ale bez tela, užitočné na kontrolu, či zdroj existuje alebo aká je jeho
+  veľkosť, bez sťahovania.
+  </details>

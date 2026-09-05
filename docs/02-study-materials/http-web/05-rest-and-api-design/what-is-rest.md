@@ -67,3 +67,34 @@ covers what that looks like concretely.
 Neither replaces REST universally — the choice depends on the specific consumer (a public API vs.
 an internal microservice vs. a mobile app with strict bandwidth constraints), not a general
 "better" or "worse."
+
+## Check yourself
+
+- What does "stateless" mean for a REST API, and how does it relate to HTTP's own statelessness?
+
+  <details>
+  <summary>Answer</summary>
+
+  Each request must contain everything needed to understand it — the server holds no client
+  "conversation state" between requests. It's really just HTTP's own statelessness applied
+  deliberately at the API-design level, rather than something new.
+  </details>
+
+- Why not nest a resource path more than 1-2 levels deep?
+
+  <details>
+  <summary>Answer</summary>
+
+  It gets unwieldy fast — a flatter query-param approach (`/orders?user_id=42`) is more practical
+  past that point.
+  </details>
+
+- What problem does GraphQL solve relative to REST, and what does it give up to solve it?
+
+  <details>
+  <summary>Answer</summary>
+
+  It lets the client specify exactly which fields it wants in one request, solving over/under-
+  fetching — at the cost of losing REST's built-in HTTP-level caching, since a GraphQL API is
+  usually one `POST /graphql` endpoint HTTP caching can't distinguish by query.
+  </details>

@@ -89,3 +89,36 @@ stránkovanie.
 Kolekcia, ktorá sa často mení počas stránkovania (sociálny feed, live log stream), je najjasnejší
 prípad pre cursor-based stránkovanie; väčšinou statická admin tabuľka s UI čísel stránok je
 rozumné miesto, kde vyhráva jednoduchosť offset stránkovania.
+
+## Skontroluj sa
+
+- Pomenuj dve zmeny API, ktoré nepotrebujú novú verziu, a dve, ktoré áno.
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nepotrebujú: pridanie nového voliteľného poľa do odpovede, pridanie nového endpointu. Potrebujú:
+  odstránenie alebo premenovanie poľa, zmena typu alebo významu poľa.
+  </details>
+
+- Prečo je URL-path verzovanie v praxi najbežnejším prístupom, napriek tomu, že nie je
+  architektonicky "najčistejšie"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Je okamžite viditeľné, triviálne smerovateľné na úrovni infraštruktúry (reverse proxy vie
+  nasmerovať `/v1/*` a `/v2/*` na úplne rôzne backendy), a ľahko pochopiteľné pre akéhokoľvek
+  vývojára klienta na prvý pohľad.
+  </details>
+
+- Aký problém so správnosťou môže postihnúť offset-based stránkovanie, ktorému sa cursor-based
+  vyhne?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Ak sa medzi stránkovanými požiadavkami vloží alebo zmaže záznam, offset sa pod tebou posunie —
+  klient môže vidieť tú istú položku dvakrát alebo jednu preskočiť. Cursor kóduje stabilnú
+  pozíciu namiesto surového offsetu, tak ho súbežné vkladania/mazania neovplyvnia.
+  </details>

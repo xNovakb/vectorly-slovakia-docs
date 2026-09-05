@@ -72,3 +72,44 @@ Vidieť jeden z nich namiesto druhého zúži, kde hľadať najprv pri debugovan
 curl -o /dev/null -s -w "%{http_code}\n" https://example.com
 curl -I https://example.com          # len hlavičky, vrátane status riadku
 ```
+
+## Skontroluj sa
+
+- Aká jedna kontrola ("je toto 2xx") často stačí bez znalosti presného kódu — prečo to funguje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Lebo samotná prvá číslica klasifikuje výsledok (úspech, presmerovanie, chyba klienta, chyba
+  servera) — často stačí na rozhodnutie, ako reagovať, bez znalosti presného kódu.
+  </details>
+
+- Aký je skutočný rozdiel medzi `401` a `403`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `401` znamená "neviem, kto si" — vôbec neboli poskytnuté žiadne platné credentials. `403`
+  znamená "viem, kto si, a nemáš dovolené toto robiť."
+  </details>
+
+- Aký je rozdiel medzi `502` a `504`, a čo ti každý z nich hovorí o tom, kde hľadať najprv pri
+  debugovaní?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `502` znamená, že proxy dostal odpoveď, ale bola neplatná alebo nezmyselná — zvyčajne backend
+  spadol alebo sa správal zle. `504` znamená, že proxy nedostal žiadnu odpoveď načas — backend je
+  buď dole, alebo príliš pomalý. Jedno ukazuje na "čo prišlo späť," druhé na "nič neprišlo späť."
+  </details>
+
+- Ktorá trieda status kódu znamená "samotná požiadavka bola zlá," a ktorá znamená "požiadavka
+  bola v poriadku, ale server zlyhal"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `4xx` znamená, že samotná požiadavka bola zlá; `5xx` znamená, že požiadavka bola v poriadku, ale
+  server ju nezvládol spracovať.
+  </details>

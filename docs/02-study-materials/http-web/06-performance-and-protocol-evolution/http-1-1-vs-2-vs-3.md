@@ -75,3 +75,35 @@ application. What it does explain:
 - Why a slightly lossy network (mobile, weak Wi-Fi) can make an HTTP/2 site feel surprisingly slow
   despite multiplexing — a single dropped packet stalls the whole connection at the TCP layer,
   which is precisely the problem HTTP/3 targets.
+
+## Check yourself
+
+- What specific problem does HTTP/2 solve that HTTP/1.1 has, and what mechanism does it use to
+  solve it?
+
+  <details>
+  <summary>Answer</summary>
+
+  Head-of-line blocking at the HTTP layer (only one request at a time per connection). HTTP/2
+  fixes it by multiplexing multiple requests and responses over one TCP connection simultaneously.
+  </details>
+
+- What problem remains even after HTTP/2, and why does it exist "one layer down"?
+
+  <details>
+  <summary>Answer</summary>
+
+  Head-of-line blocking still happens, just moved to the TCP layer — TCP guarantees strict byte
+  order, so one lost packet blocks everything on the connection, even unrelated requests that
+  already arrived fine.
+  </details>
+
+- What does HTTP/3 change to fix that remaining problem, and why does that fix actually work?
+
+  <details>
+  <summary>Answer</summary>
+
+  HTTP/3 runs over QUIC (UDP) instead of TCP, implementing reliability per-stream instead of for
+  the whole connection — a lost packet only blocks the one stream it belongs to, not every other
+  in-flight request.
+  </details>

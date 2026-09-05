@@ -69,3 +69,36 @@ postavený `GET` endpoint — pozri prečo nebezpečné akcie nikdy nesmú použ
 
 Oboje nakoniec cieli na to isté — dôveru, ktorú server kladie do "požiadavka prišla s platnou
 session cookie, takže musí byť legitímna" — z dvoch rôznych uhlov.
+
+## Skontroluj sa
+
+- Čo naozaj zneužíva XSS, a čo naozaj zneužíva CSRF — jedna veta na každé?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  XSS zneužíva chýbajúce escapovanie výstupu, aby spustil vlastný JavaScript útočníka v
+  prehliadači obete. CSRF zneužíva automatické pripájanie cookies prehliadačom, aby ho oklamal
+  poslať požiadavku, ktorú používateľ nezamýšľal.
+  </details>
+
+- Pomenuj obe hlavné obrany proti CSRF, a čo presne každá z nich zastaví.
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `SameSite` cookies zastavia prehliadač v pripájaní cookie k cross-site požiadavke vôbec. CSRF
+  tokeny sú nepredvídateľná hodnota, ktorú sfalšovaná požiadavka nemôže vopred poznať,
+  kontrolovaná pri odoslaní.
+  </details>
+
+- Vie XSS čítať odpoveď požiadavky, ktorú spustí? Vie to CSRF? Prečo na tomto rozdiele záleží pre
+  to, čo každý útok naozaj dokáže dosiahnuť?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  XSS áno — je to vlastný JS útočníka bežiaci s plným prístupom k stránke. CSRF nie — útočník
+  nikdy nevidí odpoveď, len spustí požiadavku. Preto CSRF samotné dokáže spustiť nechcenú akciu,
+  ale nedokáže vytiahnuť dáta tak, ako XSS.
+  </details>

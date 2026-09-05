@@ -123,6 +123,10 @@
     "message": "Výkon a Vývoj Protokolu",
     "description": "The label for category 'Performance & Protocol Evolution' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.HttpWebReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.Docker & Containers": {
     "message": "Docker a Kontajnery",
     "description": "The label for category 'Docker & Containers' in sidebar 'studyMaterialsSidebar'"
@@ -430,6 +434,10 @@
   "sidebar.studyMaterialsSidebar.category.Performance & Protocol Evolution.link.generated-index.description": {
     "message": "HTTP/1.1 až HTTP/3, kompresia a CDN cachovanie.",
     "description": "The generated-index page description for category 'Performance & Protocol Evolution' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.HttpWebReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znovu prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
   },
   "sidebar.studyMaterialsSidebar.category.Docker & Containers.link.generated-index.description": {
     "message": "Kontajnery, image, Dockerfile, siete, Compose a ako táto firma reálne prevádzkuje weby v Dockeri.",

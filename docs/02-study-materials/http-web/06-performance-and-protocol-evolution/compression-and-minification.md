@@ -79,3 +79,35 @@ statistical redundancy in whatever bytes remain. Doing both stacks their benefit
 minification and relying on compression alone still ships noticeably more bytes, because gzip/br
 compress repetitive patterns well but don't specifically understand "this whitespace is
 semantically meaningless" the way a minifier does.
+
+## Check yourself
+
+- Why does compressing an already-gzipped file, or a JPEG, often not help — or even slightly
+  hurt?
+
+  <details>
+  <summary>Answer</summary>
+
+  They're already compressed — little redundancy is left to exploit, so another compression pass
+  wastes CPU for no benefit and can occasionally make the file slightly larger.
+  </details>
+
+- What's the actual difference between minification and HTTP compression? Is doing one enough on
+  its own?
+
+  <details>
+  <summary>Answer</summary>
+
+  Minification removes bytes never needed at runtime (whitespace, comments) at build time; HTTP
+  compression exploits statistical redundancy in whatever bytes remain, per request. Doing only
+  one still ships noticeably more bytes than doing both.
+  </details>
+
+- Which two headers negotiate HTTP compression, and what does each side put in it?
+
+  <details>
+  <summary>Answer</summary>
+
+  `Accept-Encoding` (the client lists what it can decompress) and `Content-Encoding` (the server
+  states which encoding it actually used).
+  </details>

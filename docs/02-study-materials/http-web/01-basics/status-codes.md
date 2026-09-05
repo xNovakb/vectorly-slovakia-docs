@@ -74,3 +74,45 @@ Seeing one over the other narrows down where to look first when debugging a depl
 curl -o /dev/null -s -w "%{http_code}\n" https://example.com
 curl -I https://example.com          # headers only, includes the status line
 ```
+
+## Check yourself
+
+- What single check ("is this a 2xx") often suffices without knowing the exact code — why does
+  that work?
+
+  <details>
+  <summary>Answer</summary>
+
+  Because the first digit alone classifies the outcome (success, redirect, client error, server
+  error) — often enough to decide how to react without needing the exact code.
+  </details>
+
+- What's the actual difference between `401` and `403`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `401` means "I don't know who you are" — no valid credentials were provided at all. `403` means
+  "I know who you are, and you're not allowed to do this."
+  </details>
+
+- What's the difference between `502` and `504`, and what does each tell you about where to look
+  first when debugging?
+
+  <details>
+  <summary>Answer</summary>
+
+  `502` means the proxy got a response, but it was invalid or garbage — usually the backend
+  crashed or misbehaved. `504` means the proxy got no response in time at all — the backend is
+  either down or too slow. One points at "what came back," the other at "nothing came back."
+  </details>
+
+- Which status class means "the request itself was wrong," and which means "the request was fine
+  but the server failed"?
+
+  <details>
+  <summary>Answer</summary>
+
+  `4xx` means the request itself was wrong; `5xx` means the request was fine but the server failed
+  to handle it.
+  </details>

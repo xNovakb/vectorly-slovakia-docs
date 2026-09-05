@@ -77,3 +77,35 @@ toho neplatí pre telo požiadavky.
 použi path segment, keď identifikuje *jeden konkrétny zdroj*, a query parameter, keď filtruje/
 upravuje *kolekciu*. Toto rozlíšenie má väčší význam pri návrhu reálneho API — pozri
 [Návrh Dobrého API](../05-rest-and-api-design/designing-a-good-api.md).
+
+## Skontroluj sa
+
+- Prečo by si nikdy nemal dať secret alebo token do query parametra, okrem toho, že to "vyzerá
+  zle" v URL?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Query parametre sa objavia v histórii prehliadača, prístupových logoch servera, a akomkoľvek
+  nástroji, ktorý loguje URL — secret tam skončí v čistom texte na oveľa viac miestach, než by
+  kedy skončilo telo. Môže tiež uniknúť cez hlavičku `Referer`.
+  </details>
+
+- Kedy zvolíš path segment namiesto query parametra na identifikáciu niečoho?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Path segment, keď identifikuje jeden konkrétny zdroj (`/users/42`); query parameter, keď
+  filtruje alebo upravuje kolekciu (`/users?role=admin`).
+  </details>
+
+- Pomenuj jednu vlastnosť, ktorú má telo požiadavky a query parametre nie, a jednu, ktorú majú
+  query parametre a telo požiadavky nie.
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Telo nemá žiadny praktický limit veľkosti vynucovaný protokolom a nedá sa dať do záložiek. Query
+  parametre sa dajú dať do záložiek/zdieľať ako súčasť URL, ale majú praktické limity dĺžky.
+  </details>

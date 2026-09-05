@@ -74,3 +74,34 @@ Siete) vyjedná HTTP verziu s klientom automaticky, transparentne pre appku. Čo
 - Prečo mierne stratová sieť (mobil, slabé Wi-Fi) môže spôsobiť, že HTTP/2 stránka pôsobí
   prekvapivo pomaly aj napriek multiplexingu — jeden zahodený paket zastaví celé spojenie na TCP
   vrstve, čo je presne problém, na ktorý cieli HTTP/3.
+
+## Skontroluj sa
+
+- Aký konkrétny problém rieši HTTP/2, ktorý má HTTP/1.1, a aký mechanizmus na to použije?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Head-of-line blocking na HTTP vrstve (len jedna požiadavka naraz na spojenie). HTTP/2 to rieši
+  multiplexingom viacerých požiadaviek a odpovedí cez jedno TCP spojenie súčasne.
+  </details>
+
+- Aký problém zostáva aj po HTTP/2, a prečo existuje "o jednu vrstvu nižšie"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Head-of-line blocking sa deje stále, len presunuté na TCP vrstvu — TCP garantuje striktné
+  poradie bajtov, tak jeden stratený paket zablokuje všetko na spojení, aj nesúvisiace
+  požiadavky, ktoré už v poriadku dorazili.
+  </details>
+
+- Čo HTTP/3 zmení, aby opravil tento zostávajúci problém, a prečo to naozaj funguje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  HTTP/3 beží cez QUIC (UDP) namiesto TCP, implementuje spoľahlivosť per-stream namiesto pre celé
+  spojenie — stratený paket blokuje len jeden stream, ku ktorému patrí, nie každú inú prebiehajúcu
+  požiadavku.
+  </details>

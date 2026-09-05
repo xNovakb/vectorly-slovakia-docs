@@ -70,3 +70,47 @@ ktorý niečo zmaže), naraz poruší každý jeden z týchto predpokladov — c
 prehliadača, a proxy všetky zaobchádzajú s `GET` ako s bezpečným na spekulatívne a opakované
 volanie.
 :::
+
+## Skontroluj sa
+
+- Čo znamená "bezpečná (safe)" pre metódu, a prečo sa na to môžu spoľahnúť crawlery a prefetching
+  prehliadača?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Bezpečná metóda sa konvenčne nemá meniť stav servera — len-na-čítanie. Crawlery a prefetching ju
+  môžu volať spekulatívne a opakovane bez rizika vedľajšieho účinku, pokiaľ appka konvenciu naozaj
+  rešpektuje.
+  </details>
+
+- Je `DELETE` idempotentný? Vysvetli, prečo jeho dvojité zavolanie stále počíta ako idempotentné,
+  aj keď sa odpoveď druhého volania líši od prvého.
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Áno. Prvé volanie zdroj zmaže; druhé nenájde nič na zmazanie (možno vráti 404 namiesto úspechu).
+  Ale konečný stav — zdroj neexistuje — je rovnaký oba razy, a práve tento konečný stav, nie
+  odpoveď, je to, čo "idempotentné" naozaj meria.
+  </details>
+
+- Prečo je automatické opakovanie `POST` pri zlyhaní siete riskantnejšie než automatické
+  opakovanie `PUT`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zahodený retry `POST` môže vytvoriť duplicitný zdroj (napr. druhú objednávku), keďže `POST` nie
+  je idempotentný. Opakovanie `PUT` s rovnakým telom necháva zdroj v rovnakom finálnom stave oba
+  razy, tak je automatické opakovanie neškodné.
+  </details>
+
+- Môže byť `PATCH` idempotentný, alebo nie? Daj príklad na oba prípady.
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Idempotentný: `PATCH`, ktorý nastaví pole na presnú hodnotu. Neidempotentný: `PATCH`, ktorý
+  znamená "zvýš tento počítadlo o 1" — jeho opakovanie mení výsledok pri každom volaní.
+  </details>

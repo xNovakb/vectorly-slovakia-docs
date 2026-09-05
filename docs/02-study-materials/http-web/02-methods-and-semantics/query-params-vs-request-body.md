@@ -74,3 +74,35 @@ a request body.
 use a path segment when it identifies *one specific resource*, and a query param when it's
 filtering/modifying *a collection*. This distinction matters more once designing a real API — see
 [Designing a Good API](../05-rest-and-api-design/designing-a-good-api.md).
+
+## Check yourself
+
+- Why should you never put a secret or token in a query parameter, beyond it just "looking bad" in
+  the URL?
+
+  <details>
+  <summary>Answer</summary>
+
+  Query params show up in browser history, server access logs, and any tool that logs URLs — a
+  secret there ends up in plaintext in far more places than a body ever would. It can also leak
+  via the `Referer` header when the page navigates elsewhere.
+  </details>
+
+- When do you choose a path segment over a query param for identifying something?
+
+  <details>
+  <summary>Answer</summary>
+
+  A path segment when it identifies one specific resource (`/users/42`); a query param when
+  filtering or modifying a collection (`/users?role=admin`).
+  </details>
+
+- Name one property a request body has that query params don't, and one property query params
+  have that a request body doesn't.
+
+  <details>
+  <summary>Answer</summary>
+
+  A body has no practical protocol-imposed size limit and isn't bookmarkable. Query params are
+  bookmarkable/shareable as part of the URL, but have practical length limits.
+  </details>

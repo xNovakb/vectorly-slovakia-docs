@@ -67,3 +67,45 @@ Building a `POST`/action-triggering endpoint that's reachable via `GET` (e.g. a 
 deletes something) breaks every one of these assumptions at once — crawlers, browser prefetching,
 and proxies all treat `GET` as safe to call speculatively and repeatedly.
 :::
+
+## Check yourself
+
+- What does "safe" mean for a method, and why can crawlers and browser prefetching rely on it?
+
+  <details>
+  <summary>Answer</summary>
+
+  A safe method isn't expected to change server state — read-only by convention. Crawlers and
+  prefetching can call it speculatively and repeatedly without risking a side effect, as long as
+  the app actually respects the convention.
+  </details>
+
+- Is `DELETE` idempotent? Explain why calling it twice still counts as idempotent, even if the
+  second call's response differs from the first.
+
+  <details>
+  <summary>Answer</summary>
+
+  Yes. The first call deletes the resource; the second finds nothing to delete (and might return
+  a 404 instead of a success). But the *end state* — the resource doesn't exist — is identical
+  either time, and that end state, not the response, is what "idempotent" actually measures.
+  </details>
+
+- Why is auto-retrying a `POST` on a network failure risky in a way auto-retrying a `PUT` isn't?
+
+  <details>
+  <summary>Answer</summary>
+
+  A dropped `POST` retry can create a duplicate resource (e.g. a second order), since `POST` isn't
+  idempotent. Retrying a `PUT` with the same body leaves the resource in the same final state
+  either way, so repeating it automatically is harmless.
+  </details>
+
+- Can `PATCH` be idempotent or not? Give an example of each case.
+
+  <details>
+  <summary>Answer</summary>
+
+  Idempotent: a `PATCH` that sets a field to an exact value. Not idempotent: a `PATCH` that means
+  "increment this counter by 1" — repeating it changes the result each time.
+  </details>

@@ -68,3 +68,36 @@ endpoint — see why unsafe actions must never use `GET`, in
 
 Both ultimately target the same thing — the trust a server places in "a request came with a valid
 session cookie, so it must be legitimate" — from two different angles.
+
+## Check yourself
+
+- What does XSS actually exploit, and what does CSRF actually exploit — one sentence each?
+
+  <details>
+  <summary>Answer</summary>
+
+  XSS exploits missing output escaping to run the attacker's own JavaScript in the victim's
+  browser. CSRF exploits the browser's automatic cookie attachment to trick it into sending a
+  request the user never intended.
+  </details>
+
+- Name both core defenses against CSRF, and what each one specifically stops.
+
+  <details>
+  <summary>Answer</summary>
+
+  `SameSite` cookies stop the browser from attaching the cookie to a cross-site request in the
+  first place. CSRF tokens are an unpredictable value a forged request can't know in advance,
+  checked on submit.
+  </details>
+
+- Can XSS read the response of the request it triggers? Can CSRF? Why does that difference
+  matter for what each attack can actually accomplish?
+
+  <details>
+  <summary>Answer</summary>
+
+  XSS can — it's the attacker's own JS running with full page access. CSRF can't — the attacker
+  never sees the response, only triggers the request. That's why CSRF alone can trigger unwanted
+  actions but can't exfiltrate data the way XSS can.
+  </details>

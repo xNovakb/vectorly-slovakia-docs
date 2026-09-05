@@ -79,3 +79,43 @@ Hlavičky popisujú správu; telo *je* skutočný payload správy. Udržanie ich
 tým prázdnym riadkom) je to, čo umožňuje serveru alebo proxy čítať a konať na základe hlavičiek —
 smerovanie, kontroly autentifikácie, content negotiation — bez toho, aby musel najprv parsovať
 alebo čo i len úplne prijať telo.
+
+## Skontroluj sa
+
+- Aké tri časti má každá HTTP správa, či už požiadavka alebo odpoveď?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Úvodný riadok (riadok požiadavky alebo status riadok), hlavičky, a voliteľné telo.
+  </details>
+
+- Pomenuj hlavičku, ktorá sa objaví len v požiadavkách, a jednu, ktorá sa objaví len v
+  odpovediach — prečo dáva zmysel každá len na tej svojej strane?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `User-Agent` sa objaví len v požiadavkách (identifikuje, kto sa pýta); `Set-Cookie` sa objaví
+  len v odpovediach (popisuje, čo sa posiela späť) — každá dáva zmysel len na strane, ktorá sa
+  naozaj pýta alebo naozaj odpovedá.
+  </details>
+
+- Prečo držať telo oddelené od hlavičiek prázdnym riadkom, namiesto ich zmiešania dokopy?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Umožňuje to serveru alebo proxy čítať a konať na základe hlavičiek — smerovanie, kontroly
+  autentifikácie, content negotiation — bez toho, aby musel najprv parsovať alebo čo i len úplne
+  prijať telo.
+  </details>
+
+- Pri `curl -v`, ako rozoznáš, čo poslal tvoj klient, od toho, čo poslal server späť?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Riadky začínajúce `>` sú to, čo poslal tvoj klient; riadky začínajúce `<` sú to, čo poslal
+  server späť.
+  </details>

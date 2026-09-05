@@ -74,3 +74,35 @@ with `HttpOnly` can't be read by JavaScript at all (safer against XSS stealing t
 considerations since it's never automatically attached to requests the way cookies are). Neither
 is a strictly universal answer — it's a real tradeoff between XSS and CSRF exposure, not a solved
 question with one obviously correct choice.
+
+## Check yourself
+
+- Why does `HttpOnly` matter for a session cookie, specifically against what kind of attack?
+
+  <details>
+  <summary>Answer</summary>
+
+  It stops JavaScript — including an attacker's script injected via XSS — from reading the cookie
+  at all. It's the specific defense against XSS stealing a session token.
+  </details>
+
+- What's the practical difference between `SameSite=Strict`, `Lax`, and `None`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `Strict` never sends the cookie cross-site at all. `Lax` sends it on top-level navigation
+  (clicking a link) but not on background cross-site requests. `None` sends it on every cross-site
+  request (and requires `Secure`).
+  </details>
+
+- What's the tradeoff between a server-side session and a token-based (JWT) session, specifically
+  around revoking access?
+
+  <details>
+  <summary>Answer</summary>
+
+  A server-side session is easy to revoke — just delete the server-side record — but needs a
+  shared session store. A token-based session scales without one, but can't be revoked before it
+  naturally expires.
+  </details>

@@ -112,3 +112,36 @@ Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000
 The client generates a unique key once and sends it with every retry attempt of the *same*
 logical operation; the server recognizes a repeated key and returns the original result instead
 of creating a second payment.
+
+## Check yourself
+
+- Why wrap a collection response in an object (`{"data": [...], "meta": {...}}`) instead of
+  returning a bare JSON array at the top level?
+
+  <details>
+  <summary>Answer</summary>
+
+  Wrapping leaves room to add metadata (pagination info, total count) later without a breaking
+  change — a bare array has nowhere to put that without changing the response's fundamental shape.
+  </details>
+
+- What's wrong with returning `200 OK` with `{"success": false}` in the body instead of an actual
+  error status code?
+
+  <details>
+  <summary>Answer</summary>
+
+  It breaks generic HTTP tooling — monitoring, caching, retry logic — that checks the status code,
+  not each response's own ad-hoc body shape, to determine success or failure.
+  </details>
+
+- What problem does an `Idempotency-Key` solve that HTTP's own idempotent methods don't already
+  cover?
+
+  <details>
+  <summary>Answer</summary>
+
+  It lets a client safely retry a non-idempotent `POST` (e.g. a payment) after a network timeout —
+  the server recognizes the repeated key and returns the original result instead of creating a
+  duplicate.
+  </details>

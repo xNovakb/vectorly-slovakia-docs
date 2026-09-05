@@ -73,3 +73,45 @@ HTTPS nie je samostatný protokol s inou sémantikou — je to presne ten istý 
 len bežiaci cez šifrované TLS spojenie. Všetko na tejto stránke a zvyšku tejto témy platí
 identicky pre oboje; samotná šifrovacia vrstva je pokrytá v
 [TLS a HTTPS](/sk/study-materials/networking/web-serving/tls-https) v téme Siete.
+
+## Skontroluj sa
+
+- Prečo sa HTTP nazýva bezstavové, a aký mechanizmus — nie súčasť samotného HTTP — je to, čo
+  naozaj robí "zostať prihlásený" pocitovo ako nepretržitú session?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  HTTP zaobchádza s každou požiadavkou nezávisle — server nemá vstavanú pamäť predchádzajúcich
+  požiadaviek. "Zostať prihlásený" je postavené nad tým pomocou cookies (session ID posielané
+  späť pri každej požiadavke), nie súčasť samotného protokolu.
+  </details>
+
+- Prečo nemôže server poslať dáta prehliadaču pomocou obyčajného HTTP samotného?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  HTTP je riadené požiadavkou — server môže len odpovedať na požiadavku, ktorú klient inicioval;
+  nemá kanál na kontaktovanie klienta bez vyzvania. Skutočný push potrebuje samostatný mechanizmus
+  (WebSockets, Server-Sent Events) navrstvený navrch.
+  </details>
+
+- Kde HTTP sedí vzhľadom na TCP, a akú úlohu má každá z tých dvoch vrstiev?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  HTTP je protokol aplikačnej vrstvy, ktorý jazdí na vrchu TCP (alebo QUIC/UDP pri HTTP/3). Úlohou
+  TCP je spoľahlivo doručiť bajty v poradí; úlohou HTTP je definovať, čo tie bajty znamenajú
+  (riadok požiadavky, hlavičky, voliteľné telo).
+  </details>
+
+- Je HTTPS iný protokol než HTTP, alebo ten istý plus niečo navyše? Čo je to "niečo navyše"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Ten istý protokol, tá istá request/response sémantika — HTTPS ho len beží cez šifrované TLS
+  spojenie.
+  </details>

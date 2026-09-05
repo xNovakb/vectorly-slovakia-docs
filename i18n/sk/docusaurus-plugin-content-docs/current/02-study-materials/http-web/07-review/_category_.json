@@ -1,0 +1,9 @@
+{
+  "label": "Zopakovanie",
+  "key": "HttpWebReview",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znovu prečítaj."
+  }
+}

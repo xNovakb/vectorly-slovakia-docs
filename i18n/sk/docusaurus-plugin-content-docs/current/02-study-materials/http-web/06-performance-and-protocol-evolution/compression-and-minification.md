@@ -80,3 +80,34 @@ odstraňuje bajty, ktoré runtime naozaj nikdy nepotrebuje (komentáre, medzery)
 minifikácie a spoliehanie sa len na kompresiu stále posiela citeľne viac bajtov, lebo gzip/br
 dobre komprimujú opakujúce sa vzory, ale konkrétne nechápu, že "táto medzera je sémanticky
 bezvýznamná" tak, ako to robí minifier.
+
+## Skontroluj sa
+
+- Prečo komprimovanie už-zgzipovaného súboru, alebo JPEG, často nepomôže — alebo dokonca mierne
+  uškodí?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Sú už skomprimované — ostáva málo redundancie na zneužitie, tak ďalší kompresný prechod plytvá
+  CPU bez prínosu a niekedy súbor mierne zväčší.
+  </details>
+
+- Aký je skutočný rozdiel medzi minifikáciou a HTTP kompresiou? Stačí spraviť len jedno z nich?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Minifikácia odstraňuje bajty, ktoré runtime nikdy nepotrebuje (medzery, komentáre), v build
+  čase; HTTP kompresia zneužíva štatistickú redundanciu v tom, čo z bajtov zostane, per-request.
+  Spraviť len jedno stále posiela citeľne viac bajtov než oboje.
+  </details>
+
+- Ktoré dve hlavičky vyjednávajú HTTP kompresiu, a čo do nej dá každá strana?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `Accept-Encoding` (klient uvedie, čo vie dekomprimovať) a `Content-Encoding` (server uvedie,
+  ktoré kódovanie naozaj použil).
+  </details>

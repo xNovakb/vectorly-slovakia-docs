@@ -71,3 +71,46 @@ HTTPS isn't a separate protocol with different semantics — it's the exact same
 model, just run over an encrypted TLS connection. Everything on this page and the rest of this
 topic applies identically to both; the encryption layer itself is covered in
 [TLS & HTTPS](/study-materials/networking/web-serving/tls-https) in the Networking topic.
+
+## Check yourself
+
+- Why is HTTP called stateless, and what mechanism — not part of HTTP itself — is what actually
+  makes "staying logged in" feel like a continuous session?
+
+  <details>
+  <summary>Answer</summary>
+
+  HTTP treats every request independently — the server has no built-in memory of previous
+  requests. "Staying logged in" is built on top using cookies (a session ID sent back on every
+  request), not part of the protocol itself.
+  </details>
+
+- Why can't a server push data to a browser using plain HTTP alone?
+
+  <details>
+  <summary>Answer</summary>
+
+  HTTP is request-driven — the server can only ever respond to a request the client initiated; it
+  has no channel to contact the client unprompted. Real push needs a separate mechanism
+  (WebSockets, Server-Sent Events) layered on top.
+  </details>
+
+- Where does HTTP sit relative to TCP, and what job does each of the two layers do?
+
+  <details>
+  <summary>Answer</summary>
+
+  HTTP is the application-layer protocol that rides on top of TCP (or QUIC/UDP for HTTP/3). TCP's
+  job is reliably delivering bytes in order; HTTP's job is defining what those bytes mean (a
+  request line, headers, an optional body).
+  </details>
+
+- Is HTTPS a different protocol from HTTP, or the same one plus something else? What's the
+  "something else"?
+
+  <details>
+  <summary>Answer</summary>
+
+  The same protocol, the same request/response semantics — HTTPS just runs it over an encrypted
+  TLS connection.
+  </details>

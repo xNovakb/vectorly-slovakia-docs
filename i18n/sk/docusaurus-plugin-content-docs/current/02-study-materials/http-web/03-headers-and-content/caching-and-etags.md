@@ -80,3 +80,43 @@ Rovnaká myšlienka ako ETag, ale založená na timestampe namiesto content hash
 detekovať zmenu, ktorá sa udeje v rámci tej istej sekundy, a nedetekuje vrátenie k identickému
 obsahu spôsobom, akým by to prirodzene urobil hash-based ETag), ale jednoduchšie pre server na
 vygenerovanie, keď presný content hash nie je ľahko dostupný.
+
+## Skontroluj sa
+
+- Aký je skutočný rozdiel medzi `Cache-Control: no-cache` a `no-store`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `no-cache` znamená "cachuj to, ale over si to so serverom pred použitím." `no-store` znamená
+  "toto nikdy necachuj vôbec."
+  </details>
+
+- Na čo sa klient vďaka `ETag` môže spýtať servera, a čo odpovie server, keď sa nič nezmenilo?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Umožňuje klientovi spýtať sa "je toto stále aktuálne" (cez `If-None-Match`). Ak sa nič
+  nezmenilo, server odpovie `304 Not Modified` bez tela.
+  </details>
+
+- Prečo `304 Not Modified` odpoveď nemá telo?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Lebo celý zmysel je vyhnúť sa opätovnému posielaniu dát, ktoré klient už má — zahrnutie tela by
+  poprelo tento zmysel.
+  </details>
+
+- Prečo je "cache invalidácia," nie zlý deploy, často skutočná príčina "nasadil som fix, ale
+  používatelia stále vidia starú verziu"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Lebo prehliadač alebo CDN stále legitímne servíruje to, čo mu bolo povedané cachovať — takmer
+  vždy ide o `Cache-Control` hlavičku nastavenú príliš agresívne (alebo úplne chýbajúcu), nie o
+  pokazený deploy.
+  </details>
