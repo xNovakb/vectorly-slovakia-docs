@@ -71,3 +71,32 @@ spôsoby presúvania dát medzi nimi:
 - **HEAD** — ukazovateľ na posledný commit na aktuálnej vetve.
 
 `git status` je v podstate diff report medzi všetkými troma.
+
+## Skontroluj sa
+
+- Aký je rozdiel medzi `git add -A` a `git add -p`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `git add -A` stagne všetko (nové, upravené, zmazané) naraz; `git add -p` ti umožní stagovať
+  interaktívne, hunk po hunku — užitočné na rozdelenie jednej edit session na viac čistých
+  commitov.
+  </details>
+
+- Uloží `git commit` celý tvoj working directory, alebo niečo užšie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Niečo užšie — uloží, čo je práve stagnuté. Čokoľvek si upravil, ale necommitol cez `git add`,
+  zostane mimo commitu.
+  </details>
+
+- Aké tri ukazovatele `git status` v podstate porovnáva?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Working directory, index (staging area), a HEAD (posledný commit na aktuálnej vetve).
+  </details>

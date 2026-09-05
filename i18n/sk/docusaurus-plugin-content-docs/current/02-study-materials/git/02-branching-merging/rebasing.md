@@ -103,3 +103,41 @@ Alebo to celkom zruš:
 ```bash
 git rebase --abort
 ```
+
+## Skontroluj sa
+
+- Prečo dostanú rebasnuté commity nové hashe, aj keď ich obsah je nezmenený?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Hash commitu závisí od jeho rodiča — rebase dá commitu iného rodiča, tak aj identický obsah
+  produkuje nový hash.
+  </details>
+
+- Aké je pravidlo palca pre to, kedy je rebase bezpečný?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nikdy nerebasuj vetvu, na ktorej pracujú aj iní ľudia — rebasuj voľne len na súkromnej vetve,
+  ktorej sa dotýkaš iba ty, keďže prepísanie už pushnutých/pullnutých commitov rozíde tvoju
+  históriu od ich histórie.
+  </details>
+
+- Pri interaktívnom rebase, aký je rozdiel medzi `squash` a `fixup`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Oboje zlúčia commit do predchádzajúceho; `squash` ponechá obe commit správy na spoločnú úpravu,
+  `fixup` zahodí správu zlučovaného commitu.
+  </details>
+
+- Ak rebase narazí na konflikt, spustíš po jeho oprave `git commit`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — spustíš `git rebase --continue`; rebase si dokončenie kroku obslúži sám.
+  </details>

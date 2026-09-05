@@ -66,3 +66,33 @@ git fsck --lost-found
 Reflog is **local only** — it isn't pushed, isn't in your clone if you clone fresh, and entries do
 eventually expire (default ~90 days, configurable via `gc.reflogExpire`). It's a great "I made a
 mistake five minutes ago" tool, not permanent storage.
+
+## Check yourself
+
+- When you "lose" a commit (bad reset, botched rebase, deleted branch), is the commit object
+  usually actually gone?
+
+  <details>
+  <summary>Answer</summary>
+
+  Usually not — the commit object typically still exists on disk, you just no longer have a
+  pointer (branch/tag) aimed at it. `git reflog` helps find it again.
+  </details>
+
+- Is the reflog pushed to the remote or included in a fresh clone?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it's local only; it isn't pushed and a fresh clone won't have it, and entries eventually
+  expire (default ~90 days).
+  </details>
+
+- After deleting a branch by mistake with `git branch -D`, how do you get it back?
+
+  <details>
+  <summary>Answer</summary>
+
+  Find its last commit via `git reflog` (or a remembered hash/PR link) and recreate the branch
+  there with `git switch -c <name> <hash>`.
+  </details>

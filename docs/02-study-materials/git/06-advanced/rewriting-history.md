@@ -58,3 +58,35 @@ Once something is on `main`/`develop` or another shared branch, treat it as perm
 If a rewrite on a shared branch is genuinely unavoidable (e.g. purging a leaked secret repo-wide),
 it has to be coordinated: announce it, have everyone re-clone or carefully rebase their own
 in-progress branches afterward, and force-push with the whole team's awareness — never silently.
+
+## Check yourself
+
+- What's the difference between what `rebase -i` can rewrite and what `git filter-repo` can
+  rewrite?
+
+  <details>
+  <summary>Answer</summary>
+
+  `rebase -i` edits/reorders/combines/drops your own recent commits; `git filter-repo` rewrites
+  *all* of history, needed for something like removing a file (a leaked secret) that was committed
+  everywhere throughout history.
+  </details>
+
+- If a secret was accidentally committed and then removed via a history rewrite, is the
+  credential safe again?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — anyone who already cloned/pulled still has it, and it may be cached by the hosting
+  platform; the leaked credential must be rotated regardless of the history rewrite.
+  </details>
+
+- What's the rule for when it's safe to rewrite commits?
+
+  <details>
+  <summary>Answer</summary>
+
+  Only rewrite commits that exist solely on your own branch, not yet pulled by anyone else — once
+  something is on a shared branch, use `git revert` instead.
+  </details>

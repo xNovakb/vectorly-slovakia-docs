@@ -64,3 +64,32 @@ git commit --no-verify -m "..."
 
 Skips `pre-commit`/`commit-msg`. Useful in genuine emergencies, but a hook you're routinely
 bypassing is a sign the hook itself needs fixing, not that `--no-verify` is the right habit.
+
+## Check yourself
+
+- Are `.git/hooks/` scripts committed and shared with teammates automatically?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — they live inside the local `.git` folder and aren't committed, so they only apply to that
+  one clone unless the team explicitly shares them via a tracked folder + `core.hooksPath`, or a
+  tool like Husky.
+  </details>
+
+- What does a nonzero exit code from a `pre-commit` hook do?
+
+  <details>
+  <summary>Answer</summary>
+
+  It blocks the commit from being created.
+  </details>
+
+- What does `git commit --no-verify` do, and when is it appropriate?
+
+  <details>
+  <summary>Answer</summary>
+
+  It bypasses `pre-commit`/`commit-msg` hooks — useful in genuine emergencies, but routinely
+  bypassing a hook signals the hook itself needs fixing.
+  </details>

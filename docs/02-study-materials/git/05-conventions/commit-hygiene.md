@@ -59,3 +59,32 @@ It's completely normal to commit `wip`, `fix typo`, `actually fix it` while work
 rule applies to what lands in **permanent, shared history** — clean these up with
 `rebase -i` before opening a PR, or let a squash-merge do it for you. See
 [Squash & Rebase](./squash-and-rebase.md).
+
+## Check yourself
+
+- What's a practical sign that a commit isn't atomic?
+
+  <details>
+  <summary>Answer</summary>
+
+  If you have to write "and" in the commit message to describe it, it's often actually two (or
+  more) separate commits.
+  </details>
+
+- Why does `git bisect` work poorly against a giant mixed commit?
+
+  <details>
+  <summary>Answer</summary>
+
+  Bisect only narrows down to the commit that introduced a bug — if that commit bundles several
+  unrelated changes, landing on it doesn't tell you which specific change caused the bug.
+  </details>
+
+- Does commit hygiene mean you can't commit "wip" or "fix typo" while working locally?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — messy local history is fine; the rule applies to what lands in permanent, shared history,
+  which gets cleaned up with `rebase -i` or a squash-merge before it's shared.
+  </details>

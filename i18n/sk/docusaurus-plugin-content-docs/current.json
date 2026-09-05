@@ -43,6 +43,10 @@
     "message": "Pokročilé",
     "description": "The label for category 'Advanced' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.GitReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.SSH & Networking": {
     "message": "SSH a Siete",
     "description": "The label for category 'SSH & Networking' in sidebar 'studyMaterialsSidebar'"
@@ -354,6 +358,10 @@
   "sidebar.studyMaterialsSidebar.category.Advanced.link.generated-index.description": {
     "message": "Submoduly, hooky, prepisovanie histórie a ďalšie pokročilé Git nástroje.",
     "description": "The generated-index page description for category 'Advanced' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.GitReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znovu prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
   },
   "sidebar.studyMaterialsSidebar.category.SSH & Networking.link.generated-index.description": {
     "message": "Servery, SSH, DNS a reverse proxy: toľko sietí, aby ste vedeli, ako doména skončí smerovaním na bežiacu aplikáciu.",

@@ -90,3 +90,32 @@ Merge zachová presne to, čo sa stalo (vrátane merge commitu); rebase prepíš
 vyzerala lineárne. Pozri [Rebasing](./rebasing.md) pre kompromis, a
 [Squash a Rebase](../05-conventions/squash-and-rebase.md) pre to, ktorý z nich tu skutočne
 používame.
+
+## Skontroluj sa
+
+- Kedy Git spraví fast-forward merge namiesto vytvorenia merge commitu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Keď sa cieľová vetva (napr. `main`) nepohla odkedy sa zlučovaná vetva od nej odvetvila — Git
+  jednoducho posunie ukazovateľ dopredu, žiadny merge commit netreba.
+  </details>
+
+- Pri merge konflikte, ktorej vetvy verzia sa objaví medzi `<<<<<<< HEAD` a `=======`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Verzia tvojej aktuálnej vetvy — verzia prichádzajúcej vetvy je medzi `=======` a
+  `>>>>>>> <vetva>`.
+  </details>
+
+- Čo vytvorí "dvoch rodičov" merge commitu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Three-way merge — Git porovná oba konce vetiev voči ich spoločnému predkovi a vytvorí commit
+  spájajúci obe histórie, s každým pôvodným koncom vetvy ako rodičom.
+  </details>

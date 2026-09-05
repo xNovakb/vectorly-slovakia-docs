@@ -69,3 +69,33 @@ git merge upstream/main       # bring upstream's changes into your local main
 git remote rename origin old-origin
 git remote remove old-origin
 ```
+
+## Check yourself
+
+- Why is `git fetch` always safe but `git pull` isn't necessarily?
+
+  <details>
+  <summary>Answer</summary>
+
+  `fetch` only updates your local record of what the remote has and never touches your working
+  directory; `pull` is fetch + integrate, which can create a merge commit or a conflict.
+  </details>
+
+- After `git push -u origin feature/login` once, what changes about future `git push`/`git pull`
+  on that branch?
+
+  <details>
+  <summary>Answer</summary>
+
+  They no longer need the remote/branch name specified — the branch now tracks that remote branch
+  automatically.
+  </details>
+
+- In the fork workflow, what do `origin` and `upstream` conventionally point to?
+
+  <details>
+  <summary>Answer</summary>
+
+  `origin` points at your own fork; `upstream` points at the original repo you forked from, so you
+  can pull in its latest changes.
+  </details>

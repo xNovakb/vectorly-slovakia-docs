@@ -76,3 +76,33 @@ Add it **before** you first commit those files — once a file is already tracke
 
 Useful starting points: [github.com/github/gitignore](https://github.com/github/gitignore) has
 ready-made `.gitignore` files per language/framework.
+
+## Check yourself
+
+- What's the difference between `git config --global` and running the same command without
+  `--global`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `--global` writes to `~/.gitconfig` and applies to every repo on the machine; without it, the
+  setting applies only to the current repo, overriding the global value there.
+  </details>
+
+- Why clone using the SSH URL instead of the HTTPS one if you've set up an SSH key?
+
+  <details>
+  <summary>Answer</summary>
+
+  The SSH URL is what actually uses your SSH key for authentication — cloning via HTTPS won't use
+  it, so you'd still be prompted for a password/token.
+  </details>
+
+- If a file is already tracked by Git, does adding it to `.gitignore` stop Git from tracking it?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — `.gitignore` only prevents *untracked* files from being tracked. An already-tracked file
+  needs `git rm --cached <file>` first.
+  </details>

@@ -89,3 +89,32 @@ git merge --abort
 Merge preserves exactly what happened (including a merge commit); rebase rewrites history to look
 linear. See [Rebasing](./rebasing.md) for the tradeoff, and
 [Squash & Rebase](../05-conventions/squash-and-rebase.md) for which one we actually use here.
+
+## Check yourself
+
+- When does Git perform a fast-forward merge instead of creating a merge commit?
+
+  <details>
+  <summary>Answer</summary>
+
+  When the target branch (e.g. `main`) hasn't moved since the branch being merged diverged from
+  it — Git just slides the pointer forward, no merge commit needed.
+  </details>
+
+- In a merge conflict, which branch's version appears between `<<<<<<< HEAD` and `=======`?
+
+  <details>
+  <summary>Answer</summary>
+
+  Your current branch's version — the incoming branch's version is between `=======` and
+  `>>>>>>> <branch>`.
+  </details>
+
+- What creates a merge commit's "two parents"?
+
+  <details>
+  <summary>Answer</summary>
+
+  A three-way merge — Git compares both branch tips against their common ancestor and creates a
+  commit combining both histories, with each original branch tip as a parent.
+  </details>

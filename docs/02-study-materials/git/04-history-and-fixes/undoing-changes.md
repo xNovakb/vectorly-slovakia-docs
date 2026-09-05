@@ -65,3 +65,34 @@ pushed/shared, because it doesn't change any existing commit hash.
 
 If you did use `--hard` by mistake and lost something, [Reflog & Recovery](./reflog-recovery.md)
 is often your way back.
+
+## Check yourself
+
+- Which of `restore`, `reset`, and `revert` is safe to use on a commit that's already been pushed
+  and pulled by someone else?
+
+  <details>
+  <summary>Answer</summary>
+
+  `git revert` — it adds a new commit undoing the change instead of rewriting history, so it
+  doesn't change any existing commit hash.
+  </details>
+
+- What's the difference between `git reset --soft`, `--mixed`, and `--hard`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `--soft` undoes the last commit but keeps changes staged; `--mixed` (the default) undoes it and
+  leaves changes unstaged in the working directory; `--hard` undoes it and discards the changes
+  entirely.
+  </details>
+
+- Does `git checkout <commit> -- file.txt` move your branch or HEAD?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it only brings that one file's content back from history; the branch pointer and HEAD stay
+  where they were.
+  </details>

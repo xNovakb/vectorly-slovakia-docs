@@ -69,3 +69,32 @@ git push origin :refs/tags/v2.4.1     # delete from remote
 
 Rare — only do this for a genuine mistake (wrong commit tagged), never to "redo" a release someone
 may have already pulled.
+
+## Check yourself
+
+- What's the difference between a lightweight and an annotated tag, and which should you use for
+  releases?
+
+  <details>
+  <summary>Answer</summary>
+
+  A lightweight tag is just a name pointing at a commit; an annotated tag is a full object
+  carrying metadata (tagger, date, message) and can be GPG-signed. Use annotated tags for
+  releases.
+  </details>
+
+- Does `git push` automatically push your tags?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — tags need their own push (`git push origin <tag>` or `git push origin --tags`).
+  </details>
+
+- In `vMAJOR.MINOR.PATCH`, which part corresponds to a `fix` commit and which to a `feat` commit?
+
+  <details>
+  <summary>Answer</summary>
+
+  A `fix` bumps PATCH; a `feat` bumps MINOR.
+  </details>

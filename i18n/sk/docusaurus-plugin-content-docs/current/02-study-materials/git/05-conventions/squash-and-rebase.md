@@ -86,3 +86,32 @@ oboch prípadoch **nikdy force-pushuj do `main` alebo `develop`**.
 
 Pozri [Rebasing → Interaktívny rebase](../02-branching-merging/rebasing.md#interaktívny-rebase)
 pre plnú mechaniku `rebase -i` a slovies `pick`/`squash`/`fixup`/`drop`.
+
+## Skontroluj sa
+
+- Aký je praktický rozdiel medzi rebase merge a squash merge, keď oboje vie produkovať lineárnu
+  históriu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Rebase merge stále zachová každý jednotlivý commit z vetvy (prehratý nad `main`); squash merge
+  ich všetky zbalí do jedného commitu na `main`, bez ohľadu na to, koľko ich bolo.
+  </details>
+
+- Prečo použiť `--force-with-lease` namiesto obyčajného `--force` po rebase?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `--force-with-lease` odmietne prepísať remote vetvu, ak na ňu niekto iný pushol odkedy si
+  naposledy fetchol; obyčajný `--force` takú kontrolu nemá a môže potichu zahodiť cudziu prácu.
+  </details>
+
+- Stratia sa neporiadne rozpracované commity na feature vetve po squash-merge?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — stále existujú v histórii PR na feature vetve/GitHub, len sa neprenesú na `main`.
+  </details>

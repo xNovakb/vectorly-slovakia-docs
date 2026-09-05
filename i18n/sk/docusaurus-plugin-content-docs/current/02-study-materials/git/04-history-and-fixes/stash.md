@@ -62,3 +62,32 @@ Oboje ti umožnia "ulož a vráť sa neskôr" — rozdiel je v rozsahu a vidite�
 Pravidlo: stashuj na päťminútové vyrušenie, commituj (aj neporiadne, na neskoršie squashnutie —
 pozri [Squash a Rebase](../05-conventions/squash-and-rebase.md)) pre čokoľvek, čo by ťa mrzelo
 stratiť, keby ti spadol notebook.
+
+## Skontroluj sa
+
+- Aký je rozdiel medzi `git stash pop` a `git stash apply`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `pop` aplikuje najnovší stash a odstráni ho zo zoznamu; `apply` ho aplikuje, ale ponechá aj v
+  zozname, užitočné na aplikovanie rovnakého stashu na viac vetiev.
+  </details>
+
+- Zobrazí sa stash v `git log` alebo prežije `git clone`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Ani jedno — stashe sú len lokálne, na rozdiel od WIP commitu, ktorý sa zobrazí v `git log` a
+  pushne sa po commitnutí.
+  </details>
+
+- Aké je pravidlo palca na výber medzi stash a WIP commitom?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Stashuj na rýchle, päťminútové vyrušenie pri prepnutí vetvy; commituj (aj neporiadne, na
+  neskoršie squashnutie) čokoľvek, čo by ťa mrzelo stratiť, keby ti spadol notebook.
+  </details>

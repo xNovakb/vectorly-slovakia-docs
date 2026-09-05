@@ -78,3 +78,32 @@ Pozri [`/sk/internal-operations/git-workflow`](/sk/internal-operations/git-workf
 politiku tejto organizácie — odľahčený model `main` + `develop` + `feature/*` (najbližšie k
 GitFlow vyššie, mínus `release/*`/`hotfix/*`), squash-mergovaný, s docs-only rýchlou cestou priamo
 do `main`. Túto stránku ber ako všeobecnú teóriu, tamtú ako záväznú prax.
+
+## Skontroluj sa
+
+- Vynucuje Git samotný nejaký konkrétny workflow model (feature-branch, trunk-based, GitFlow)?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — workflow model je čisto tímová konvencia o tom, ako sa vytvárajú a zlučujú vetvy; Git
+  nemá vstavaný koncept ani jedného z nich.
+  </details>
+
+- Ktorý workflow model uprednostňuje veľmi krátkotrvajúce vetvy alebo priame commitovanie do
+  `main` za feature flagmi?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Trunk-based development.
+  </details>
+
+- Čo tu organizácia skutočne používa, a ako sa to porovnáva s GitFlow?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Odľahčený model `main` + `develop` + `feature/*`, najbližšie k GitFlow, ale bez
+  `release/*`/`hotfix/*` vetiev, squash-mergovaný s docs-only rýchlou cestou do `main`.
+  </details>

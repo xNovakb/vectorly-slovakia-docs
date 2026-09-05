@@ -53,3 +53,43 @@ Git sleduje súbor v jednom z troch stavov, čo bude dôležité, keď začneš 
 
 Ďalšia stránka, [Inštalácia a Konfigurácia](./installation-config.md), ťa nastaví na to, aby si to
 mohol vyskúšať; [Základný Workflow](./core-workflow.md) prevedie súbor cez tieto tri stavy.
+
+## Skontroluj sa
+
+- Prečo Git ukladá commity ako snapshoty namiesto diffov, a aký praktický prínos to dáva?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Každý commit je kompletný snapshot — nezmenený súbor jednoducho ukazuje na ten istý uložený
+  blob ako predtým, namiesto opätovného kopírovania. Preto sú commity lacné a checkout starého
+  commitu je rýchly: Git ti odovzdá uložený snapshot namiesto prehrávania reťaze patchov.
+  </details>
+
+- Čo znamená "distribuovaný" pre Git konkrétne, v kontraste s SVN/CVS?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Každý klon obsahuje celú históriu — každý commit, vetvu a tag — nielen posledný snapshot.
+  SVN/CVS držia skutočnú históriu na centrálnom serveri; tvoj lokálny počítač má len aktuálne
+  súbory.
+  </details>
+
+- Pomenuj tri stavy, v ktorých môže byť súbor, a ktorý príkaz ho presunie z prvého do druhého.
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Working directory, staging area (index), a committed. `git add` presunie súbor z working
+  directory do staging area.
+  </details>
+
+- Prečo môžeš spraviť `git log` a prepínať vetvy bez pripojenia k sieti?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Tvoj klon už drží celú históriu lokálne — pripojenie k sieti potrebuješ len na synchronizáciu s
+  ostatnými cez push/pull/fetch.
+  </details>

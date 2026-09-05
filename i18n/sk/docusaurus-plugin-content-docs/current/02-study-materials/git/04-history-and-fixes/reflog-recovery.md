@@ -65,3 +65,33 @@ git fsck --lost-found
 Reflog je **len lokálny** — nepushuje sa, nie je v čerstvom klone, a záznamy naozaj časom
 expirujú (predvolene ~90 dní, konfigurovateľné cez `gc.reflogExpire`). Skvelý nástroj na "urobil
 som chybu pred piatimi minútami", nie trvalé úložisko.
+
+## Skontroluj sa
+
+- Keď "stratíš" commit (zlý reset, pokazený rebase, zmazaná vetva), je objekt commitu zvyčajne
+  naozaj preč?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zvyčajne nie — objekt commitu zvyčajne stále existuje na disku, len naň už nemáš ukazovateľ
+  (vetvu/tag). `git reflog` pomôže ho znovu nájsť.
+  </details>
+
+- Pushuje sa reflog na remote alebo je súčasťou čerstvého klonu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — je len lokálny; nepushuje sa a čerstvý klon ho nebude mať, a záznamy naozaj časom
+  expirujú (predvolene ~90 dní).
+  </details>
+
+- Po omylom zmazanej vetve pomocou `git branch -D`, ako ju dostaneš späť?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nájdi jej posledný commit cez `git reflog` (alebo zapamätaný hash/link na PR) a znovu vytvor
+  vetvu tam pomocou `git switch -c <meno> <hash>`.
+  </details>

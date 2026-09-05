@@ -104,3 +104,40 @@ Or bail out entirely:
 ```bash
 git rebase --abort
 ```
+
+## Check yourself
+
+- Why do rebased commits get new hashes even though their content is unchanged?
+
+  <details>
+  <summary>Answer</summary>
+
+  A commit's hash depends on its parent — rebasing gives the commit a different parent, so even
+  identical content produces a new hash.
+  </details>
+
+- What's the rule of thumb for when rebasing is safe?
+
+  <details>
+  <summary>Answer</summary>
+
+  Never rebase a branch other people are also working on — rebase freely only on a private branch
+  only you touch, since rewriting already-pushed/pulled commits diverges your history from theirs.
+  </details>
+
+- In an interactive rebase, what's the difference between `squash` and `fixup`?
+
+  <details>
+  <summary>Answer</summary>
+
+  Both combine a commit into the previous one; `squash` keeps both commit messages for you to
+  edit together, `fixup` discards the message of the commit being combined.
+  </details>
+
+- If a rebase hits a conflict, do you run `git commit` after fixing it?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — you run `git rebase --continue`; rebase handles finalizing the step itself.
+  </details>

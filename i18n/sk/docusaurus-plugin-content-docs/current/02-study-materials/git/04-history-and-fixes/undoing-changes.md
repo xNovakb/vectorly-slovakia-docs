@@ -66,3 +66,33 @@ lebo nemení žiadny existujúci commit hash.
 
 Ak si `--hard` použil omylom a niečo si stratil, [Reflog a Obnova](./reflog-recovery.md) je
 väčšinou cesta späť.
+
+## Skontroluj sa
+
+- Ktorý z `restore`, `reset`, a `revert` je bezpečné použiť na commit, ktorý už bol pushnutý a
+  niekto iný ho pullol?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `git revert` — pridá nový commit vracajúci zmenu namiesto prepísania histórie, tak nemení
+  žiadny existujúci commit hash.
+  </details>
+
+- Aký je rozdiel medzi `git reset --soft`, `--mixed`, a `--hard`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `--soft` vráti posledný commit, ale nechá zmeny stagnuté; `--mixed` (predvolený režim) ho vráti
+  a nechá zmeny vo working directory, unstagnuté; `--hard` ho vráti a zmeny úplne zahodí.
+  </details>
+
+- Hýbe `git checkout <commit> -- file.txt` vetvou alebo HEAD?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — len prinesie obsah jedného súboru späť z histórie; ukazovateľ vetvy a HEAD zostávajú tam,
+  kde boli.
+  </details>

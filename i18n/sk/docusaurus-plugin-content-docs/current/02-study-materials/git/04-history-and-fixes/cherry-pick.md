@@ -61,3 +61,31 @@ git cherry-pick --abort
   problém so správnosťou, len niečo, s čím treba počítať.
 - Nepoužívaj cherry-pick ako náhradu za merge/rebase celej vetvy — je to skalpel na jeden commit,
   nie všeobecný integračný nástroj.
+
+## Skontroluj sa
+
+- Prinesie cherry-pick commitu aj ostatné commity z jeho pôvodnej vetvy?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — skopíruje len ten jeden konkrétny commit na aktuálnu vetvu, vytvorí nový commit s
+  rovnakými zmenami, ale novým hashom.
+  </details>
+
+- Aký je klasický legitímny use case pre cherry-pick?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Backport hotfixu, ktorý pristál na `develop`, na už vyrezanú release vetvu, bez zlúčenia
+  ostatnej rozpracovanej práce z `develop` do release vetvy.
+  </details>
+
+- Mal by sa cherry-pick používať ako všeobecná náhrada za merge alebo rebase celej vetvy?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — je to skalpel na jeden commit, nie všeobecný integračný nástroj.
+  </details>

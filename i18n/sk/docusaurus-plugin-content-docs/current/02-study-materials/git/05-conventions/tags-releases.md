@@ -69,3 +69,30 @@ git push origin :refs/tags/v2.4.1     # zmaž z remote
 
 Zriedkavé — rob to len pri skutočnej chybe (otagovaný zlý commit), nikdy na "predělanie" release,
 ktorý si niekto mohol už stiahnuť.
+
+## Skontroluj sa
+
+- Aký je rozdiel medzi lightweight a annotated tagom, a ktorý by si mal použiť na releasy?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Lightweight tag je len meno ukazujúce na commit; annotated tag je plný objekt nesúci metadáta
+  (tagger, dátum, správa) a dá sa GPG podpísať. Na releasy používaj annotated tagy.
+  </details>
+
+- Pushuje `git push` automaticky aj tvoje tagy?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — tagy potrebujú vlastný push (`git push origin <tag>` alebo `git push origin --tags`).
+  </details>
+
+- V `vMAJOR.MINOR.PATCH`, ktorá časť zodpovedá `fix` commitu a ktorá `feat` commitu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `fix` zvýši PATCH; `feat` zvýši MINOR.
+  </details>

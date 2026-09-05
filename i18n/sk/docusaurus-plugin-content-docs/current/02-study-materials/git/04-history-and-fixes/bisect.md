@@ -71,3 +71,30 @@ zásahu.
   hádania.
 - `git bisect log` ukáže doterajšie kroky; `git bisect replay <súbor>` vie prehrať uloženú
   session.
+
+## Skontroluj sa
+
+- Zhruba koľko krokov potrebuje `git bisect` na prehľadanie 1 000 commitov?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zhruba log2(1000) ≈ 10 krokov, keďže ide o binárne vyhľadávanie.
+  </details>
+
+- Akú konvenciu exit kódu využíva `git bisect run` na automatické posúdenie dobrý/zlý?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nulový exit kód znamená "dobrý", nenulový "zlý" — rovnaká konvencia ako pri akomkoľvek shell
+  skripte/CI checku.
+  </details>
+
+- Čo urobíš, ak sa commit v bisect rozsahu naozaj nedá otestovať (napr. sa nezostaví)?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Preskoč ho pomocou `git bisect skip` namiesto hádania.
+  </details>

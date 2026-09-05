@@ -62,3 +62,32 @@ Both let you "save and come back later" — the difference is scope and visibili
 Rule of thumb: stash for a five-minute interruption, commit (even messily, to be squashed later —
 see [Squash & Rebase](../05-conventions/squash-and-rebase.md)) for anything you'd be upset to lose
 if your laptop died.
+
+## Check yourself
+
+- What's the difference between `git stash pop` and `git stash apply`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `pop` applies the most recent stash and removes it from the list; `apply` applies it but keeps
+  it in the list too, useful for applying the same stash to more than one branch.
+  </details>
+
+- Does a stash show up in `git log` or survive a `git clone`?
+
+  <details>
+  <summary>Answer</summary>
+
+  No to both — stashes are local only, unlike a WIP commit which shows in `git log` and gets
+  pushed once committed.
+  </details>
+
+- What's the rule of thumb for choosing stash vs. a WIP commit?
+
+  <details>
+  <summary>Answer</summary>
+
+  Stash for a quick, five-minute branch-switch interruption; commit (even messily, to be squashed
+  later) for anything you'd be upset to lose if your laptop died.
+  </details>

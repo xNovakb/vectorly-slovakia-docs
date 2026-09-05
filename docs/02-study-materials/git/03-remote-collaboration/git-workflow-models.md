@@ -78,3 +78,32 @@ See [`/internal-operations/git-workflow`](/internal-operations/git-workflow) for
 organization's real policy — a lightweight `main` + `develop` + `feature/*` model (closest to
 GitFlow above, minus `release/*`/`hotfix/*`), squash-merged, with a docs-only fast path straight
 to `main`. Treat this page as the general theory, that page as the binding practice.
+
+## Check yourself
+
+- Does Git itself enforce any particular workflow model (feature-branch, trunk-based, GitFlow)?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — a workflow model is purely a team convention about how branches are created and merged;
+  Git has no built-in concept of any of them.
+  </details>
+
+- Which workflow model favors very short-lived branches or committing straight to `main` behind
+  feature flags?
+
+  <details>
+  <summary>Answer</summary>
+
+  Trunk-based development.
+  </details>
+
+- What does this org actually use, and how does it compare to GitFlow?
+
+  <details>
+  <summary>Answer</summary>
+
+  A lightweight `main` + `develop` + `feature/*` model, closest to GitFlow but without
+  `release/*`/`hotfix/*` branches, squash-merged with a docs-only fast path to `main`.
+  </details>

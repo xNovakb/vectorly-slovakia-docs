@@ -60,3 +60,32 @@ Je úplne normálne commitovať `wip`, `fix typo`, `actually fix it` počas prá
 platí pre to, čo pristane v **trvalej, zdieľanej histórii** — vyčisti to pomocou `rebase -i` pred
 otvorením PR, alebo to za teba spraví squash-merge. Pozri
 [Squash a Rebase](./squash-and-rebase.md).
+
+## Skontroluj sa
+
+- Aké je praktické znamenie, že commit nie je atomický?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Ak musíš do commit správy napísať "a" na jeho popis, často to znamená, že by mali byť commity
+  dva (alebo viac).
+  </details>
+
+- Prečo `git bisect` funguje zle proti obrovskému zmiešanému commitu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Bisect len zúži na commit, ktorý zaviedol bug — ak tento commit zväzuje niekoľko nesúvisiacich
+  zmien, pristátie na ňom ti nepovie, ktorá konkrétna zmena bug spôsobila.
+  </details>
+
+- Znamená hygiena commitov, že nemôžeš commitovať "wip" alebo "fix typo" počas lokálnej práce?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — neporiadna lokálna história je v poriadku; pravidlo platí pre to, čo pristane v trvalej,
+  zdieľanej histórii, čo sa vyčistí pomocou `rebase -i` alebo squash-merge pred zdieľaním.
+  </details>

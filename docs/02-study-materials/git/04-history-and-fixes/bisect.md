@@ -69,3 +69,31 @@ input from you.
 - Skip a commit that can't be tested (e.g. it doesn't build) with `git bisect skip` instead of
   guessing.
 - `git bisect log` shows the steps so far; `git bisect replay <file>` can replay a saved session.
+
+## Check yourself
+
+- Roughly how many steps does `git bisect` need to search 1,000 commits?
+
+  <details>
+  <summary>Answer</summary>
+
+  About log2(1000) ≈ 10 steps, since it's a binary search.
+  </details>
+
+- What exit code convention does `git bisect run` rely on to judge good vs. bad automatically?
+
+  <details>
+  <summary>Answer</summary>
+
+  Zero exit code means "good", nonzero means "bad" — the same convention as any shell script/CI
+  check.
+  </details>
+
+- What do you do if a commit in the bisect range can't actually be tested (e.g. it doesn't
+  build)?
+
+  <details>
+  <summary>Answer</summary>
+
+  `git bisect skip` it instead of guessing good or bad.
+  </details>

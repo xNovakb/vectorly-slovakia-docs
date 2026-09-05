@@ -69,3 +69,33 @@ more involved than with a submodule.
 For most internal "shared code between our own repos" needs, a published package (npm, etc.) is
 usually simpler than either — reach for submodules/subtrees only when publishing a package isn't
 practical.
+
+## Check yourself
+
+- What does a submodule actually store in your repo — the other repo's files, or something else?
+
+  <details>
+  <summary>Answer</summary>
+
+  A pointer to a specific commit of the other repo, not the other repo's files themselves —
+  cloning needs an extra step (`--recurse-submodules` or `submodule update --init`) to actually
+  pull the contents.
+  </details>
+
+- Does a subtree keep the inner repo as an independent Git repo?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — a subtree copies the other repo's files directly into your repo's history as regular
+  committed files, blending its history into yours.
+  </details>
+
+- For most internal "shared code between our own repos" needs, what's usually simpler than
+  either submodules or subtrees?
+
+  <details>
+  <summary>Answer</summary>
+
+  A published package (e.g. an npm package).
+  </details>

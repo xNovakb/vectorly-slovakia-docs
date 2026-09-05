@@ -87,3 +87,34 @@ either way, **never force-push to `main` or `develop`**.
 
 See [Rebasing → Interactive rebase](../02-branching-merging/rebasing.md#interactive-rebase) for
 the full mechanics of `rebase -i` and the `pick`/`squash`/`fixup`/`drop` verbs.
+
+## Check yourself
+
+- What's the practical difference between a rebase merge and a squash merge, given both can
+  produce a linear history?
+
+  <details>
+  <summary>Answer</summary>
+
+  A rebase merge still keeps every individual commit from the branch (replayed on top of `main`);
+  a squash merge collapses all of them into a single commit on `main`, regardless of how many
+  there were.
+  </details>
+
+- Why use `--force-with-lease` instead of plain `--force` after a rebase?
+
+  <details>
+  <summary>Answer</summary>
+
+  `--force-with-lease` refuses to overwrite the remote branch if someone else pushed to it since
+  your last fetch; plain `--force` has no such check and can silently discard someone else's work.
+  </details>
+
+- Do the messy in-progress commits on a feature branch get lost after a squash-merge?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — they still exist in the PR's history on the feature branch/GitHub, they're just not
+  carried onto `main`.
+  </details>

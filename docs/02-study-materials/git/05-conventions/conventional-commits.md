@@ -74,3 +74,30 @@ Don't write the type/scope and then repeat it in prose:
 ```
 
 The type already says "this is a fix" — spend the summary explaining *what* changed instead.
+
+## Check yourself
+
+- What does a `BREAKING CHANGE:` footer trigger under semver automation?
+
+  <details>
+  <summary>Answer</summary>
+
+  A major version bump (as opposed to `fix` → patch, `feat` → minor).
+  </details>
+
+- What's wrong with a message like `fix: fix bug where login fails`?
+
+  <details>
+  <summary>Answer</summary>
+
+  It repeats the type ("fix") in the summary text instead of using that space to explain what
+  specifically changed.
+  </details>
+
+- What two things does a Conventional Commits type enable automating?
+
+  <details>
+  <summary>Answer</summary>
+
+  Changelog generation and semver version bumps, both driven by reading the commit type.
+  </details>

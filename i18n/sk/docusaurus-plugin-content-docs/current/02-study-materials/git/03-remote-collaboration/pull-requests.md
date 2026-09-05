@@ -55,3 +55,32 @@ Dva bežné modely, kto môže pushovať vetvy:
 Táto organizácia používa model spoločného repozitára so štruktúrou vetiev
 `main`/`develop`/`feature` — pozri [Modely Git Workflow](./git-workflow-models.md) a reálnu
 politiku na [`/sk/internal-operations/git-workflow`](/sk/internal-operations/git-workflow).
+
+## Skontroluj sa
+
+- Je pull/merge request koncept Gitu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — je to funkcia, ktorú pridáva hostingová platforma (GitHub/GitLab) navyše k obyčajnému
+  Gitu; samotný Git nemá koncept PR.
+  </details>
+
+- Ak pushneš ďalšie commity na vetvu, ktorá má už otvorený PR, treba niečo znovu otvárať?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — PR sa automaticky aktualizuje o nové commity.
+  </details>
+
+- Aký je kľúčový rozdiel medzi modelom spoločného repozitára a fork-based modelom?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  V spoločnom repozitári každý pushuje feature vetvy priamo do rovnakého repozitára; vo
+  fork-based modeli pushuješ do vlastnej forknutej kópie a otvoríš PR z forku do originálneho
+  repozitára — čo vyžaduje nastavenie remotov `origin`/`upstream`.
+  </details>

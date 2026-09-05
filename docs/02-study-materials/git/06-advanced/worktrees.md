@@ -61,3 +61,33 @@ git worktree prune
 
 Worktrees are the more efficient version of "just clone it again into another folder" — same
 benefit (two working directories at once), without duplicating the entire repo's history on disk.
+
+## Check yourself
+
+- What problem does `git worktree` solve that would otherwise require stashing?
+
+  <details>
+  <summary>Answer</summary>
+
+  It lets you check out a different branch (e.g. `main`, to fix an urgent bug) in a completely
+  separate folder, without disturbing your current uncommitted work on another branch.
+  </details>
+
+- Do multiple worktrees share the same commit history/objects, or does each worktree duplicate
+  the repo?
+
+  <details>
+  <summary>Answer</summary>
+
+  They share the same underlying repo/history (same `.git`, same remotes, same objects) — much
+  lower disk usage than a second full `git clone`.
+  </details>
+
+- What do you need to run after deleting a worktree folder by hand instead of using
+  `git worktree remove`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `git worktree prune`, to clean up the stale metadata left behind.
+  </details>

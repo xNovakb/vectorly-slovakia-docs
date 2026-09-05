@@ -77,3 +77,32 @@ Pridaj ho **pred** prvým commitnutím týchto súborov — akonáhle je súbor 
 
 Užitočný štartovací bod: [github.com/github/gitignore](https://github.com/github/gitignore) má
 hotové `.gitignore` súbory podľa jazyka/frameworku.
+
+## Skontroluj sa
+
+- Aký je rozdiel medzi `git config --global` a spustením toho istého príkazu bez `--global`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `--global` zapíše do `~/.gitconfig` a platí pre každý repozitár na počítači; bez neho platí
+  nastavenie len pre aktuálny repozitár, kde prepíše globálnu hodnotu.
+  </details>
+
+- Prečo klonovať pomocou SSH URL namiesto HTTPS, ak máš nastavený SSH kľúč?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  SSH URL je to, čo naozaj použije tvoj SSH kľúč na autentifikáciu — klonovanie cez HTTPS ho
+  nepoužije, tak by si bol stále vyzvaný na heslo/token.
+  </details>
+
+- Ak je súbor už trackovaný Gitom, zastaví jeho pridanie do `.gitignore` Git v jeho trackovaní?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — `.gitignore` zabráni len trackovaniu *netrackovaných* súborov. Už trackovaný súbor
+  potrebuje najprv `git rm --cached <súbor>`.
+  </details>

@@ -75,3 +75,30 @@ Nepíš typ/scope a potom ho zopakuj v texte:
 ```
 
 Typ už hovorí "toto je fix" — zhrnutie použi na vysvetlenie *čo* sa presne zmenilo.
+
+## Skontroluj sa
+
+- Čo spúšťa pätička `BREAKING CHANGE:` pri semver automatizácii?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Major version bump (na rozdiel od `fix` → patch, `feat` → minor).
+  </details>
+
+- Čo je zle na správe ako `fix: fix bug where login fails`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Opakuje typ ("fix") v texte zhrnutia namiesto toho, aby ten priestor využila na vysvetlenie, čo
+  konkrétne sa zmenilo.
+  </details>
+
+- Aké dve veci umožňuje typ Conventional Commits automatizovať?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Generovanie changelogu a semver version bumpy, oboje riadené čítaním typu commitu.
+  </details>

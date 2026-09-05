@@ -55,3 +55,33 @@ Two common models for who can push branches:
 This org uses the shared-repo model with a `main`/`develop`/`feature` branch structure — see
 [Git Workflow Models](./git-workflow-models.md) and the actual policy at
 [`/internal-operations/git-workflow`](/internal-operations/git-workflow).
+
+## Check yourself
+
+- Is a pull/merge request a Git concept?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it's a feature the hosting platform (GitHub/GitLab) adds on top of plain Git; Git itself
+  has no concept of a PR.
+  </details>
+
+- If you push more commits to a branch that already has an open PR, do you need to reopen
+  anything?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — the PR updates automatically to include the new commits.
+  </details>
+
+- What's the key difference between the shared-repo and fork-based collaboration models?
+
+  <details>
+  <summary>Answer</summary>
+
+  In shared-repo, everyone pushes feature branches directly to the same repo; in fork-based, you
+  push to your own forked copy and open a PR from your fork into the original repo — requiring an
+  `origin`/`upstream` remote setup.
+  </details>

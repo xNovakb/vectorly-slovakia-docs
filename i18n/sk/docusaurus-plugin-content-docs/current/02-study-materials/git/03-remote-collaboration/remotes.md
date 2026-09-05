@@ -71,3 +71,33 @@ git merge upstream/main       # prenes zmeny z upstream do lokálnej main
 git remote rename origin old-origin
 git remote remove old-origin
 ```
+
+## Skontroluj sa
+
+- Prečo je `git fetch` vždy bezpečný, ale `git pull` nie nutne?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `fetch` len aktualizuje tvoj lokálny záznam o tom, čo má remote, nikdy sa nedotýka working
+  directory; `pull` je fetch + integrácia, tak môže vytvoriť merge commit alebo konflikt.
+  </details>
+
+- Po `git push -u origin feature/login` raz, čo sa zmení na budúcich `git push`/`git pull` na
+  tejto vetve?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Už netreba uvádzať remote/vetvu znovu — lokálna vetva teraz vie, ktorú remote vetvu má na
+  starosti (tracking).
+  </details>
+
+- V fork workflow, na čo konvenčne ukazujú `origin` a `upstream`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `origin` ukazuje na tvoj vlastný fork; `upstream` ukazuje na originálny repozitár, z ktorého si
+  forkoval, aby si mohol ťahať jeho najnovšie zmeny.
+  </details>

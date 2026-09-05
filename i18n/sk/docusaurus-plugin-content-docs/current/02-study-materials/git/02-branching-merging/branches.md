@@ -71,3 +71,39 @@ chore/short-description
 
 Drž mená krátke a s pomlčkami — objavujú sa v URL, názvoch CI jobov a vo výstupe
 `git log --graph`, kde dlhé mená pôsobia natlačene.
+
+## Skontroluj sa
+
+- Je `main` pre Git interne niečo špeciálne?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — je to presúvateľný ukazovateľ na commit ako každý iný; je len konvenčne predvolený.
+  </details>
+
+- Čo sa stane s HEAD, keď spravíš `git commit`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  HEAD samotný sa nehýbe — *vetva*, na ktorú HEAD ukazuje, sa posunie dopredu na nový commit;
+  HEAD len sleduje.
+  </details>
+
+- Čo je riskantné na commitovaní v detached HEAD stave?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Tieto commity sa stanú nedosiahnuteľnými a nakoniec ich zmaže garbage collector, akonáhle sa
+  prepneš preč, pokiaľ ich najprv nepremeníš na skutočnú vetvu pomocou `git switch -c <meno>`.
+  </details>
+
+- Aký je rozdiel medzi `git branch -d` a `git branch -D`?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `-d` zmaže vetvu len ak je už zlúčená; `-D` ju vynúti zmazať aj keď nie je zlúčená.
+  </details>

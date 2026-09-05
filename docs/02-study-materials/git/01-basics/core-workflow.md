@@ -72,3 +72,32 @@ moving data between them:
 - **HEAD** — a pointer to the last commit on your current branch.
 
 `git status` is, in effect, a diff report between all three.
+
+## Check yourself
+
+- What's the difference between `git add -A` and `git add -p`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `git add -A` stages everything (new, modified, deleted) at once; `git add -p` lets you stage
+  interactively, hunk by hunk — useful for splitting one edit session into multiple clean commits.
+  </details>
+
+- Does `git commit` save your whole working directory, or something narrower?
+
+  <details>
+  <summary>Answer</summary>
+
+  Something narrower — it saves whatever is currently staged. Anything edited but not
+  `git add`-ed stays out of the commit.
+  </details>
+
+- What are the three pointers `git status` is effectively reporting a diff between?
+
+  <details>
+  <summary>Answer</summary>
+
+  The working directory, the index (staging area), and HEAD (the last commit on the current
+  branch).
+  </details>

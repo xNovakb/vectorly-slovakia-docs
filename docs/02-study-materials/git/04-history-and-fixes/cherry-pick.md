@@ -63,3 +63,31 @@ git cherry-pick --abort
   change. Not a correctness problem, just something to expect.
 - Don't reach for cherry-pick as a substitute for merging/rebasing a whole branch — it's a
   scalpel for one commit, not a general integration tool.
+
+## Check yourself
+
+- Does cherry-picking a commit bring along the other commits from its original branch?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it copies just that one specific commit onto your current branch, creating a new commit
+  with the same changes but a new hash.
+  </details>
+
+- What's a classic legitimate use case for cherry-pick?
+
+  <details>
+  <summary>Answer</summary>
+
+  Backporting a hotfix that landed on `develop` onto an already-cut release branch, without
+  merging all of develop's other in-progress work into the release branch.
+  </details>
+
+- Should cherry-pick be used as a general substitute for merging or rebasing a whole branch?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it's a scalpel for one commit, not a general integration tool.
+  </details>

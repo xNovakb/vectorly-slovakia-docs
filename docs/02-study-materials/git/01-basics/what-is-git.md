@@ -54,3 +54,45 @@ committing:
 
 The next page, [Installation & Config](./installation-config.md), gets you set up to actually try
 this; [Core Workflow](./core-workflow.md) walks through moving a file through these three states.
+
+## Check yourself
+
+- Why does Git store commits as snapshots rather than diffs, and what practical benefit does that
+  give?
+
+  <details>
+  <summary>Answer</summary>
+
+  Every commit is a full snapshot — an unchanged file just points at the same stored blob as
+  before instead of being copied again. This is why commits are cheap and checking out an old
+  commit is fast: Git hands you a saved snapshot instead of replaying a chain of patches.
+  </details>
+
+- What does "distributed" mean for Git specifically, contrasted with SVN/CVS?
+
+  <details>
+  <summary>Answer</summary>
+
+  Every clone contains the entire history — every commit, branch, and tag — not just the latest
+  snapshot. SVN/CVS keep the real history on a central server; your local machine only has the
+  current files.
+  </details>
+
+- Name the three states a file can be in, and which command moves it from the first to the
+  second.
+
+  <details>
+  <summary>Answer</summary>
+
+  Working directory, staging area (index), and committed. `git add` moves a file from the working
+  directory into the staging area.
+  </details>
+
+- Why can you `git log` and switch branches with no network connection?
+
+  <details>
+  <summary>Answer</summary>
+
+  Your clone already holds the full history locally — a network connection is only needed to sync
+  with others via push/pull/fetch.
+  </details>

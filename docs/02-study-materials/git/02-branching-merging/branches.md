@@ -72,3 +72,40 @@ chore/short-description
 
 Keep names short and hyphenated — they show up in URLs, CI job names, and `git log --graph`
 output where long names get cramped.
+
+## Check yourself
+
+- Is `main` special to Git internally?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it's a movable pointer to a commit like any other branch; it's only conventionally the
+  default.
+  </details>
+
+- What happens to HEAD when you `git commit`?
+
+  <details>
+  <summary>Answer</summary>
+
+  HEAD itself doesn't move — the *branch* HEAD points to moves forward to the new commit; HEAD
+  just follows along.
+  </details>
+
+- What's risky about making commits in a detached HEAD state?
+
+  <details>
+  <summary>Answer</summary>
+
+  Those commits become unreachable and eventually garbage-collected once you switch away, unless
+  you turn them into a real branch first with `git switch -c <name>`.
+  </details>
+
+- What's the difference between `git branch -d` and `git branch -D`?
+
+  <details>
+  <summary>Answer</summary>
+
+  `-d` only deletes a branch if it's already merged; `-D` force-deletes it even if not merged.
+  </details>
