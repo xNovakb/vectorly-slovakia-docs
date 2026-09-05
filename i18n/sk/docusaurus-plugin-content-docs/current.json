@@ -207,6 +207,10 @@
     "message": "Nástroje a Platformy",
     "description": "The label for category 'Tools & Platforms' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.CiCdReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.Kotlin Fundamentals": {
     "message": "Kotlin Fundamentals",
     "description": "The label for category 'Kotlin Fundamentals' in sidebar 'studyMaterialsSidebar'"
@@ -514,6 +518,10 @@
   "sidebar.studyMaterialsSidebar.category.Deployment Strategies.link.generated-index.description": {
     "message": "Continuous delivery vs. deployment, blue-green a canary releasy, a bezpečný rollback.",
     "description": "The generated-index page description for category 'Deployment Strategies' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.CiCdReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znova prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
   },
   "sidebar.studyMaterialsSidebar.category.Pipeline Design.link.generated-index.description": {
     "message": "Stage a joby, cachovanie na zrýchlenie buildov a paralelné spúšťanie práce.",
