@@ -103,6 +103,10 @@
     "message": "Praktický Shell",
     "description": "The label for category 'Practical Shell' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.LinuxShellReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.HTTP & Web Fundamentals": {
     "message": "HTTP a Web Základy",
     "description": "The label for category 'HTTP & Web Fundamentals' in sidebar 'studyMaterialsSidebar'"
@@ -426,6 +430,10 @@
   "sidebar.studyMaterialsSidebar.category.Practical Shell.link.generated-index.description": {
     "message": "Premenné prostredia, shell skriptovanie, systemd služby a riešenie problémov na reálnom serveri.",
     "description": "The generated-index page description for category 'Practical Shell' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.LinuxShellReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znovu prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
   },
   "sidebar.studyMaterialsSidebar.category.HTTP & Web Fundamentals.link.generated-index.description": {
     "message": "Protokol pod každou webovou aplikáciou: requesty, status kódy, hlavičky, cachovanie, bezpečnosť a návrh REST API.",

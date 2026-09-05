@@ -1,0 +1,9 @@
+{
+  "label": "Review",
+  "key": "LinuxShellReview",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Synthesis questions across the whole topic — talk through the answers, don't just re-read."
+  }
+}
