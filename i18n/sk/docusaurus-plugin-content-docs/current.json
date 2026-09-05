@@ -322,5 +322,321 @@
   "sidebar.studyMaterialsSidebar.category.Parameterized & Property-Based Testing": {
     "message": "Parametrizované a Property-Based Testovanie",
     "description": "The label for category 'Parameterized & Property-Based Testing' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Git.link.generated-index.description": {
+    "message": "Git pre vývojárov: od prvého commitu cez konvenčné commity až po branching, rebase a firemný squash-and-rebase workflow.",
+    "description": "The generated-index page description for category 'Git' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.GitBasics.link.generated-index.description": {
+    "message": "Začiatky s Gitom: čo to je, počiatočné nastavenie a základný cyklus add/commit/status.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Branching & Merging.link.generated-index.description": {
+    "message": "Vetvy, merge a rebase — ako Git spája rozbiehajúce sa línie práce.",
+    "description": "The generated-index page description for category 'Branching & Merging' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Remote Collaboration.link.generated-index.description": {
+    "message": "Práca s remote repozitármi, pull/merge requestami a tímovými modelmi vetvenia.",
+    "description": "The generated-index page description for category 'Remote Collaboration' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.History & Fixes.link.generated-index.description": {
+    "message": "Vracanie chýb späť, obnova stratenej práce a prehrabávanie sa históriou.",
+    "description": "The generated-index page description for category 'History & Fixes' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Conventions.link.generated-index.description": {
+    "message": "Konvencie commit správ, stratégia mergovania a tagovanie release verzií naprieč našimi repozitármi.",
+    "description": "The generated-index page description for category 'Conventions' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Advanced.link.generated-index.description": {
+    "message": "Submoduly, hooky, prepisovanie histórie a ďalšie pokročilé Git nástroje.",
+    "description": "The generated-index page description for category 'Advanced' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.SSH & Networking.link.generated-index.description": {
+    "message": "Servery, SSH, DNS a reverse proxy: toľko sietí, aby ste vedeli, ako doména skončí smerovaním na bežiacu aplikáciu.",
+    "description": "The generated-index page description for category 'SSH & Networking' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.NetworkingBasics.link.generated-index.description": {
+    "message": "Model klient/server, porty a protokoly, a toľko o smerovaní paketov na internete, koľko treba.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.SSH.link.generated-index.description": {
+    "message": "Bezpečné pripájanie na vzdialené stroje: kľúče, konfigurácia a tunelovanie.",
+    "description": "The generated-index page description for category 'SSH' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Domains & DNS.link.generated-index.description": {
+    "message": "Ako sa doménové meno prekladá na server a aké typy záznamov to umožňujú.",
+    "description": "The generated-index page description for category 'Domains & DNS' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Web Serving.link.generated-index.description": {
+    "message": "Reverse proxy, TLS/HTTPS a load balancing — čo sedí medzi doménou a vašou aplikáciou.",
+    "description": "The generated-index page description for category 'Web Serving' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Practical Setups.link.generated-index.description": {
+    "message": "Spojenie všetkého dokopy, plus Docker siete a riešenie problémov s konektivitou.",
+    "description": "The generated-index page description for category 'Practical Setups' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Linux & Shell.link.generated-index.description": {
+    "message": "Príkazový riadok, oprávnenia, procesy a toľko o fungovaní Linux servera, aby ste ho vedeli administrovať.",
+    "description": "The generated-index page description for category 'Linux & Shell' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.LinuxShellBasics.link.generated-index.description": {
+    "message": "Čo je to shell, štruktúra súborového systému a pohyb v ňom.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Permissions & Users.link.generated-index.description": {
+    "message": "Používatelia, skupiny, oprávnenia súborov a prečo sa servery vyhýbajú behu pod rootom.",
+    "description": "The generated-index page description for category 'Permissions & Users' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Processes.link.generated-index.description": {
+    "message": "Čo je proces, ako ho skúmať a ovládať, a spúšťanie vecí na pozadí.",
+    "description": "The generated-index page description for category 'Processes' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Text & Pipes.link.generated-index.description": {
+    "message": "Prezeranie a editácia súborov, vyhľadávanie a reťazenie príkazov.",
+    "description": "The generated-index page description for category 'Text & Pipes' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Package Management.link.generated-index.description": {
+    "message": "Inštalácia a aktualizácia softvéru na Linux serveri.",
+    "description": "The generated-index page description for category 'Package Management' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Practical Shell.link.generated-index.description": {
+    "message": "Premenné prostredia, shell skriptovanie, systemd služby a riešenie problémov na reálnom serveri.",
+    "description": "The generated-index page description for category 'Practical Shell' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.HTTP & Web Fundamentals.link.generated-index.description": {
+    "message": "Protokol pod každou webovou aplikáciou: requesty, status kódy, hlavičky, cachovanie, bezpečnosť a návrh REST API.",
+    "description": "The generated-index page description for category 'HTTP & Web Fundamentals' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.HttpWebBasics.link.generated-index.description": {
+    "message": "Cyklus request/response a status kódy — podoba každej HTTP komunikácie.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Methods & Semantics.link.generated-index.description": {
+    "message": "HTTP metódy, bezpečnosť (safety) a idempotencia, a kam patria dáta v requeste.",
+    "description": "The generated-index page description for category 'Methods & Semantics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Headers & Content.link.generated-index.description": {
+    "message": "Hlavičky, na ktorých reálne záleží, content types a HTTP cachovanie.",
+    "description": "The generated-index page description for category 'Headers & Content' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Security.link.generated-index.description": {
+    "message": "Same-origin policy, CORS, cookies a sessions, a klasické webové útoky, pred ktorými chránia.",
+    "description": "The generated-index page description for category 'Security' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.REST & API Design.link.generated-index.description": {
+    "message": "Čo REST skutočne znamená, návrh konzistentného API, verzovanie a stránkovanie.",
+    "description": "The generated-index page description for category 'REST & API Design' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Performance & Protocol Evolution.link.generated-index.description": {
+    "message": "HTTP/1.1 až HTTP/3, kompresia a CDN cachovanie.",
+    "description": "The generated-index page description for category 'Performance & Protocol Evolution' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Docker & Containers.link.generated-index.description": {
+    "message": "Kontajnery, image, Dockerfile, siete, Compose a ako táto firma reálne prevádzkuje weby v Dockeri.",
+    "description": "The generated-index page description for category 'Docker & Containers' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.DockerBasics.link.generated-index.description": {
+    "message": "Čo je to kontajner, rozdiel image vs. kontajner, a v čom sa kontajnery líšia od VM.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Images & Dockerfiles.link.generated-index.description": {
+    "message": "Písanie Dockerfile, buildovanie a tagovanie image, a ako funguje cachovanie vrstiev.",
+    "description": "The generated-index page description for category 'Images & Dockerfiles' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Running Containers.link.generated-index.description": {
+    "message": "Životný cyklus kontajnera, debugovanie bežiaceho kontajnera a práca s environment premennými/secrets.",
+    "description": "The generated-index page description for category 'Running Containers' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Networking & Storage.link.generated-index.description": {
+    "message": "Publikovanie portov, sieťové módy, volumes a prečo sú kontajnery štandardne dočasné (ephemeral).",
+    "description": "The generated-index page description for category 'Networking & Storage' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Docker Compose.link.generated-index.description": {
+    "message": "Deklaratívna definícia viackontajnerových aplikácií a ako Compose používa nasadenie tejto firmy.",
+    "description": "The generated-index page description for category 'Docker Compose' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Production Practices.link.generated-index.description": {
+    "message": "Best practices pre Dockerfile, health checky a restart policy, a reálne nastavenie kontajnerov tejto firmy.",
+    "description": "The generated-index page description for category 'Production Practices' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Podman.link.generated-index.description": {
+    "message": "Alternatíva k Dockeru bez daemona a štandardne bez rootu — čo je iné a ako sa oba porovnávajú.",
+    "description": "The generated-index page description for category 'Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.PodmanBasics.link.generated-index.description": {
+    "message": "Architektúra bez daemona, kontajnery bez rootu ako štandard a koncept podov.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Using Podman.link.generated-index.description": {
+    "message": "CLI v praxi, podman-compose a integrácia so systemd.",
+    "description": "The generated-index page description for category 'Using Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Docker vs. Podman.link.generated-index.description": {
+    "message": "Architektonické rozdiely, kompatibilita a migrácia, a kedy si vybrať ktoré riešenie.",
+    "description": "The generated-index page description for category 'Docker vs. Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.CI/CD Basics.link.generated-index.description": {
+    "message": "Automatizované buildy, testy a nasadenia: pipeline, stage, deployment stratégie, secrets a platformy, na ktorých to celé beží.",
+    "description": "The generated-index page description for category 'CI/CD Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.CiCdBasics.link.generated-index.description": {
+    "message": "Čo CI/CD skutočne znamená, koncept pipeline a čo spúšťa run.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Build & Test.link.generated-index.description": {
+    "message": "Automatizované buildy, spúšťanie testov v CI a odovzdávanie artefaktov medzi stage.",
+    "description": "The generated-index page description for category 'Build & Test' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Deployment Strategies.link.generated-index.description": {
+    "message": "Continuous delivery vs. deployment, blue-green a canary releasy, a bezpečný rollback.",
+    "description": "The generated-index page description for category 'Deployment Strategies' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Pipeline Design.link.generated-index.description": {
+    "message": "Stage a joby, cachovanie na zrýchlenie buildov a paralelné spúšťanie práce.",
+    "description": "The generated-index page description for category 'Pipeline Design' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Secrets & Environments.link.generated-index.description": {
+    "message": "Bezpečná správa secrets, postup buildu cez prostredia a credentials s najmenším potrebným oprávnením.",
+    "description": "The generated-index page description for category 'Secrets & Environments' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Tools & Platforms.link.generated-index.description": {
+    "message": "Základy GitHub Actions, porovnanie hlavných CI platforiem a self-hosted vs. managed runnery.",
+    "description": "The generated-index page description for category 'Tools & Platforms' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin": {
+    "message": "Kotlin",
+    "description": "The label for category 'Kotlin' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin.link.generated-index.description": {
+    "message": "Jazyk, jeho idiómy, coroutines, Spring Boot a testovanie — Kotlin od A po Z.",
+    "description": "The generated-index page description for category 'Kotlin' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin Fundamentals.link.generated-index.description": {
+    "message": "Samotný jazyk Kotlin: syntax, null safety, triedy, kolekcie, spracovanie chýb a interop s Javou.",
+    "description": "The generated-index page description for category 'Kotlin Fundamentals' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinFundamentalsBasics.link.generated-index.description": {
+    "message": "Čo je Kotlin, premenné a typy, a hlavná vlastnosť: null safety.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Functions & Control Flow.link.generated-index.description": {
+    "message": "Syntax funkcií, if/when ako výrazy, a lambdy ako plnohodnotné hodnoty.",
+    "description": "The generated-index page description for category 'Functions & Control Flow' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Classes & Objects.link.generated-index.description": {
+    "message": "Konštruktory a properties, data classes, a deklarácie object/companion object.",
+    "description": "The generated-index page description for category 'Classes & Objects' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Collections & Functional Style.link.generated-index.description": {
+    "message": "List/Set/Map, funkcionálne operácie nad kolekciami, a lazy Sequences.",
+    "description": "The generated-index page description for category 'Collections & Functional Style' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Error Handling.link.generated-index.description": {
+    "message": "Výnimky v Kotline, typ Result, a definovanie vlastných typov výnimiek.",
+    "description": "The generated-index page description for category 'Error Handling' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Interop & Tooling.link.generated-index.description": {
+    "message": "Volanie Javy z Kotlinu a naopak, platform types, a základy Gradle projektu.",
+    "description": "The generated-index page description for category 'Interop & Tooling' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin Idioms & Advanced Features.link.generated-index.description": {
+    "message": "Písanie idiomatického Kotlinu, nie len Javy v kotlinovom prevleku: scope funkcie, extensions, sealed classes, generiká, DSL a vzory, vďaka ktorým kód vyzerá ako skutočný Kotlin.",
+    "description": "The generated-index page description for category 'Kotlin Idioms & Advanced Features' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Scope Functions.link.generated-index.description": {
+    "message": "let, run, with, apply, also — čo každá z nich skutočne robí a ako vybrať tú správnu.",
+    "description": "The generated-index page description for category 'Scope Functions' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Extension Functions & Properties.link.generated-index.description": {
+    "message": "Pridávanie funkcií a properties k typom, ktoré nevlastníte, a lambda receivers ako základ pre DSL.",
+    "description": "The generated-index page description for category 'Extension Functions & Properties' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Classes: Advanced.link.generated-index.description": {
+    "message": "Sealed classes, value classes a delegácia — modelovanie obmedzených hierarchií a eliminácia boilerplate kódu.",
+    "description": "The generated-index page description for category 'Classes: Advanced' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Generics & Type System.link.generated-index.description": {
+    "message": "Generické funkcie a triedy, declaration-site variance, a reified typové parametre.",
+    "description": "The generated-index page description for category 'Generics & Type System' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Building DSLs.link.generated-index.description": {
+    "message": "Trailing lambdy, type-safe buildery a operator overloading — ako Kotlin DSL skutočne fungujú.",
+    "description": "The generated-index page description for category 'Building DSLs' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Idiomatic Patterns.link.generated-index.description": {
+    "message": "Destructuring, infix funkcie, a stdlib funkcie, ktoré sa oplatí poznať, no ľahko sa prehliadnu.",
+    "description": "The generated-index page description for category 'Idiomatic Patterns' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin Coroutines & Concurrency.link.generated-index.description": {
+    "message": "Structured concurrency, dispatchery, Flow, a bežné chyby, ktoré ľudí potrápia pri písaní asynchrónneho Kotlinu.",
+    "description": "The generated-index page description for category 'Kotlin Coroutines & Concurrency' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinCoroutinesBasics.link.generated-index.description": {
+    "message": "Čo je to coroutine, kľúčové slovo suspend, a rozdiel launch vs. async.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Structured Concurrency.link.generated-index.description": {
+    "message": "Scope, context a cancellation — ako je životnosť coroutine viazaná na miesto, kde bola spustená.",
+    "description": "The generated-index page description for category 'Structured Concurrency' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Dispatchers & Threading.link.generated-index.description": {
+    "message": "Ktorý dispatcher použiť na čo, prepínanie contextu uprostred coroutine, a thread safety pri zdieľanom stave.",
+    "description": "The generated-index page description for category 'Dispatchers & Threading' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Flow.link.generated-index.description": {
+    "message": "Asynchrónne prúdy hodnôt postavené na coroutines, ich operátory, a rozdiel StateFlow vs. SharedFlow.",
+    "description": "The generated-index page description for category 'Flow' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Error Handling & Testing.link.generated-index.description": {
+    "message": "Ako sa výnimky šíria cez coroutines, supervisor joby, a testovanie suspending kódu.",
+    "description": "The generated-index page description for category 'Error Handling & Testing' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Common Pitfalls.link.generated-index.description": {
+    "message": "Chyby, ktoré sa objavujú stále dokola: zneužitie GlobalScope, blokujúce volania, a zlá voľba concurrency modelu.",
+    "description": "The generated-index page description for category 'Common Pitfalls' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Kotlin + Spring Boot.link.generated-index.description": {
+    "message": "Tvorba webových API v Kotline so Spring Boot: dependency injection, web vrstva, prístup k dátam, testovanie a produkčné úvahy.",
+    "description": "The generated-index page description for category 'Kotlin + Spring Boot' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinSpringBootBasics.link.generated-index.description": {
+    "message": "Prečo sa Kotlin a Spring Boot k sebe hodia, štruktúra projektu a konfigurácia.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Dependency Injection.link.generated-index.description": {
+    "message": "Čo DI rieši, constructor injection po kotlinovsky, a bean scopes.",
+    "description": "The generated-index page description for category 'Dependency Injection' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Web Layer.link.generated-index.description": {
+    "message": "REST controllery, validácia requestov, a centralizované spracovanie výnimiek.",
+    "description": "The generated-index page description for category 'Web Layer' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Data Access.link.generated-index.description": {
+    "message": "Spring Data JPA, reálne trecie plochy Kotlin/JPA, a písanie queries.",
+    "description": "The generated-index page description for category 'Data Access' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Testing Spring Apps.link.generated-index.description": {
+    "message": "Unit testovanie s MockK, integračné testovanie s Testcontainers, a testovanie web vrstvy.",
+    "description": "The generated-index page description for category 'Testing Spring Apps' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Production Considerations.link.generated-index.description": {
+    "message": "Actuator a observability, ladenie výkonu, a balenie Spring Boot aplikácie na nasadenie.",
+    "description": "The generated-index page description for category 'Production Considerations' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Testing in Kotlin.link.generated-index.description": {
+    "message": "Všeobecné idiómy unit testovania v Kotline: JUnit5, Kotest assertions, MockK, a parametrizované/property-based testovanie.",
+    "description": "The generated-index page description for category 'Testing in Kotlin' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinTestingBasics.link.generated-index.description": {
+    "message": "JUnit5 z Kotlinu, kotlin-špecifické testovacie idiómy, a organizácia test suite.",
+    "description": "The generated-index page description for category 'Basics' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Assertions & Mocking.link.generated-index.description": {
+    "message": "Kotest fluent assertions a MockK, natívna mocking knižnica pre Kotlin.",
+    "description": "The generated-index page description for category 'Assertions & Mocking' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.Parameterized & Property-Based Testing.link.generated-index.description": {
+    "message": "Spúšťanie jedného testu nad viacerými vstupmi, generatívne property-based testovanie, a stavba test fixtures.",
+    "description": "The generated-index page description for category 'Parameterized & Property-Based Testing' in sidebar 'studyMaterialsSidebar'"
   }
 }
