@@ -85,3 +85,46 @@ Host *
 
 `Host *` sa vzťahuje na každé pripojenie — dobré na predvolené hodnoty, ktoré chceš vždy, vrstvené
 pod konkrétnejšie `Host` bloky nad ním.
+
+## Skontroluj sa
+
+- `github-docs` v SSH konfigurácii nasmeruje `HostName` na reálny `github.com`. Aký problém tento
+  trik s fiktívnym hostname naozaj rieši?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Umožní ti vynútiť konkrétny kľúč (napr. deploy kľúč špecifický pre repozitár) pre jednu GitHub
+  identitu, pričom tvoj osobný kľúč zostane predvoľbou pre samotný `github.com` — dve identity
+  bez toho, aby sa zrážali.
+  </details>
+
+- Čomu ťa `ProxyJump` ušetrí robiť ručne?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Ručnému SSH-ovaniu najprv na bastion host a potom znova odtiaľ na interný cieľ — `ProxyJump`
+  toto zreťazí automaticky v jednom príkaze.
+  </details>
+
+- Prečo by bol `ProxyJump` kombinovaný s key-based autentifikáciou bezpečnejší než password auth
+  cez bastion host?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Password auth sa dá phishnúť, brute-forcnúť, a na produkčných serveroch je často úplne vypnutá;
+  key auth dokazuje identitu kryptograficky namiesto toho, a `ProxyJump` len automatizuje
+  smerovanie cez bastion bez oslabenia tejto autentifikácie.
+  </details>
+
+- Kde by mal sedieť blok `Host *` vzhľadom na konkrétnejšie `Host` bloky, a prečo?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Vzťahuje sa na každé pripojenie, tak funguje ako sada predvolieb vrstvená pod konkrétnejšie
+  bloky — vlastné nastavenia konkrétneho `Host` bloku majú prednosť pre ten host.
+  </details>
+

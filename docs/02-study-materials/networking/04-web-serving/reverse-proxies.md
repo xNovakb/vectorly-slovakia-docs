@@ -71,3 +71,36 @@ docs.vectorly-slovakia.sk {
 
 The app itself has zero awareness of auth — Caddy rejects unauthenticated requests before they
 ever reach `docs-app`.
+
+## Check yourself
+
+- `docs.vectorly-slovakia.sk` and `vectorly-slovakia.sk` share one VPS and one public IP but reach
+  different containers. What makes that possible?
+
+  <details>
+  <summary>Answer</summary>
+
+  The reverse proxy reads the `Host` header on each incoming request and routes it to a different
+  backend depending on which hostname was requested.
+  </details>
+
+- What's the actual difference between a reverse proxy and a forward proxy — which side of the
+  connection does each one sit in front of?
+
+  <details>
+  <summary>Answer</summary>
+
+  A reverse proxy sits in front of servers, hiding which backend answered from the client. A
+  forward proxy sits in front of clients, hiding which client made the request from the server.
+  </details>
+
+- If Caddy handles basic auth at the proxy layer, does the backend app need any awareness of
+  authentication?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — Caddy rejects unauthenticated requests before they ever reach the app, so the app has zero
+  awareness of auth at all.
+  </details>
+

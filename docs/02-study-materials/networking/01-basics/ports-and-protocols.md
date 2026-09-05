@@ -64,3 +64,36 @@ ss -tlnp
 Useful when a server "isn't responding" — confirming *something* is actually listening on the
 expected port is the first troubleshooting step (more in
 [Troubleshooting Connectivity](../05-practical-setups/troubleshooting-connectivity.md)).
+
+## Check yourself
+
+- Why can one machine with a single IP address run a web server, a database, and an SSH server
+  all at once without them interfering?
+
+  <details>
+  <summary>Answer</summary>
+
+  Each one listens on its own port — the port number, not the IP, is what routes a connection to
+  the right one of them.
+  </details>
+
+- What's the practical difference in what TCP and UDP guarantee, and why does SSH need TCP's
+  guarantee while a video call is fine on UDP?
+
+  <details>
+  <summary>Answer</summary>
+
+  TCP guarantees delivery and order, retransmitting lost packets; UDP guarantees neither. SSH
+  needs every byte to arrive correctly and in order (it's a terminal session); a video call would
+  rather skip a lost frame than stall waiting for a retransmit.
+  </details>
+
+- A server "isn't responding." What's the first thing to check, and what command checks it?
+
+  <details>
+  <summary>Answer</summary>
+
+  Whether anything is actually listening on the expected port — `ss -tlnp` (Linux/macOS) or
+  `Get-NetTCPConnection -State Listen` (PowerShell).
+  </details>
+

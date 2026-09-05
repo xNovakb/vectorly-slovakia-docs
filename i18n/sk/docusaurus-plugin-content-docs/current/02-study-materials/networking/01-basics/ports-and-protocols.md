@@ -64,3 +64,36 @@ ss -tlnp
 Užitočné, keď server "neodpovedá" — overenie, že na očakávanom porte naozaj *niečo* počúva, je
 prvý krok pri riešení problémov (viac v
 [Riešení Problémov s Pripojením](../05-practical-setups/troubleshooting-connectivity.md)).
+
+## Skontroluj sa
+
+- Prečo môže jeden počítač s jedinou IP adresou bežať web server, databázu, a SSH server naraz
+  bez toho, aby si prekážali?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Každý počúva na vlastnom porte — číslo portu, nie IP, je to, čo nasmeruje pripojenie na
+  správny z nich.
+  </details>
+
+- Aký je praktický rozdiel v tom, čo garantuje TCP a UDP, a prečo SSH potrebuje garanciu TCP,
+  zatiaľ čo video hovor je v poriadku na UDP?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  TCP garantuje doručenie a poradie, retransmituje stratené pakety; UDP negarantuje ani jedno.
+  SSH potrebuje, aby každý bajt dorazil správne a v poradí (je to terminálová session); video
+  hovor radšej preskočí stratený frame, než by čakal na retransmit.
+  </details>
+
+- Server "neodpovedá." Čo skontrolovať ako prvé, a aký príkaz to skontroluje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Či na očakávanom porte vôbec niečo počúva — `ss -tlnp` (Linux/macOS) alebo
+  `Get-NetTCPConnection -State Listen` (PowerShell).
+  </details>
+

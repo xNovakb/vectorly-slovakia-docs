@@ -65,3 +65,36 @@ Zmena záznamu sa neprejaví všade okamžite — každý resolver, ktorý mal s
 naďalej servíruje, kým vyprší TTL toho záznamu (pozri [Ako DNS Funguje](./how-dns-works.md)).
 "Ešte to nefunguje" hneď po DNS zmene je takmer vždy toto, nie zlá konfigurácia — daj tomu čas
 úmerný starému TTL, než usúdiš, že je naozaj niečo zle.
+
+## Skontroluj sa
+
+- Prečo nemôže holá/root doména zvyčajne mať `CNAME` záznam, čo ju núti použiť namiesto toho `A`
+  záznam?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `CNAME` nemôže koexistovať s inými záznamami na presne rovnakom mene (ako `MX` záznam, ktorý
+  root doména zvyčajne potrebuje) — reálne pravidlo DNS protokolu, nie zvláštnosť providera.
+  </details>
+
+- `docs.vectorly-slovakia.sk` a `vectorly-slovakia.sk` ukazujú na rôzne servery. Aký DNS fakt to
+  umožňuje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Každá subdoména je vlastný záznam — nič nenúti subdomény tej istej domény ukazovať na ten istý
+  server.
+  </details>
+
+- Práve si zmenil `A` záznam a "ešte to nefunguje" o desať sekúnd neskôr. Je to nutne zlá
+  konfigurácia?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — resolvery, ktoré mali starú hodnotu už cachovanú, ju naďalej servírujú, kým nevyprší TTL
+  toho záznamu; daj tomu čas úmerný starému TTL, než usúdiš, že je naozaj niečo zle.
+  </details>
+

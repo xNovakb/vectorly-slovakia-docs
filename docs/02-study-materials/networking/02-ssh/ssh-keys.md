@@ -81,3 +81,35 @@ narrowly (one key, one purpose) instead of reusing a personal key.
 Generate separate keypairs for separate concerns (personal GitHub access vs. a deploy key vs. a
 specific server) rather than reusing one key everywhere — see
 [SSH Config](./ssh-config.md) for managing several keys cleanly.
+
+## Check yourself
+
+- Which half of an SSH keypair should ever leave your machine, even during authentication?
+
+  <details>
+  <summary>Answer</summary>
+
+  Neither, really — the private key never leaves your machine at all. The server only ever sees
+  the public key and proof (a decrypted challenge) that you hold the matching private key.
+  </details>
+
+- What does a passphrase actually protect against, given the private key file itself might leak
+  (stolen laptop, backup mistake)?
+
+  <details>
+  <summary>Answer</summary>
+
+  It encrypts the private key file at rest, so a leaked file is useless to whoever has it without
+  also knowing the passphrase.
+  </details>
+
+- Why are CI deploy keys (like this repo's `vectorly_docs_key`) deliberately passphrase-less,
+  when that seems to contradict the passphrase advice above?
+
+  <details>
+  <summary>Answer</summary>
+
+  CI has no human to type a passphrase — the tradeoff is accepted specifically because the key is
+  scoped narrowly (one key, one purpose) instead of reusing a broader personal key.
+  </details>
+

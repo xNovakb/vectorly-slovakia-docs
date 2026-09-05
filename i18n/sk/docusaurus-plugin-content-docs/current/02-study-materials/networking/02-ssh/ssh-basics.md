@@ -63,3 +63,37 @@ na VPS a spustenie deploy — pozri
 [`/sk/internal-operations/git-workflow`](/sk/internal-operations/git-workflow) a
 [`/sk/internal-operations/server-architecture`](/sk/internal-operations/server-architecture) pre
 reálne nastavenie, ktoré táto stránka popisuje všeobecnejšie.
+
+## Skontroluj sa
+
+- Po `ssh deploy@docs.vectorly-slovakia.sk` spustíš `pwd`. Na čí súborový systém sa ten príkaz
+  naozaj pozerá?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Na vzdialený — všetko napísané po pripojení beží na vzdialenom počítači, nie na tvojom
+  vlastnom.
+  </details>
+
+- Prečo je key auth preferovaná pred password auth pre čokoľvek nad rámec rýchleho osobného
+  testovacieho boxu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Password auth sa dá phishnúť a brute-forcnúť a nedá sa bezpečne automatizovať; key auth namiesto
+  toho použije kryptografický pár kľúčov na dokázanie identity, a je často jedinou možnosťou po
+  vypnutí password auth na produkčných serveroch.
+  </details>
+
+- Ako spustíš jeden vzdialený príkaz bez otvorenia interaktívneho shellu, a prečo je to užitočné
+  v CI?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `ssh deploy@host "príkaz"` — spustí príkaz vzdialene, výstup vypíše lokálne, a odpojí sa, čo je
+  presne to, čo skript alebo CI job potrebuje namiesto interaktívnej session.
+  </details>
+

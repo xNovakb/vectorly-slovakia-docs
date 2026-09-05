@@ -70,3 +70,37 @@ nájdi a ukonči proces.
 Tunel je jednoúčelové, per-connection riešenie — rýchlo nastaviteľné, žiadna infraštruktúra
 netreba. VPN je správna voľba, keď sa *rovnaká* potreba opakuje naprieč celým tímom alebo mnohými
 službami; tunel je správny pre "potrebujem sa teraz pozrieť na túto jednu vec."
+
+## Skontroluj sa
+
+- Pri `ssh -L 5432:localhost:5432 deploy@host`, port 5432 ktorého počítača naozaj dosiahneš, keď
+  sa pripojíš na `localhost:5432` na vlastnom notebooku?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Port 5432 vzdialeného servera — local forwarding (`-L`) sprístupní službu na vzdialenej strane,
+  akoby bežala na tvojom vlastnom počítači.
+  </details>
+
+- Aký je rozdiel medzi tým, čo naozaj forwardujú `-L` a `-D` — jeden konkrétny port, alebo
+  všetko?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  `-L` forwarduje jeden konkrétny port na jeden konkrétny cieľ; `-D` premení celé SSH pripojenie
+  na všeobecný SOCKS proxy, smerujúci celú prevádzku klienta cez vzdialený server.
+  </details>
+
+- Prečo siahnuť po tuneli namiesto VPN pre "potrebujem hneď teraz nahliadnuť do tejto jednej
+  firewallovanej databázy"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Tunel je rýchlo nastaviteľný bez potrebnej infraštruktúry pre jednoúčelovú, per-connection
+  potrebu; VPN sa oplatí nastaviť len keď sa rovnaká potreba prístupu opakuje naprieč celým tímom
+  alebo mnohými službami.
+  </details>
+

@@ -85,3 +85,35 @@ Host *
 
 `Host *` applies to every connection — good for defaults you always want, layered under more
 specific `Host` blocks above it.
+
+## Check yourself
+
+- `github-docs` in an SSH config points `HostName` at the real `github.com`. What problem does
+  that fake hostname trick actually solve?
+
+  <details>
+  <summary>Answer</summary>
+
+  It lets you force a specific key (e.g. a repo-specific deploy key) for one GitHub identity while
+  keeping your personal key as the default for `github.com` itself — two identities without them
+  colliding.
+  </details>
+
+- What does `ProxyJump` save you from doing manually?
+
+  <details>
+  <summary>Answer</summary>
+
+  Manually SSH-ing into a bastion host first and then SSH-ing again from there to the internal
+  target — `ProxyJump` chains that automatically in one command.
+  </details>
+
+- Where should a `Host *` block sit relative to more specific `Host` blocks, and why?
+
+  <details>
+  <summary>Answer</summary>
+
+  It applies to every connection, so it acts as a set of defaults layered underneath the more
+  specific blocks — a specific `Host` block's own settings take precedence for that host.
+  </details>
+

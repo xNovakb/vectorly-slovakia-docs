@@ -70,3 +70,37 @@ process.
 A tunnel is a single-purpose, per-connection workaround — quick to set up, no infrastructure
 needed. A VPN is the right call when the *same* need recurs across a whole team or many services;
 a tunnel is right for "I need to poke at this one thing right now."
+
+## Check yourself
+
+- With `ssh -L 5432:localhost:5432 deploy@host`, which machine's port 5432 do you actually reach
+  when you connect to `localhost:5432` on your own laptop?
+
+  <details>
+  <summary>Answer</summary>
+
+  The remote server's port 5432 — local forwarding (`-L`) makes a service on the remote side
+  reachable as if it were running on your own machine.
+  </details>
+
+- What's the difference between what `-L` and `-D` actually forward — one specific port, or
+  everything?
+
+  <details>
+  <summary>Answer</summary>
+
+  `-L` forwards one specific port to one specific destination; `-D` turns the whole SSH connection
+  into a general-purpose SOCKS proxy, routing all of a client's traffic through the remote server.
+  </details>
+
+- Why reach for a tunnel instead of a VPN for "I need to inspect this one firewalled database
+  right now"?
+
+  <details>
+  <summary>Answer</summary>
+
+  A tunnel is quick to set up with no infrastructure needed for a single-purpose, per-connection
+  need; a VPN is worth the setup only when the same access need recurs across a whole team or many
+  services.
+  </details>
+

@@ -61,3 +61,36 @@ to the VPS and run the deploy — see
 [`/internal-operations/git-workflow`](/internal-operations/git-workflow) and
 [`/internal-operations/server-architecture`](/internal-operations/server-architecture) for the
 real setup this describes in general terms.
+
+## Check yourself
+
+- After `ssh deploy@docs.vectorly-slovakia.sk`, you run `pwd`. Whose filesystem does that command
+  actually look at?
+
+  <details>
+  <summary>Answer</summary>
+
+  The remote machine's — everything typed after connecting runs on the remote machine, not your
+  own.
+  </details>
+
+- Why is key auth preferred over password auth for anything beyond a quick personal test box?
+
+  <details>
+  <summary>Answer</summary>
+
+  Password auth is phishable and brute-forceable and can't be automated safely; key auth uses a
+  cryptographic keypair to prove identity instead, and is often the only option left once password
+  auth is disabled on production servers.
+  </details>
+
+- How do you run a single remote command without opening an interactive shell, and why is that
+  useful in CI?
+
+  <details>
+  <summary>Answer</summary>
+
+  `ssh deploy@host "command"` — it runs the command remotely, prints the output locally, and
+  disconnects, which is exactly what a script or CI job needs instead of an interactive session.
+  </details>
+

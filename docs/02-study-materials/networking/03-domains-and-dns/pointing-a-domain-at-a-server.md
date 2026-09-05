@@ -63,3 +63,35 @@ this diagnostic approach.
 [`/internal-operations/server-architecture`](/internal-operations/server-architecture) — DNS
 pointed at the VPS, Caddy as the reverse proxy handling TLS and routing by hostname to the right
 Docker container.
+
+## Check yourself
+
+- A domain resolves to the right IP via `dig`, but `curl -v https://the-domain` fails while
+  `curl -v http://the-ip` succeeds. Where's the problem, per this page's diagnostic order?
+
+  <details>
+  <summary>Answer</summary>
+
+  Specifically the reverse proxy/TLS configuration — DNS and the server itself are both fine since
+  the IP check over plain HTTP worked.
+  </details>
+
+- Why check `dig ... +short` before trying `curl` against the domain at all?
+
+  <details>
+  <summary>Answer</summary>
+
+  It isolates whether DNS is even resolving to the right IP first — no point debugging the server
+  or reverse proxy if the domain isn't pointing at the right place yet.
+  </details>
+
+- What has to be true on the server itself before a reverse proxy can even be useful, per the
+  chain on this page?
+
+  <details>
+  <summary>Answer</summary>
+
+  Something has to actually be listening on ports 80/443 on the server — the reverse proxy routes
+  incoming requests, it doesn't create a listener where none exists.
+  </details>
+

@@ -67,3 +67,36 @@ value keeps serving it until that record's TTL expires (see
 [How DNS Works](./how-dns-works.md)). "It's not working yet" right after a DNS change is almost
 always this, not a misconfiguration — give it time proportional to the old TTL before assuming
 something's actually wrong.
+
+## Check yourself
+
+- Why can't a bare/root domain usually have a `CNAME` record, forcing it to use an `A` record
+  instead?
+
+  <details>
+  <summary>Answer</summary>
+
+  A `CNAME` can't coexist with other records on the same exact name (like an `MX` record a root
+  domain usually needs) — a real DNS protocol rule, not a provider quirk.
+  </details>
+
+- `docs.vectorly-slovakia.sk` and `vectorly-slovakia.sk` point at different servers. What DNS fact
+  makes that possible?
+
+  <details>
+  <summary>Answer</summary>
+
+  Each subdomain is its own record — nothing forces subdomains of the same domain to point at the
+  same server.
+  </details>
+
+- You just changed an `A` record and it "isn't working yet" ten seconds later. Is that necessarily
+  a misconfiguration?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — resolvers that already cached the old value keep serving it until that record's TTL
+  expires; give it time proportional to the old TTL before assuming something's wrong.
+  </details>
+

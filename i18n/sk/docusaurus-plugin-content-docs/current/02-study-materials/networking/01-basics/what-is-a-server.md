@@ -50,3 +50,36 @@ Takmer všetko v tejto sekcii je **client-server**: jedna strana ponúka službu
 konzumuje, a roly sú pevné. (Peer-to-peer, kde každý uzol môže vystupovať v oboch rolách, tiež
 existuje — BitTorrent, niektoré blockchainové siete — ale je mimo rozsahu tejto sekcie; nič v
 stacku tejto organizácie takto nefunguje.)
+
+## Skontroluj sa
+
+- Je "server" typ počítača, alebo rola, ktorú hrá program? Prečo na tomto rozlíšení záleží pre
+  jeden fyzický počítač bežiaci viacero serverov naraz?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Je to rola, nie typ počítača — ten istý fyzický počítač môže súčasne bežať web server,
+  databázový server a SSH server, každý jednoducho program počúvajúci na vlastnom porte.
+  </details>
+
+- Dosiahne `curl http://localhost:3000` server na vlastnom počítači, alebo na nejakom vzdialenom
+  serveri?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Vlastný počítač — `localhost`/`127.0.0.1` vždy znamená "tento počítač," dostupný len z neho
+  samotného, pokiaľ ho zámerne nesprístupníš.
+  </details>
+
+- Konkrétne, ako sa požiadavka na `docs.vectorly-slovakia.sk` dostane k správnemu kontajneru na
+  VPS tejto organizácie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Reverse proxy (Caddy) pred VPS prijme požiadavku a rozhodne, ktorý kontajner ju obslúži, na
+  základe doménového mena v požiadavke.
+  </details>
+

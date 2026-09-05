@@ -72,3 +72,37 @@ HTTP over a network you don't fully control defeats the point.
 curl -vI https://docs.vectorly-slovakia.sk 2>&1 | grep -A5 "Server certificate"
 openssl s_client -connect docs.vectorly-slovakia.sk:443 -servername docs.vectorly-slovakia.sk
 ```
+
+## Check yourself
+
+- Encryption alone (without a certificate/CA) would stop eavesdropping, but what attack would it
+  still leave possible?
+
+  <details>
+  <summary>Answer</summary>
+
+  Someone impersonating the real server — authentication (the certificate, checked against a
+  trusted CA) is what proves the server is who it claims to be, separate from encryption itself.
+  </details>
+
+- Does the certificate/CA verification step happen on every single HTTP request over a TLS
+  connection, or once per connection?
+
+  <details>
+  <summary>Answer</summary>
+
+  Once per connection — after the handshake, all subsequent requests on that connection reuse the
+  already-negotiated encrypted session.
+  </details>
+
+- Why is it fine for backend containers to talk plain HTTP to each other over the internal Docker
+  network, when plain HTTP is otherwise a bad idea?
+
+  <details>
+  <summary>Answer</summary>
+
+  That internal network is genuinely private (a Docker bridge network unreachable from outside),
+  so there's no one positioned to intercept it the way there is on the open internet — the
+  reverse proxy already handled encryption for the actual internet-facing hop.
+  </details>
+

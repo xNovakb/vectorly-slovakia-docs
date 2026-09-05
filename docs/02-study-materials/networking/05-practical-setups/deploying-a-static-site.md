@@ -60,3 +60,35 @@ curl -sI https://docs.vectorly-slovakia.sk            # 4. does the full public 
 
 If (3) works but (4) doesn't, the problem is in Caddy/DNS/TLS, not the app —
 [Troubleshooting Connectivity](./troubleshooting-connectivity.md) has more of this approach.
+
+## Check yourself
+
+- Why does `docs-app` listen on port 80 only internally, never exposed directly to the internet?
+
+  <details>
+  <summary>Answer</summary>
+
+  Only Caddy needs to be reachable from the internet; keeping every other container internal-only
+  shrinks what actually needs to be kept patched and secured against direct exposure.
+  </details>
+
+- In the debugging sequence (container running? → logs clean? → listening internally? → public
+  chain works?), what does it mean if step 3 succeeds but step 4 fails?
+
+  <details>
+  <summary>Answer</summary>
+
+  The app itself is fine — the problem is somewhere in Caddy, DNS, or TLS, not in the application
+  container.
+  </details>
+
+- What SSH mechanism from the SSH & Networking topic does the deploy workflow actually use to
+  reach the VPS?
+
+  <details>
+  <summary>Answer</summary>
+
+  A dedicated SSH key (`vectorly_docs_key`) via the `github-docs` SSH config alias, rather than a
+  personal key.
+  </details>
+

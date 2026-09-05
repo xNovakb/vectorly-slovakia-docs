@@ -60,3 +60,37 @@ nslookup docs.vectorly-slovakia.sk        # alternative, more available by defau
 
 More on reading these results in
 [Troubleshooting Connectivity](../05-practical-setups/troubleshooting-connectivity.md).
+
+## Check yourself
+
+- Are the registrar and the DNS provider always the same company? What does each one actually do?
+
+  <details>
+  <summary>Answer</summary>
+
+  Not necessarily — the registrar is where you bought the domain and handles ownership/renewal,
+  pointing it at a set of nameservers; the nameservers (often a different company) are where the
+  actual DNS records live and get edited.
+  </details>
+
+- Why does changing a record's TTL to a low value (e.g. 300 seconds) before a planned DNS change
+  help, and what's the tradeoff of leaving it low permanently?
+
+  <details>
+  <summary>Answer</summary>
+
+  A low TTL makes resolvers ask again sooner, so a change propagates faster. Left low permanently,
+  it means more repeated queries hitting the nameserver — a high TTL reduces that load but makes
+  future changes slower to take effect.
+  </details>
+
+- In the resolution flow diagram, does a browser normally ask the root nameserver directly for
+  every single lookup?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — in practice, most of this is cached at every level, so the full root → TLD → authoritative
+  chain only happens on a "cold start" for a domain not recently resolved anywhere on the network.
+  </details>
+

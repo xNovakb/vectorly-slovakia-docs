@@ -82,3 +82,36 @@ networks:
 `external: true` povie Compose "táto sieť už existuje, nesnaž sa ju vytvoriť" — musí byť vytvorená
 raz (`docker network create proxy-net`) skôr, než môže ktorýkoľvek compose projekt, ktorý ju
 používa, naštartovať.
+
+## Skontroluj sa
+
+- Zvnútra kontajnera `caddy` funguje `curl http://docs-app:80`. Znamená to, že `docs-app:80` je
+  dostupný aj z internetu, alebo čo i len z hostiteľského počítača?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — kontajnery na rovnakej bridge sieti sa vedia dosiahnuť podľa mena bez akýchkoľvek portov
+  publikovaných na hostiteľa vôbec; len explicitné publikovanie `-p` spraví port dostupný zvonku
+  Dockeru.
+  </details>
+
+- Prečo musí byť `proxy-net` deklarovaná ako `external: true` v `docker-compose.yml` súboroch
+  tejto organizácie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Lebo je zdieľaná naprieč viacerými nezávisle nasadzovanými compose projektmi (docs stránka a
+  hlavná marketingová stránka) — `external: true` povie Compose, že sieť už existuje a nemá sa
+  snažiť vytvoriť vlastnú sieť pre projekt.
+  </details>
+
+- Čo jedna vec spraví port kontajnera dostupný zvonku Dockeru úplne?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Explicitné publikovanie cez `-p HOST:CONTAINER` — všetko ostatné je predvolene len interné.
+  </details>
+

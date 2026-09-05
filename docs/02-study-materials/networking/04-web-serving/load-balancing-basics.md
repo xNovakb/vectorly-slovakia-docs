@@ -59,3 +59,35 @@ run multiple replicas of the docs site, so there's no load balancer in the pictu
 acting purely as a reverse proxy routing by hostname, not spreading load across instances. This
 page is here as the concept you'd reach for if/when traffic or availability needs outgrow a single
 instance — not a description of the current setup.
+
+## Check yourself
+
+- A reverse proxy routes by hostname to different services; a load balancer routes across
+  multiple instances of the same service. Is the underlying mechanism actually different?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — both are the same routing-decision mechanism, just applied differently: one to different
+  services, the other to replicas of one service.
+  </details>
+
+- Why do health checks matter for a load balancer beyond just "is the instance capable of more
+  traffic"?
+
+  <details>
+  <summary>Answer</summary>
+
+  Without them the load balancer would keep routing to an instance that's actually broken; health
+  checks let it automatically pull a failed instance out of rotation until it recovers.
+  </details>
+
+- Does this org's current setup use a load balancer? Why or why not?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — it runs one VPS with one container per app, so there's nothing to spread load across;
+  Caddy here is acting purely as a reverse proxy routing by hostname, not balancing replicas.
+  </details>
+

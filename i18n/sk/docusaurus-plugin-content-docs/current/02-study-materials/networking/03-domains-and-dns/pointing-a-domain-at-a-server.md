@@ -62,3 +62,35 @@ viac tohto diagnostického prístupu.
 [`/sk/internal-operations/server-architecture`](/sk/internal-operations/server-architecture) — DNS
 nasmerované na VPS, Caddy ako reverse proxy obsluhujúci TLS a smerujúci podľa hostname na správny
 Docker kontajner.
+
+## Skontroluj sa
+
+- Doména sa resolvuje na správnu IP cez `dig`, ale `curl -v https://tvoja-domena` zlyhá, zatiaľ čo
+  `curl -v http://tvoja-ip` uspeje. Kde je problém, podľa diagnostického poradia z tejto stránky?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Konkrétne v konfigurácii reverse proxy/TLS — DNS aj samotný server sú v poriadku, keďže
+  kontrola IP cez obyčajné HTTP fungovala.
+  </details>
+
+- Prečo skontrolovať `dig ... +short` skôr, než vôbec skúsiš `curl` proti doméne?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Izoluje to, či DNS vôbec resolvuje na správnu IP, ako prvé — nemá zmysel debugovať server alebo
+  reverse proxy, ak doména ešte neukazuje na správne miesto.
+  </details>
+
+- Čo musí platiť na samotnom serveri predtým, než môže byť reverse proxy vôbec užitočný, podľa
+  reťaze na tejto stránke?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Niečo musí naozaj počúvať na portoch 80/443 na serveri — reverse proxy smeruje prichádzajúce
+  požiadavky, nevytvára poslucháča tam, kde žiadny neexistuje.
+  </details>
+

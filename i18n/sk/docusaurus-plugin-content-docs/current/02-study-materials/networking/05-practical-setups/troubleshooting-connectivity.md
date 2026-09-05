@@ -89,3 +89,34 @@ Ak očakávaný port vo výstupe vôbec nie je, appka nebeží / spadla / je bin
 
 Spoľahlivé poradie: DNS → dosiahnem IP vôbec → dokončí sa TLS → odpovedá proxy → odpovedá backend.
 Každý krok vylúči celú kategóriu príčiny skôr, než začneš hľadať v logoch samotnej appky.
+
+## Skontroluj sa
+
+- `ping docs.vectorly-slovakia.sk` nedostane žiadnu odpoveď. Dokazuje to, že server je dole?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — veľa serverov zámerne blokuje ICMP (čo `ping` používa) z bezpečnostných dôvodov; žiadna
+  odpoveď znamená len, že konkrétne ICMP je blokované, nie že samotný server je dole.
+  </details>
+
+- Vo výstupe `curl -v` sa pripojenie zastaví hneď po "Trying 203.0.113.42:443..." bez riadku
+  "Connected". Čo to naznačuje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Na tom porte nič nepočúva, alebo firewall blokuje pripojenie — TLS handshake a všetko po ňom
+  ani nedostalo šancu začať.
+  </details>
+
+- Prečo spustiť `ss -tlnp` na samotnom serveri, nie z vlastného počítača?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Odpovie to na to, či na tom počítači naozaj niečo počúva na očakávanom porte — spustenie
+  lokálne by ukázalo len to, čo počúva na tvojom vlastnom počítači, nie na vzdialenom serveri.
+  </details>
+

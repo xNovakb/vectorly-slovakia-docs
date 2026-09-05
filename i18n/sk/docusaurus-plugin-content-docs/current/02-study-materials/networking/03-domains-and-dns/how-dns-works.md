@@ -61,3 +61,38 @@ nslookup docs.vectorly-slovakia.sk        # alternatíva, predvolene dostupnejš
 
 Viac o čítaní týchto výsledkov v
 [Riešení Problémov s Pripojením](../05-practical-setups/troubleshooting-connectivity.md).
+
+## Skontroluj sa
+
+- Sú registrátor a DNS provider vždy tá istá firma? Čo naozaj robí každý z nich?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie nutne — registrátor je miesto, kde si doménu kúpil, a stará sa o vlastníctvo/obnovu,
+  nasmerujúc ju na sadu nameserverov; nameservery (často iná firma) sú tam, kde skutočne žijú a
+  upravujú sa DNS záznamy.
+  </details>
+
+- Prečo pomáha nastavenie nízkeho TTL (napr. 300 sekúnd) na zázname pred plánovanou DNS zmenou, a
+  aký je kompromis pri ponechaní nízkeho TTL natrvalo?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nízky TTL spôsobí, že sa resolvery pýtajú znova skôr, tak sa zmena rýchlejšie prejaví. Ponechaný
+  nízko natrvalo znamená viac opakovaných dopytov na nameserver — vysoký TTL túto záťaž zníži, ale
+  spomalí prejavenie budúcich zmien.
+  </details>
+
+- V diagrame priebehu resolvovania, pýta sa prehliadač bežne priamo root nameservera pri každom
+  jednotlivom vyhľadaní?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — v praxi je väčšina tohto cachovaná na každej úrovni, tak sa celý reťazec root → TLD →
+  autoritatívny odohráva naplno len pri "studenom štarte" pre doménu nedávno neresolvovanú
+  nikde na sieti.
+  </details>
+

@@ -56,3 +56,36 @@ túto cestu krok za krokom naozaj ukáže.
   server.
 - Latencia (ping čas) je zhruba úmerná fyzickej vzdialenosti + počtu skokov — server na inom
   kontinente bude mať vždy strop na to, ako rýchlo dokáže odpovedať, nech je kód akokoľvek rýchly.
+
+## Skontroluj sa
+
+- Prečo sa zvyčajne nedá SSH-núť priamo na vlastný notebook z internetu, zatiaľ čo na VPS áno?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Tvoj notebook má typicky len súkromnú IP za NAT, priamo nedostupnú zvonku bez extra nastavenia
+  (port forwarding, VPN, tunel); VPS má vlastnú verejnú IP.
+  </details>
+
+- Prejde jeden paket celú cestu od zdroja k cieľu na jeden skok, alebo prechádza cez medziľahlé
+  routery?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Prechádza cez viacero routerov, z ktorých každý vie len, ktorým smerom sa dostane bližšie k
+  cieľu — žiadny jednotlivý bod nepozná celú cestu vopred.
+  </details>
+
+- "Funguje mi to z domu, ale nie z kancelárie" — čo to zvyčajne naznačuje, vzhľadom na to, ako sa
+  pakety naozaj smerujú?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Firewall alebo security group blokuje pripojenie na jednom konkrétnom skoku niekde na tejto
+  konkrétnej sieťovej ceste — takmer nikdy nejde o pokazený server, keďže server je pre oboje
+  rovnaký.
+  </details>
+

@@ -91,3 +91,34 @@ wrong interface (`127.0.0.1` only, not `0.0.0.0` — meaning it only accepts con
 A reliable order: DNS → can I reach the IP at all → does TLS complete → does the proxy respond →
 does the backend respond. Each step rules out an entire category of cause before you go looking
 inside the app's own logs.
+
+## Check yourself
+
+- `ping docs.vectorly-slovakia.sk` gets no response. Does that prove the server is down?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — many servers deliberately block ICMP (what `ping` uses) for security reasons; no response
+  only means ICMP specifically is blocked, not that the server itself is down.
+  </details>
+
+- In `curl -v` output, the connection stops right after "Trying 203.0.113.42:443..." with no
+  "Connected" line. What does that indicate?
+
+  <details>
+  <summary>Answer</summary>
+
+  Nothing is listening on that port, or a firewall is blocking the connection — the TLS handshake
+  and everything after it never even had a chance to start.
+  </details>
+
+- Why run `ss -tlnp` on the server itself rather than from your own machine?
+
+  <details>
+  <summary>Answer</summary>
+
+  It answers whether anything is actually listening on the expected port on that machine — running
+  it locally would only show what's listening on your own machine, not the remote server.
+  </details>
+

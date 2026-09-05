@@ -71,6 +71,10 @@
     "message": "Praktické Nastavenia",
     "description": "The label for category 'Practical Setups' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.NetworkingReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.Linux & Shell": {
     "message": "Linux a Shell",
     "description": "The label for category 'Linux & Shell' in sidebar 'studyMaterialsSidebar'"
@@ -386,6 +390,10 @@
   "sidebar.studyMaterialsSidebar.category.Practical Setups.link.generated-index.description": {
     "message": "Spojenie všetkého dokopy, plus Docker siete a riešenie problémov s konektivitou.",
     "description": "The generated-index page description for category 'Practical Setups' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.NetworkingReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znovu prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
   },
   "sidebar.studyMaterialsSidebar.category.Linux & Shell.link.generated-index.description": {
     "message": "Príkazový riadok, oprávnenia, procesy a toľko o fungovaní Linux servera, aby ste ho vedeli administrovať.",

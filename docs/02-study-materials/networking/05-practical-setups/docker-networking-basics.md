@@ -80,3 +80,35 @@ networks:
 
 `external: true` tells Compose "this network already exists, don't try to create it" — it has to
 be created once (`docker network create proxy-net`) before any compose project using it can start.
+
+## Check yourself
+
+- From inside the `caddy` container, `curl http://docs-app:80` works. Does that mean `docs-app:80`
+  is also reachable from the internet, or even from the host machine?
+
+  <details>
+  <summary>Answer</summary>
+
+  No — containers on the same bridge network reach each other by name with no ports published to
+  the host at all; only an explicit `-p` publish makes a port reachable from outside Docker.
+  </details>
+
+- Why does `proxy-net` need to be declared `external: true` in this org's `docker-compose.yml`
+  files?
+
+  <details>
+  <summary>Answer</summary>
+
+  Because it's shared across multiple independently-deployed compose projects (the docs site and
+  the main marketing site) — `external: true` tells Compose the network already exists and not to
+  try creating its own per-project network.
+  </details>
+
+- What single thing makes a container's port reachable from outside Docker entirely?
+
+  <details>
+  <summary>Answer</summary>
+
+  Publishing it explicitly with `-p HOST:CONTAINER` — everything else is internal-only by default.
+  </details>
+

@@ -72,3 +72,38 @@ Obyčajný HTTP cez sieť, ktorú plne nekontroluješ, popiera celý zmysel.
 curl -vI https://docs.vectorly-slovakia.sk 2>&1 | grep -A5 "Server certificate"
 openssl s_client -connect docs.vectorly-slovakia.sk:443 -servername docs.vectorly-slovakia.sk
 ```
+
+## Skontroluj sa
+
+- Šifrovanie samotné (bez certifikátu/CA) by zastavilo odpočúvanie, ale aký útok by stále nechalo
+  možný?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Niekoho vydávajúceho sa za skutočný server — autentifikácia (certifikát, overený voči
+  dôveryhodnej CA) je to, čo dokazuje, že server je tým, za koho sa vydáva, oddelene od
+  samotného šifrovania.
+  </details>
+
+- Deje sa krok overenia certifikátu/CA pri každej jednej HTTP požiadavke cez TLS spojenie, alebo
+  raz na spojenie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Raz na spojenie — po handshake všetky nasledujúce požiadavky na tom spojení znovu použijú už
+  vyjednanú šifrovanú session.
+  </details>
+
+- Prečo je v poriadku, aby backend kontajnery medzi sebou hovorili obyčajným HTTP cez internú
+  Docker sieť, keď je obyčajný HTTP inak zlý nápad?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Tá interná sieť je naozaj súkromná (Docker bridge sieť nedostupná zvonku), tak niet nikoho v
+  pozícii ju odpočúvať tak, ako na otvorenom internete — reverse proxy už vyriešil šifrovanie pre
+  skutočný internetu-vystavený skok.
+  </details>
+

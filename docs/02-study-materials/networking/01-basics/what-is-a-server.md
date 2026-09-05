@@ -49,3 +49,35 @@ Almost everything covered in this section is **client-server**: one side offers 
 other consumes it, and the roles are fixed. (Peer-to-peer, where every node can act as both,
 exists too — BitTorrent, some blockchain networks — but is out of scope here; nothing in this
 org's stack works that way.)
+
+## Check yourself
+
+- Is "server" a type of machine, or a role a program plays? Why does that distinction matter for
+  one physical computer running multiple servers at once?
+
+  <details>
+  <summary>Answer</summary>
+
+  It's a role, not a machine type — the same physical computer can run a web server, a database
+  server, and an SSH server simultaneously, each just a program listening on its own port.
+  </details>
+
+- Does `curl http://localhost:3000` reach a server on your own machine, or on some remote server?
+
+  <details>
+  <summary>Answer</summary>
+
+  Your own machine — `localhost`/`127.0.0.1` always means "this machine," reachable only from
+  itself unless deliberately exposed.
+  </details>
+
+- Concretely, how does a request for `docs.vectorly-slovakia.sk` end up at the right container on
+  this org's VPS?
+
+  <details>
+  <summary>Answer</summary>
+
+  A reverse proxy (Caddy) in front of the VPS receives the request and decides which container
+  handles it based on the domain name in the request.
+  </details>
+

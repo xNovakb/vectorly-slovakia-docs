@@ -82,3 +82,37 @@ kľúč, jeden účel) namiesto opätovného použitia osobného kľúča.
 Generuj samostatné páry kľúčov pre samostatné účely (osobný prístup na GitHub vs. deploy kľúč vs.
 konkrétny server) namiesto opätovného použitia jedného kľúča všade — pozri
 [SSH Konfigurácia](./ssh-config.md) pre čisté spravovanie viacerých kľúčov.
+
+## Skontroluj sa
+
+- Ktorá polovica SSH páru kľúčov by mala niekedy opustiť tvoj počítač, aj počas
+  autentifikácie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Žiadna, v podstate — súkromný kľúč neopustí tvoj počítač vôbec. Server vidí len verejný kľúč a
+  dôkaz (rozšifrovanú výzvu), že máš zodpovedajúci súkromný kľúč.
+  </details>
+
+- Čo passphrase naozaj chráni, vzhľadom na to, že samotný súbor súkromného kľúča môže uniknúť
+  (ukradnutý notebook, chyba pri zálohe)?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Zašifruje súbor súkromného kľúča v pokoji, tak je unikutý súbor nepoužiteľný pre kohokoľvek,
+  kto ho má, bez toho, aby poznal aj passphrase.
+  </details>
+
+- Prečo sú CI deploy kľúče (ako `vectorly_docs_key` tohto repozitára) zámerne bez passphrase, keď
+  sa to zdá odporovať rade o passphrase vyššie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  CI nemá človeka, ktorý by zadal passphrase — tento kompromis je akceptovaný práve preto, lebo
+  kľúč je úzko zaškatuľkovaný (jeden kľúč, jeden účel) namiesto opätovného použitia širšieho
+  osobného kľúča.
+  </details>
+

@@ -60,3 +60,35 @@ nespúšťa viacero replík docs stránky, takže dnes tu žiadny load balancer 
 funguje čisto ako reverse proxy smerujúci podľa hostname, nie rozkladajúci záťaž naprieč
 inštanciami. Táto stránka je tu ako koncept, po ktorom by si siahol, keby/až potreby na prevádzku
 alebo dostupnosť prerástli jednu inštanciu — nie popis aktuálneho nastavenia.
+
+## Skontroluj sa
+
+- Reverse proxy smeruje podľa hostname na rôzne služby; load balancer smeruje naprieč viacerými
+  inštanciami tej istej služby. Je podkladový mechanizmus naozaj rôzny?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — oboje je ten istý mechanizmus rozhodovania o smerovaní, len aplikovaný odlišne: jeden na
+  rôzne služby, druhý na repliky jednej služby.
+  </details>
+
+- Prečo na health checkoch záleží load balanceru viac, než len "je inštancia schopná prijať viac
+  prevádzky"?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Bez nich by load balancer naďalej smeroval na inštanciu, ktorá je naozaj pokazená; health checky
+  mu umožnia automaticky vyradiť zlyhanú inštanciu z rotácie, kým sa nezotaví.
+  </details>
+
+- Používa aktuálne nastavenie tejto organizácie load balancer? Prečo áno, alebo prečo nie?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — beží na jednom VPS s jedným kontajnerom na appku, tak niet čo rozkladať; Caddy tu funguje
+  čisto ako reverse proxy smerujúci podľa hostname, nie rozkladajúci záťaž naprieč replikami.
+  </details>
+

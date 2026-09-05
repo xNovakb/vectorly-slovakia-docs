@@ -58,3 +58,36 @@ this hop-by-hop path for real.
 - Latency (ping time) is roughly proportional to physical distance + hop count — a server on
   another continent will always have a floor on how fast it can respond, no matter how fast the
   code is.
+
+## Check yourself
+
+- Why can't you usually SSH directly into your own laptop from the internet, while you can SSH
+  into a VPS?
+
+  <details>
+  <summary>Answer</summary>
+
+  Your laptop typically has only a private IP behind NAT, not directly reachable from outside
+  without extra setup (port forwarding, a VPN, a tunnel); a VPS has its own public IP.
+  </details>
+
+- Does a single packet travel the entire source-to-destination path in one hop, or does it pass
+  through intermediate routers?
+
+  <details>
+  <summary>Answer</summary>
+
+  It passes through multiple routers, each of which only knows which direction gets it closer to
+  the destination — no single point knows the whole path in advance.
+  </details>
+
+- "It works from my machine but not from the office" — what does this usually indicate, given how
+  packets actually route?
+
+  <details>
+  <summary>Answer</summary>
+
+  A firewall or security group is blocking the connection at one specific hop somewhere along that
+  particular network path — almost never a broken server, since the server is the same for both.
+  </details>
+

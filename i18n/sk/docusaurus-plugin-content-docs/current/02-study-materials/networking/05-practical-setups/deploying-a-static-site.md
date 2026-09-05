@@ -62,3 +62,34 @@ curl -sI https://docs.vectorly-slovakia.sk            # 4. funguje celá verejn�
 
 Ak (3) funguje, ale (4) nie, problém je v Caddy/DNS/TLS, nie v appke —
 [Riešenie Problémov s Pripojením](./troubleshooting-connectivity.md) má viac tohto prístupu.
+
+## Skontroluj sa
+
+- Prečo `docs-app` počúva na porte 80 len interne, nikdy priamo vystavený internetu?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Len Caddy potrebuje byť dostupný z internetu; udržanie každého ostatného kontajnera len-interne
+  zmenšuje, čo je naozaj potrebné udržiavať patchnuté a zabezpečené proti priamemu vystaveniu.
+  </details>
+
+- V sekvencii debugovania (beží kontajner? → logy čisté? → počúva interne? → funguje verejná
+  reťaz?), čo znamená, ak krok 3 uspeje, ale krok 4 zlyhá?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Samotná appka je v poriadku — problém je niekde v Caddy, DNS, alebo TLS, nie v kontajneri
+  aplikácie.
+  </details>
+
+- Aký SSH mechanizmus z témy SSH a Siete naozaj používa deploy workflow na dosiahnutie VPS?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Dedikovaný SSH kľúč (`vectorly_docs_key`) cez `github-docs` SSH konfiguračný alias, nie osobný
+  kľúč.
+  </details>
+

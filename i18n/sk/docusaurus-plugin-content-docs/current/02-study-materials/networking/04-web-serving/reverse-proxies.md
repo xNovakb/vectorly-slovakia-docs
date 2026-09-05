@@ -71,3 +71,36 @@ docs.vectorly-slovakia.sk {
 
 Appka samotná nemá o autentifikácii žiadnu vedomosť — Caddy odmietne neautentifikované
 požiadavky skôr, než sa dostanú k `docs-app`.
+
+## Skontroluj sa
+
+- `docs.vectorly-slovakia.sk` a `vectorly-slovakia.sk` zdieľajú jeden VPS a jednu verejnú IP, ale
+  dostávajú sa k rôznym kontajnerom. Čo to umožňuje?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Reverse proxy číta hlavičku `Host` na každej prichádzajúcej požiadavke a smeruje ju na iný
+  backend v závislosti od toho, ktorý hostname bol požadovaný.
+  </details>
+
+- Aký je skutočný rozdiel medzi reverse proxy a forward proxy — pred ktorou stranou pripojenia
+  každý sedí?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Reverse proxy sedí pred servermi, skrýva pred klientom, ktorý backend odpovedal. Forward proxy
+  sedí pred klientmi, skrýva pred serverom, ktorý klient urobil požiadavku.
+  </details>
+
+- Ak Caddy rieši basic auth na úrovni proxy, potrebuje backend appka nejakú vedomosť o
+  autentifikácii?
+
+  <details>
+  <summary>Odpoveď</summary>
+
+  Nie — Caddy odmietne neautentifikované požiadavky skôr, než sa vôbec dostanú k appke, tak appka
+  nemá o autentifikácii žiadnu vedomosť.
+  </details>
+
