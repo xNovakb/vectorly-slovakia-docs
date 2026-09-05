@@ -167,6 +167,14 @@
     "message": "Produkčné Postupy",
     "description": "The label for category 'Production Practices' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.DockerReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.DockerReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znova prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.Podman": {
     "message": "Podman",
     "description": "The label for category 'Podman' in sidebar 'studyMaterialsSidebar'"
@@ -182,6 +190,14 @@
   "sidebar.studyMaterialsSidebar.category.Docker vs. Podman": {
     "message": "Docker vs. Podman",
     "description": "The label for category 'Docker vs. Podman' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.PodmanReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.PodmanReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou — odpovedaj nahlas, nielen si to znova prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
   },
   "sidebar.studyMaterialsSidebar.category.CI/CD Basics": {
     "message": "CI/CD Základy",
