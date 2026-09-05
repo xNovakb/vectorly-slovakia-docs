@@ -343,6 +343,14 @@
     "message": "Produkčné Úvahy",
     "description": "The label for category 'Production Considerations' in sidebar 'studyMaterialsSidebar'"
   },
+  "sidebar.studyMaterialsSidebar.category.KotlinReview": {
+    "message": "Zopakovanie",
+    "description": "The label for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
+  "sidebar.studyMaterialsSidebar.category.KotlinReview.link.generated-index.description": {
+    "message": "Syntetizujúce otázky naprieč celou témou Kotlin — odpovedaj nahlas, nielen si to znova prečítaj.",
+    "description": "The generated-index page description for category 'Review' in sidebar 'studyMaterialsSidebar'"
+  },
   "sidebar.studyMaterialsSidebar.category.Testing in Kotlin": {
     "message": "Testovanie v Kotline",
     "description": "The label for category 'Testing in Kotlin' in sidebar 'studyMaterialsSidebar'"
